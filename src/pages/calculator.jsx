@@ -10,6 +10,14 @@ const Calculator = () => {
   )
 }
 
+const Display = () => {
+  return (
+    <div className="displayContainer">
+      
+    </div>
+  )
+}
+
 const Button = (props) => {
   const { onClick, value } = props;
 
