@@ -1,12 +1,20 @@
 import React from 'react';
 
-const Calculator = () => {
 
+
+const Calculator = () => {
+  return (
+    <div className="container">
+
+    </div>
+  )
 }
 
-const NumberButton = (props) => {
+const Button = (props) => {
+  const { onClick, value } = props;
+
   return (
-    <button>{props.value}</button>
+    <button>{value}</button>
   )
 } 
 
