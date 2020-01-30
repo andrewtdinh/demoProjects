@@ -2,8 +2,11 @@ import React from 'react';
 
 const Calculator = () => {
   return (
-    <div className="container">
-
+    <div className="container" style={{
+      "backgroundColor": "blue",
+      "width": "80%",
+      "height": "100vh",
+    }}>
     </div>
   )
 }
