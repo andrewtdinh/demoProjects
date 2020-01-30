@@ -10,7 +10,7 @@ const Calculator = () => {
     //   "margin": "0 auto"
     // }}>
     // </div>
-    <div className="container" style={Styles.container}>
+    <div className={Styles.container}>
     </div>
   )
 }
