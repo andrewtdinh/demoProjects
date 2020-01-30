@@ -4,7 +4,7 @@ import Styles from "./index.module.css"
 const Account = () => {
   return (
     <div className={Styles.container}>
-      <h2>Intuit Account Manager</h2>
+      <h3>Account Dashboard</h3>
     </div>
   )
 }
