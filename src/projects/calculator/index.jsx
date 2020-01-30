@@ -6,6 +6,7 @@ const Calculator = () => {
       "backgroundColor": "blue",
       "width": "80%",
       "height": "100vh",
+      "margin": "0 auto"
     }}>
     </div>
   )
