@@ -1,0 +1,11 @@
+.tableContainer {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-gap: 6px;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-gap: 6px;
+}
