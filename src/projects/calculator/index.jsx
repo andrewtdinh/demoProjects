@@ -3,13 +3,6 @@ import Styles from './index.module.css';
 
 const Calculator = () => {
   return (
-    // <div className="container" style={{
-    //   "backgroundColor": "blue",
-    //   "width": "80%",
-    //   "height": "100vh",
-    //   "margin": "0 auto"
-    // }}>
-    // </div>
     <div className={Styles.container}>
     </div>
   )
