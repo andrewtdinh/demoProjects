@@ -1,6 +1,10 @@
+body {
+  margin: 0;
+}
+
 .container {
   background-color: lightgrey;
-  width: 80%;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
 }
