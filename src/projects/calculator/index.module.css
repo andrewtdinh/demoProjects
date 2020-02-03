@@ -27,7 +27,7 @@ body {
 
 .calcWrapper {
   display: grid;
-  height: 330px;
+  height: 355px;
   grid-template-columns: repeat(4, 55px);
   grid-template-rows: repeat(6, 55px);
   grid-gap: 5px;
