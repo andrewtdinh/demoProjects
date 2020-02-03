@@ -6,8 +6,23 @@ body {
 }
 
 .container {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+  width: 245px;
+  position: relative;
+  top: 55px;
+  border: 1px solid black;
+}
+
+.calcWrapper {
   display: grid;
+  height: 465px;
+  width: 365px;
   grid-template-columns: repeat(4, 55px);
   grid-template-rows: repeat(6, 55px);
-  
+  grid-gap: 5px;
+  padding: 110px auto;
 }
