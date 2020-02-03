@@ -7,18 +7,27 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   margin: 55px auto auto auto;
-  width: 255px;
+  width: 275px;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   box-sizing: border-box;
-  position: relative;
   border: 1px solid black;
+  border-radius: 10px;
+  padding-top: 25px;
+}
+
+.calcTitle {
+  display: flex;
+  width: 86%;
+  justify-content: flex-end;
+  font-style: italic;
 }
 
 .calcWrapper {
   display: grid;
-  height: 465px;
+  height: 375px;
   grid-template-columns: repeat(4, 55px);
   grid-template-rows: repeat(6, 55px);
   grid-gap: 5px;

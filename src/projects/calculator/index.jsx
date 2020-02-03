@@ -3,7 +3,8 @@ import Styles from './index.module.css';
 
 const Calculator = () => {
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} >
+      <div className={Styles.calcTitle} >imMaculator</div>
       <div className={Styles.calcWrapper}></div>
     </div>
   )
