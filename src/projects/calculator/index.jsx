@@ -34,10 +34,18 @@ const Buttons = () => {
 }
 
 const Button = (props) => {
-  const { onClick, value } = props;
+  const { onClick, label, color, bgColor } = props;
 
   return (
-    <button onClick={onClick} >{value}</button>
+    <button 
+      onClick={onClick}
+      style={{
+        color: color,
+        backgroundColor: bgColor
+      }}
+    >
+      {label}
+    </button>
   )
 }
 
