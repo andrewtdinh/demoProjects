@@ -18,15 +18,16 @@ const Calculator = () => {
 const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' }) => {
   return (
     <div
+      className={Styles.displayWrapper}
       style={{
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
         backgroundColor: bgColor,
         color: displayColor,
-        gridColumn: "span 4",
-        borderRadius: "3px",
-        textAlign: "right"
+        // display: "flex",
+        // justifyContent: "flex-end",
+        // alignItems: "center",
+        // gridColumn: "span 4",
+        // borderRadius: "3px",
+        // textAlign: "right"
       }}
     >
       <div className={Styles.displayWindow}>{strValue}</div>
