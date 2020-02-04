@@ -15,11 +15,14 @@ const Calculator = () => {
   )
 }
 
-const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='' }) => {
+const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' }) => {
   return <div style={{
+    display: 'flex',
+    justifyContent: 'flexEnd',
     backgroundColor: bgColor,
     color: displayColor,
     gridColumn: 'span 4',
+    borderRadius: '3px'
   }}>{strValue}</div>
 }
 
