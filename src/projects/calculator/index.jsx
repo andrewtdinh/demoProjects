@@ -34,12 +34,13 @@ const Buttons = () => {
 }
 
 const Button = (props) => {
-  const { onClick, label, color, bgColor } = props;
+  const { onClick, label, color, bgColor, span } = props;
 
   return (
     <button 
       onClick={onClick}
       style={{
+        gridColumn: `span ${span}`,
         color: color,
         backgroundColor: bgColor
       }}
