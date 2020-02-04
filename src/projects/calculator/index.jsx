@@ -16,14 +16,21 @@ const Calculator = () => {
 }
 
 const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' }) => {
-  return <div style={{
-    display: 'flex',
-    justifyContent: 'flexEnd',
-    backgroundColor: bgColor,
-    color: displayColor,
-    gridColumn: 'span 4',
-    borderRadius: '3px'
-  }}>{strValue}</div>
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        backgroundColor: bgColor,
+        color: displayColor,
+        gridColumn: "span 4",
+        borderRadius: "3px",
+      }}
+    >
+      <div className="display-window">{strValue}</div>
+    </div>
+  )
 }
 
 const Buttons = () => {
