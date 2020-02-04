@@ -22,12 +22,6 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' 
       style={{
         backgroundColor: bgColor,
         color: displayColor,
-        // display: "flex",
-        // justifyContent: "flex-end",
-        // alignItems: "center",
-        // gridColumn: "span 4",
-        // borderRadius: "3px",
-        // textAlign: "right"
       }}
     >
       <div className={Styles.displayWindow}>{strValue}</div>

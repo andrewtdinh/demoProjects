@@ -32,7 +32,6 @@ body {
   grid-template-rows: repeat(6, 55px);
   grid-gap: 5px;
   padding: 110px auto;
-  /* border: 1px solid black; */
   margin-bottom: 20px;
   border-radius: 5px;
 }
