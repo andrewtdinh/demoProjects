@@ -26,9 +26,10 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' 
         color: displayColor,
         gridColumn: "span 4",
         borderRadius: "3px",
+        textAlign: "right"
       }}
     >
-      <div className="display-window">{strValue}</div>
+      <div className={Styles.displayWindow}>{strValue}</div>
     </div>
   )
 }

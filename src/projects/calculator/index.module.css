@@ -37,6 +37,8 @@ body {
   border-radius: 5px;
 }
 
-.display-window {
+.displayWindow {
+  display: inline-block;
   width: 100%;
+  margin-right: 3px;
 }
