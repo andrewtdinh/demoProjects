@@ -19,6 +19,10 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue }) =
   return <div className="displayContainer">{strValue}</div>
 }
 
+const Buttons = () => {
+  
+}
+
 const Button = (props) => {
   const { onClick, value } = props;
 
