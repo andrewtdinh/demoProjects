@@ -8,14 +8,14 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 55px auto auto auto;
-  width: 275px;
+  margin: 20px auto auto auto;
+  width: 47vh;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 10px;
-  padding-top: 25px;
+  padding-top: 2vh;
 }
 
 .calcTitle {
@@ -30,7 +30,7 @@ body {
   height: 415px;
   grid-template-columns: repeat(4, 10vh);
   grid-template-rows: repeat(7, 10vh);
-  grid-gap: 5px;
+  grid-gap: 1vh;
   padding: 110px auto;
   margin-bottom: 20px;
   border-radius: 5px;
