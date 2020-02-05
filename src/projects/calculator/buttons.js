@@ -19,13 +19,19 @@ const Buttons = [
   },
   {
     name: "Division Operator",
-    label: "U+00F7",
+    label: "÷",
     color: "#FFF",
     bgColor: "#F6872C",
   },
   {
     name: "Number One Button",
     label: "1",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+  {
+    name: "Number Two Button",
+    label: "2",
     color: "rgba(84,103,112,.83)",
     bgColor: "#DCDCDC",
   },
