@@ -28,8 +28,8 @@ body {
 .calcWrapper {
   display: grid;
   height: 415px;
-  grid-template-columns: repeat(4, 55px);
-  grid-template-rows: repeat(7, 55px);
+  grid-template-columns: repeat(4, 10vh);
+  grid-template-rows: repeat(7, 10vh);
   grid-gap: 5px;
   padding: 110px auto;
   margin-bottom: 20px;
