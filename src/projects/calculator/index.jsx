@@ -7,7 +7,7 @@ const displayColor = '#ffffff';
 const Calculator = () => {
   return (
     <div className={Styles.container} >
-      <div className={Styles.calcTitle}>imMaculator</div>
+      <div className={Styles.calcTitle}>Little Bean Counter</div>
       <div className={Styles.calcWrapper}>
         <Display bgColor={displayBGColor} textColor={displayColor} />
       </div>

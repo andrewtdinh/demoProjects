@@ -20,7 +20,7 @@ body {
 
 .calcTitle {
   display: flex;
-  width: 85%;
+  width: 43vh;
   justify-content: flex-end;
   font-style: italic;
 }
