@@ -1,9 +1,34 @@
 const Buttons = [
   {
-    label: 'AC',
-    color: 'rgba(84,103,112,.83)',
-    bgColor: '#DCDCDC',
+    name: "Clear Display Operator",
+    label: "CLEAR",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
   },
-];
+  {
+    name: "Sign Toggle Operator",
+    label: "+ / -",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+  {
+    name: "Percent Of Operator",
+    label: "% of",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+  {
+    name: "Division Operator",
+    label: "U+00F7",
+    color: "#FFF",
+    bgColor: "#F6872C",
+  },
+  {
+    name: "Number One Button",
+    label: "1",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+]
 
 export default Buttons;
