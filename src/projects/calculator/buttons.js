@@ -95,6 +95,30 @@ const Buttons = [
     color: "#FFF",
     bgColor: "#F6872C",
   },
+  {
+    name: "Number Seven Button",
+    label: "7",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+  {
+    name: "Number Eight Button",
+    label: "8",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+  {
+    name: "Number Nine Button",
+    label: "9",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+  {
+    name: "Addition Operator",
+    label: "+",
+    color: "#FFF",
+    bgColor: "#F6872C",
+  },
 ]
 
 export default Buttons;
