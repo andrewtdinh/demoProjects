@@ -119,6 +119,25 @@ const Buttons = [
     color: "#FFF",
     bgColor: "#F6872C",
   },
+  {
+    name: "Number 0 Button",
+    label: "0",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+    rowSpan: 2,
+  },
+  {
+    name: "Period Button",
+    label: ".",
+    color: "rgba(84,103,112,.83)",
+    bgColor: "#DCDCDC",
+  },
+  {
+    name: "Equal Operator",
+    label: "=",
+    color: "#FFF",
+    bgColor: "#F6872C",
+  },
 ]
 
 export default Buttons;
