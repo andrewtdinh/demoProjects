@@ -32,20 +32,34 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' 
 }
 
 const renderButtons = () => {
-  console.log({buttons})
+  return buttons.map(buttonProps => {
+    const { onClick, label, color, bgColor, rowSpan, name } = buttonProps;
+    const span = rowSpan ? `span ${rowSpan}` : 'span 1';
+    return (
+      <Button 
+        onClick={onClick}
+        span={span}
+        name={name}
+        label={label}
+      />
+    )
+  })
 }
 
 const Button = (props) => {
-  const { onClick, label, color, bgColor, span } = props;
+  const { onClick, label, color, bgColor, span, name } = props;
 
   return (
     <button 
-      onClick={onClick}
+      onClick={onClick ? onClick : () => {}}
       style={{
         gridColumn: `span ${span}`,
         color: color,
-        backgroundColor: bgColor
+        backgroundColor: bgColor,
+        
       }}
+      key={name}
+      aria-label={name}
     >
       {label}
     </button>
