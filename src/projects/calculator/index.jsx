@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './index.module.css';
+import buttons from './buttons';
 
 const displayBGColor = '#918987';
 const displayColor = '#ffffff';
@@ -10,6 +11,7 @@ const Calculator = () => {
       <div className={Styles.calcTitle}>Little Bean Counter</div>
       <div className={Styles.calcWrapper}>
         <Display bgColor={displayBGColor} textColor={displayColor} />
+        {renderButtons()}
       </div>
     </div>
   )
@@ -29,8 +31,8 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' 
   )
 }
 
-const Buttons = () => {
-
+const renderButtons = () => {
+  console.log({buttons})
 }
 
 const Button = (props) => {
