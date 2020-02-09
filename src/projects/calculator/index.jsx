@@ -53,10 +53,9 @@ const Button = (props) => {
     <button 
       onClick={onClick ? onClick : () => {}}
       style={{
-        gridColumn: `span ${span}`,
+        gridColumn: span,
         color: color,
         backgroundColor: bgColor,
-        
       }}
       key={name}
       aria-label={name}
