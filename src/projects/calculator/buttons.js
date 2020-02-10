@@ -7,13 +7,13 @@ const Buttons = [
   },
   {
     name: "Save To Memory Button",
-    label: "MEM+",
+    label: "MEM IN",
     color: "rgba(84,103,112,.83)",
     bgColor: "blue",
   },
   {
     name: "Get Next Value To Memory Button",
-    label: "MEM-",
+    label: "MEM OUT",
     color: "rgba(84,103,112,.83)",
     bgColor: "blue",
   },
