@@ -1,9 +1,9 @@
 import React from 'react';
 import Styles from './index.module.css';
 import { 
-  buttons, 
+  getButtons, 
   displayColor, 
-  displayColor, 
+  displayBGColor, 
 } from './buttons';
 
 const Calculator = () => {
@@ -33,9 +33,10 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' 
 }
 
 const renderButtons = () => {
-  return buttons.map(buttonProps => {
+  return getButtons().map((buttonProps, idx) => {
     const { onClick, label, color, bgColor, rowSpan, name } = buttonProps;
     const span = rowSpan ? `span ${rowSpan}` : 'span 1';
+    console.log({idx, bgColor})
     return (
       <Button 
         onClick={onClick}
