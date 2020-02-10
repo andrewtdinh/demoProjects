@@ -40,19 +40,19 @@ export const buttons = [
     name: "Sign Toggle Operator",
     label: "+ / -",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Percent Of Operator",
     label: "% of",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Division Operator",
     label: "÷",
     color: "#FFF",
-    bgColor: "#F6872C",
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Number One Button",
@@ -76,7 +76,7 @@ export const buttons = [
     name: "Multiplication Operator",
     label: "X",
     color: "#FFF",
-    bgColor: "#F6872C",
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Number Four Button",
@@ -100,7 +100,7 @@ export const buttons = [
     name: "Subtraction Operator",
     label: "-",
     color: "#FFF",
-    bgColor: "#F6872C",
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Number Seven Button",
@@ -124,7 +124,7 @@ export const buttons = [
     name: "Addition Operator",
     label: "+",
     color: "#FFF",
-    bgColor: "#F6872C",
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Number 0 Button",
@@ -143,6 +143,6 @@ export const buttons = [
     name: "Equal Operator",
     label: "=",
     color: "#FFF",
-    bgColor: "#F6872C",
+    bgColor: purpleOperatorColor,
   },
 ]
