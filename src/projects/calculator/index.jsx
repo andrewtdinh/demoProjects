@@ -1,6 +1,10 @@
 import React from 'react';
 import Styles from './index.module.css';
-import { buttons, displayColor, displayColor } from './buttons';
+import { 
+  buttons, 
+  displayColor, 
+  displayColor, 
+} from './buttons';
 
 const Calculator = () => {
   return (

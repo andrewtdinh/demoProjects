@@ -1,5 +1,9 @@
 export const displayBGColor = "#918987";
-export const displayColor = "#ffffff"
+export const displayColor = "#ffffff";
+export const orangeOperatorColor = "f2823a";
+export const blueButtonColor = "4daecf";
+export const purpleOperatorColor = "7328b6";
+export const yellowOperatorColor = "ffff2d";
 
 export const buttons = [
   {
