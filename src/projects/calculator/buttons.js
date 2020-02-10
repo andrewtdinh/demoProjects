@@ -10,7 +10,7 @@ export const buttons = [
     name: "Clear Display Operator",
     label: "CLEAR",
     color: "#FFF",
-    bgColor: orangeOperatorColor,
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Save To Memory Button",
@@ -34,25 +34,25 @@ export const buttons = [
     name: "Delete Last Character Button",
     label: "⌫",
     color: "#FFF",
-    bgColor: orangeOperatorColor,
+    bgColor: purpleOperatorColor,
   },
   {
     name: "Sign Toggle Operator",
     label: "+ / -",
     color: "rgba(84,103,112,.83)",
-    bgColor: purpleOperatorColor,
+    bgColor: orangeOperatorColor,
   },
   {
     name: "Percent Of Operator",
     label: "% of",
     color: "rgba(84,103,112,.83)",
-    bgColor: purpleOperatorColor,
+    bgColor: orangeOperatorColor,
   },
   {
     name: "Division Operator",
     label: "÷",
     color: "#FFF",
-    bgColor: purpleOperatorColor,
+    bgColor: orangeOperatorColor,
   },
   {
     name: "Number One Button",
@@ -76,7 +76,7 @@ export const buttons = [
     name: "Multiplication Operator",
     label: "X",
     color: "#FFF",
-    bgColor: purpleOperatorColor,
+    bgColor: orangeOperatorColor,
   },
   {
     name: "Number Four Button",
@@ -100,7 +100,7 @@ export const buttons = [
     name: "Subtraction Operator",
     label: "-",
     color: "#FFF",
-    bgColor: purpleOperatorColor,
+    bgColor: orangeOperatorColor,
   },
   {
     name: "Number Seven Button",
@@ -124,7 +124,7 @@ export const buttons = [
     name: "Addition Operator",
     label: "+",
     color: "#FFF",
-    bgColor: purpleOperatorColor,
+    bgColor: orangeOperatorColor,
   },
   {
     name: "Number 0 Button",
@@ -143,6 +143,6 @@ export const buttons = [
     name: "Equal Operator",
     label: "=",
     color: "#FFF",
-    bgColor: purpleOperatorColor,
+    bgColor: orangeOperatorColor,
   },
 ]
