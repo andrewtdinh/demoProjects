@@ -1,17 +1,17 @@
 export const whiteText = "#FFFFFF";
 export const displayBGColor = "#918987";
 export const displayColor = whiteText;
-export const orangeOperatorColor = "#f2823a";
+export const orangeOperatorColor = "#f5993b"
 export const blueButtonColor = "#4daecf";
-export const purpleOperatorColor = "#7328b6";
-export const yellowOperatorColor = "#ffff2d";
+export const redOperatorColor = "#e0301e"
+export const yellowOperatorColor = "#fffc9a"
 
 export const buttons = [
   {
     name: "Clear Display Operator",
     label: "CLEAR",
     color: whiteText,
-    bgColor: purpleOperatorColor,
+    bgColor: redOperatorColor,
   },
   {
     name: "Save To Memory Button",
@@ -35,7 +35,7 @@ export const buttons = [
     name: "Delete Last Character Button",
     label: "⌫",
     color: whiteText,
-    bgColor: purpleOperatorColor,
+    bgColor: redOperatorColor,
   },
   {
     name: "Sign Toggle Operator",
@@ -59,19 +59,19 @@ export const buttons = [
     name: "Number One Button",
     label: "1",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Number Two Button",
     label: "2",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Number Three Button",
     label: "3",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Multiplication Operator",
@@ -83,19 +83,19 @@ export const buttons = [
     name: "Number Four Button",
     label: "4",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Number Five Button",
     label: "5",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Number Six Button",
     label: "6",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Subtraction Operator",
@@ -107,19 +107,19 @@ export const buttons = [
     name: "Number Seven Button",
     label: "7",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Number Eight Button",
     label: "8",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Number Nine Button",
     label: "9",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Addition Operator",
@@ -131,14 +131,14 @@ export const buttons = [
     name: "Number 0 Button",
     label: "0",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
     rowSpan: 2,
   },
   {
     name: "Period Button",
     label: ".",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: blueButtonColor,
   },
   {
     name: "Equal Operator",
