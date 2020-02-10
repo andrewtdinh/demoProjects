@@ -1,5 +1,6 @@
+export const whiteText = "#FFFFFF";
 export const displayBGColor = "#918987";
-export const displayColor = "#ffffff";
+export const displayColor = whiteText;
 export const orangeOperatorColor = "#f2823a";
 export const blueButtonColor = "#4daecf";
 export const purpleOperatorColor = "#7328b6";
@@ -9,7 +10,7 @@ export const buttons = [
   {
     name: "Clear Display Operator",
     label: "CLEAR",
-    color: "#FFF",
+    color: whiteText,
     bgColor: purpleOperatorColor,
   },
   {
@@ -33,19 +34,19 @@ export const buttons = [
   {
     name: "Delete Last Character Button",
     label: "⌫",
-    color: "#FFF",
+    color: whiteText,
     bgColor: purpleOperatorColor,
   },
   {
     name: "Sign Toggle Operator",
     label: "+ / -",
-    color: "rgba(84,103,112,.83)",
+    color: whiteText,
     bgColor: orangeOperatorColor,
   },
   {
     name: "Percent Of Operator",
     label: "% of",
-    color: "rgba(84,103,112,.83)",
+    color: whiteText,
     bgColor: orangeOperatorColor,
   },
   {
