@@ -16,19 +16,19 @@ export const buttons = [
     name: "Save To Memory Button",
     label: "MEM IN",
     color: "rgba(84,103,112,.83)",
-    bgColor: "blue",
+    bgColor: yellowOperatorColor,
   },
   {
     name: "Get Next Value To Memory Button",
     label: "MEM OUT",
     color: "rgba(84,103,112,.83)",
-    bgColor: "blue",
+    bgColor: yellowOperatorColor,
   },
   {
     name: "Last Result",
     label: "PREV",
     color: "rgba(84,103,112,.83)",
-    bgColor: "#DCDCDC",
+    bgColor: yellowOperatorColor,
   },
   {
     name: "Delete Last Character Button",
