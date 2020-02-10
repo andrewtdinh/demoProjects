@@ -41,6 +41,7 @@ const renderButtons = () => {
         span={span}
         name={name}
         label={label}
+        color={color}
       />
     )
   })
