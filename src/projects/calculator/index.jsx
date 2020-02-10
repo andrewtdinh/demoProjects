@@ -42,6 +42,7 @@ const renderButtons = () => {
         name={name}
         label={label}
         color={color}
+        bgColor={bgColor}
       />
     )
   })
