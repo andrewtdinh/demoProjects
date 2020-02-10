@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './index.module.css';
 import { 
-  getButtons, 
+  buttons, 
   displayColor, 
   displayBGColor, 
 } from './buttons';
@@ -33,10 +33,9 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' 
 }
 
 const renderButtons = () => {
-  return getButtons().map((buttonProps, idx) => {
+  return buttons.map(buttonProps => {
     const { onClick, label, color, bgColor, rowSpan, name } = buttonProps;
     const span = rowSpan ? `span ${rowSpan}` : 'span 1';
-    console.log({idx, bgColor})
     return (
       <Button 
         onClick={onClick}
