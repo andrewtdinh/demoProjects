@@ -1,4 +1,7 @@
-const Buttons = [
+export const displayBGColor = "#918987";
+export const displayColor = "#ffffff"
+
+export const buttons = [
   {
     name: "Clear Display Operator",
     label: "CLEAR",
@@ -139,5 +142,3 @@ const Buttons = [
     bgColor: "#F6872C",
   },
 ]
-
-export default Buttons;

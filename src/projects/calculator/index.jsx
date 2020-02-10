@@ -1,9 +1,6 @@
 import React from 'react';
 import Styles from './index.module.css';
-import buttons from './buttons';
-
-const displayBGColor = '#918987';
-const displayColor = '#ffffff';
+import { buttons, displayColor, displayColor } from './buttons';
 
 const Calculator = () => {
   return (
