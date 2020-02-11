@@ -36,6 +36,7 @@ const renderButtons = () => {
   return buttons.map(buttonProps => {
     const { onClick, label, color, bgColor, rowSpan, name, type } = buttonProps;
     const span = rowSpan ? `span ${rowSpan}` : 'span 1';
+
     return (
       <Button 
         onClick={onClick}
@@ -44,14 +45,17 @@ const renderButtons = () => {
         label={label}
         color={color}
         bgColor={bgColor}
-        className={type}
+        type={type}
       />
     )
   })
 }
 
 const Button = (props) => {
-  const { onClick, label, color, bgColor, span, name, className } = props;
+  const { onClick, label, color, bgColor, span, name, type } = props;
+  const fontSize = type === 'blue-button' ? 
+    '3rem' : 
+    type === 'orange-operator-button' ? '1.3rem' : '1.1rem'
 
   return (
     <button 
@@ -60,10 +64,10 @@ const Button = (props) => {
         gridColumn: span,
         color: color,
         backgroundColor: bgColor,
+        fontSize: fontSize
       }}
       key={name}
       aria-label={name}
-      className={className}
     >
       {label}
     </button>

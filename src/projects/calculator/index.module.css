@@ -51,3 +51,8 @@ body {
   margin-right: 3px;
   font-size: 24px;
 }
+
+.blue-button {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+}
