@@ -55,7 +55,7 @@ const Button = (props) => {
   const { onClick, label, color, bgColor, span, name, type } = props;
   const fontSize = type === 'blue-button' ? 
     '3rem' : 
-    type === 'orange-operator-button' ? '1.3rem' : '1.1rem'
+    type === 'orange-operator-button' ? '1.4rem' : '1rem'
 
   return (
     <button 
@@ -64,6 +64,7 @@ const Button = (props) => {
         gridColumn: span,
         color: color,
         backgroundColor: bgColor,
+        fontWeight: 600,
         fontSize: fontSize
       }}
       key={name}
