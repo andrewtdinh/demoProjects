@@ -16,14 +16,14 @@ export const buttons = [
   },
   {
     name: "Save To Memory Button",
-    label: "MEM +",
+    label: "MEM＋",
     color: "rgba(84,103,112,.83)",
     bgColor: yellowOperatorColor,
     type: "yellow-operator-button",
   },
   {
     name: "Get Next Value To Memory Button",
-    label: "MEM -",
+    label: "MEM–",
     color: "rgba(84,103,112,.83)",
     bgColor: yellowOperatorColor,
     type: "yellow-operator-button",
@@ -44,7 +44,7 @@ export const buttons = [
   },
   {
     name: "Sign Toggle Operator",
-    label: "+ / -",
+    label: "＋ / –",
     color: whiteText,
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
@@ -114,7 +114,7 @@ export const buttons = [
   },
   {
     name: "Subtraction Operator",
-    label: "-",
+    label: "–",
     color: "#FFF",
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
