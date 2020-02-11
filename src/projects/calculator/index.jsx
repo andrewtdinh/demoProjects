@@ -34,7 +34,7 @@ const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' 
 
 const renderButtons = () => {
   return buttons.map(buttonProps => {
-    const { onClick, label, color, bgColor, rowSpan, name } = buttonProps;
+    const { onClick, label, color, bgColor, rowSpan, name, type } = buttonProps;
     const span = rowSpan ? `span ${rowSpan}` : 'span 1';
     return (
       <Button 
@@ -44,13 +44,14 @@ const renderButtons = () => {
         label={label}
         color={color}
         bgColor={bgColor}
+        className={type}
       />
     )
   })
 }
 
 const Button = (props) => {
-  const { onClick, label, color, bgColor, span, name } = props;
+  const { onClick, label, color, bgColor, span, name, className } = props;
 
   return (
     <button 
@@ -62,6 +63,7 @@ const Button = (props) => {
       }}
       key={name}
       aria-label={name}
+      className={className}
     >
       {label}
     </button>
