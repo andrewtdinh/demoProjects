@@ -55,7 +55,7 @@ const Button = (props) => {
   const { onClick, label, color, bgColor, span, name, type } = props;
   const fontSize = type === 'blue-button' ? 
     '3rem' : 
-    type === 'orange-operator-button' ? '1.4rem' : '1rem'
+    type === 'orange-operator-button' ? '1.4rem' : '1.1rem'
 
   return (
     <button 

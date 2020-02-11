@@ -16,14 +16,14 @@ export const buttons = [
   },
   {
     name: "Save To Memory Button",
-    label: "MEM IN",
+    label: "MEM +",
     color: "rgba(84,103,112,.83)",
     bgColor: yellowOperatorColor,
     type: "yellow-operator-button",
   },
   {
     name: "Get Next Value To Memory Button",
-    label: "MEM OUT",
+    label: "MEM -",
     color: "rgba(84,103,112,.83)",
     bgColor: yellowOperatorColor,
     type: "yellow-operator-button",
