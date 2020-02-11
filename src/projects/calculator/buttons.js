@@ -2,7 +2,7 @@ export const whiteText = "#FFFFFF";
 export const displayBGColor = "#918987";
 export const displayColor = whiteText;
 export const orangeOperatorColor = "#f5993b"
-export const blueButtonColor = "#4daecf";
+export const blueButtonColor = "#9dc2d4"
 export const redOperatorColor = "#e0301e"
 export const yellowOperatorColor = "#fffc9a"
 
