@@ -7,6 +7,24 @@ import {
 } from './buttons';
 
 const Calculator = () => {
+  const Display = ({
+    bgColor=displayBGColor,
+    textColor=displayColor,
+    strValue="0",
+  }) => {
+    return (
+      <div
+        className={Styles.displayWrapper}
+        style={{
+          backgroundColor: bgColor,
+          color: textColor,
+        }}
+      >
+        <div className={Styles.displayWindow}>{strValue}</div>
+      </div>
+    )
+  }
+
   return (
     <div className={Styles.container} >
       <div className={Styles.calcTitle}>Little Bean Counter</div>
@@ -18,19 +36,7 @@ const Calculator = () => {
   )
 }
 
-const Display = ({ bgColor=displayBGColor, textColor=displayColor, strValue='0' }) => {
-  return (
-    <div
-      className={Styles.displayWrapper}
-      style={{
-        backgroundColor: bgColor,
-        color: displayColor,
-      }}
-    >
-      <div className={Styles.displayWindow}>{strValue}</div>
-    </div>
-  )
-}
+
 
 const renderButtons = () => {
   return buttons.map(buttonProps => {
