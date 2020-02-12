@@ -65,7 +65,8 @@ const Button = (props) => {
         color: color,
         backgroundColor: bgColor,
         fontWeight: 600,
-        fontSize: fontSize
+        fontSize: fontSize,
+        borderRadius: '7px'
       }}
       key={name}
       aria-label={name}
