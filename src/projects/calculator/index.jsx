@@ -35,6 +35,33 @@ const Calculator = () => {
     )
   }
 
+  const renderButtons = () => {
+    return buttons.map(buttonProps => {
+      const {
+        onClick,
+        label,
+        color,
+        bgColor,
+        rowSpan,
+        name,
+        type,
+      } = buttonProps
+      const span = rowSpan ? `span ${rowSpan}` : "span 1"
+
+      return (
+        <Button
+          onClick={onClick}
+          span={span}
+          name={name}
+          label={label}
+          color={color}
+          bgColor={bgColor}
+          type={type}
+        />
+      )
+    })
+  }
+
   return (
     <div className={Styles.container} >
       <div className={Styles.calcTitle}>Little Bean Counter</div>
@@ -50,26 +77,6 @@ const Calculator = () => {
   )
 }
 
-
-
-const renderButtons = () => {
-  return buttons.map(buttonProps => {
-    const { onClick, label, color, bgColor, rowSpan, name, type } = buttonProps;
-    const span = rowSpan ? `span ${rowSpan}` : 'span 1';
-
-    return (
-      <Button 
-        onClick={onClick}
-        span={span}
-        name={name}
-        label={label}
-        color={color}
-        bgColor={bgColor}
-        type={type}
-      />
-    )
-  })
-}
 
 const Button = (props) => {
   const { onClick, label, color, bgColor, span, name, type } = props;
