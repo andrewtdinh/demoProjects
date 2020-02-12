@@ -44,7 +44,7 @@ export const buttons = [
   },
   {
     name: "Sign Toggle Operator",
-    label: "＋ / –",
+    label: "±",
     color: whiteText,
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
