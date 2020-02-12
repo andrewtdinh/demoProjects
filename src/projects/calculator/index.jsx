@@ -15,6 +15,8 @@ const Calculator = () => {
     operation: null
   }
 
+  const [ calcState, setCalcState ] = useState(initialState);
+
   const Display = ({
     bgColor=displayBGColor,
     textColor=displayColor,
@@ -37,7 +39,11 @@ const Calculator = () => {
     <div className={Styles.container} >
       <div className={Styles.calcTitle}>Little Bean Counter</div>
       <div className={Styles.calcWrapper}>
-        <Display bgColor={displayBGColor} textColor={displayColor} />
+        <Display 
+          bgColor={displayBGColor} 
+          textColor={displayColor}
+          displayStr={calcState.displayStr}
+        />
         {renderButtons()}
       </div>
     </div>
