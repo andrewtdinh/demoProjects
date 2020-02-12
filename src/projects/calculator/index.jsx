@@ -38,11 +38,9 @@ const Calculator = () => {
   const Button = props => {
     const { onClick, label, color, bgColor, span, name, type } = props
     const fontSize =
-      type === "blue-button"
-        ? "3rem"
-        : type === "orange-operator-button"
-        ? "1.3rem"
-        : "0.9rem"
+      type === "blue-button" ? 
+        "3rem" : 
+        type === "orange-operator-button" ? "1.3rem" : "0.9rem"
 
     return (
       <button
