@@ -9,14 +9,14 @@ export const yellowOperatorColor = "#fffc9a"
 export const buttons = [
   {
     name: "Clear Display Operator",
-    label: "CLEAR",
+    label: "CLR",
     color: whiteText,
     bgColor: redOperatorColor,
     type: "red-operator-button",
   },
   {
     name: "Save To Memory Button",
-    label: "MEM＋",
+    label: "MEM+",
     color: "rgba(84,103,112,.83)",
     bgColor: yellowOperatorColor,
     type: "yellow-operator-button",
