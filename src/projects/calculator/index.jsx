@@ -18,7 +18,7 @@ const Calculator = () => {
   const Display = ({
     bgColor=displayBGColor,
     textColor=displayColor,
-    strValue="0",
+    displayStr="0",
   }) => {
     return (
       <div
@@ -28,7 +28,7 @@ const Calculator = () => {
           color: textColor,
         }}
       >
-        <div className={Styles.displayWindow}>{strValue}</div>
+        <div className={Styles.displayWindow}>{displayStr}</div>
       </div>
     )
   }
