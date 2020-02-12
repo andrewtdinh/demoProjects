@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styles from './index.module.css';
 import { 
   buttons, 
@@ -7,6 +7,14 @@ import {
 } from './buttons';
 
 const Calculator = () => {
+  const initialState = {
+    displayStr: '0',
+    operand1: null,
+    operand2: null,
+    prevResult: null,
+    operation: null
+  }
+
   const Display = ({
     bgColor=displayBGColor,
     textColor=displayColor,
