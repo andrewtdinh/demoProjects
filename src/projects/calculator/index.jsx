@@ -35,8 +35,12 @@ const Calculator = () => {
     )
   }
 
+  const updateDisplay = () => {
+
+  }
+
   const Button = props => {
-    const { onClick, label, color, bgColor, span, name, type } = props
+    const { onClick, label, color, bgColor, span, name, type, value } = props
     const fontSize =
       type === "blue-button" ? 
         "3rem" : 
@@ -55,6 +59,7 @@ const Calculator = () => {
         }}
         key={name}
         aria-label={name}
+        value={value ? value : null}
       >
         {label}
       </button>
@@ -71,6 +76,7 @@ const Calculator = () => {
         rowSpan,
         name,
         type,
+        value,
       } = buttonProps
       const span = rowSpan ? `span ${rowSpan}` : "span 1"
 
@@ -83,6 +89,7 @@ const Calculator = () => {
           color={color}
           bgColor={bgColor}
           type={type}
+          value={value}
         />
       )
     })
