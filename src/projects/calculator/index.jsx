@@ -101,11 +101,15 @@ const Calculator = () => {
         value,
       } = buttonProps
       const span = rowSpan ? `span ${rowSpan}` : "span 1";
-      const onClick = type === 'blue-button' ? onNumbersClick : null;
+      const onClickFn = type === 'blue-button' ? 
+        onNumbersClick : 
+        type === 'clear-button' ? 
+          onClearBtnClick:
+          null;
 
       return (
         <Button
-          onClick={onClick}
+          onClick={onClickFn}
           span={span}
           name={name}
           label={label}

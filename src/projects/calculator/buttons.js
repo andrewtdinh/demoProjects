@@ -12,7 +12,7 @@ export const buttons = [
            label: "CLR",
            color: whiteText,
            bgColor: redOperatorColor,
-           type: "red-operator-button",
+           type: "clear-button",
          },
          {
            name: "Save To Memory Button",
@@ -40,7 +40,7 @@ export const buttons = [
            label: "⌫",
            color: whiteText,
            bgColor: redOperatorColor,
-           type: "red-operator-button",
+           type: "delete-button",
          },
          {
            name: "Sign Toggle Operator",
