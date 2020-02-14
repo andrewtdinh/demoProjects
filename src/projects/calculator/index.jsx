@@ -57,6 +57,11 @@ const Calculator = () => {
     }
   }
 
+  const onClearBtnClick = (e) => {
+    e.preventDefault();
+    updateDisplay('0')
+  }
+
   const Button = props => {
     const { onClick, label, color, bgColor, span, name, type, value } = props
     const fontSize =
