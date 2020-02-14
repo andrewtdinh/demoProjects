@@ -114,7 +114,9 @@ const Calculator = () => {
         onNumbersClick : 
         type === 'clear-button' ? 
           onClearBtnClick :
-          null;
+          type === 'delete-button' ?
+            onDeleteBtnClick :
+            null;
 
       return (
         <Button
