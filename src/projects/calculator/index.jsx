@@ -47,7 +47,7 @@ const Calculator = () => {
     const buttonValue = e.target.value;
 
     e.preventDefault();
-    console.log({e})
+    console.log(e.target.value)
   }
 
   const Button = props => {
@@ -80,7 +80,6 @@ const Calculator = () => {
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
-        onClick,
         label,
         color,
         bgColor,
@@ -89,7 +88,8 @@ const Calculator = () => {
         type,
         value,
       } = buttonProps
-      const span = rowSpan ? `span ${rowSpan}` : "span 1"
+      const span = rowSpan ? `span ${rowSpan}` : "span 1";
+      const onClick = type === 'blue-button' ? onNumbersClick : null;
 
       return (
         <Button
