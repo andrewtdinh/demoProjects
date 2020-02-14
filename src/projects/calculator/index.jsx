@@ -39,6 +39,17 @@ const Calculator = () => {
     setCalcState({ ...calcState, displayStr: newDisplayStr})
   }
 
+  /**
+   * 
+   * onNumbersClick is activated when user click on numbers or dot (.) buttons
+   */
+  const onNumbersClick = (e) => {
+    const buttonValue = e.target.value;
+
+    e.preventDefault();
+    console.log({e})
+  }
+
   const Button = props => {
     const { onClick, label, color, bgColor, span, name, type, value } = props
     const fontSize =
