@@ -35,8 +35,8 @@ const Calculator = () => {
     )
   }
 
-  const updateDisplay = () => {
-
+  const updateDisplay = (newDisplayStr) => {
+    setCalcState({ ...calcState, displayStr: newDisplayStr})
   }
 
   const Button = props => {
