@@ -67,8 +67,8 @@ const Calculator = () => {
     const previousDisplayStrLen = previousDisplayStr.length;
 
     e.preventDefault();
-    previousDisplayStr && previousDisplayStrLen === 1 && updateDisplay('0') || 
-    previousDisplayStr && previousDisplayStrLen > 1 && updateDisplay(previousDisplayStr.slice(0, previousDisplayStrLen - 1))
+    (previousDisplayStr && previousDisplayStrLen === 1 && updateDisplay('0')) || 
+    (previousDisplayStr && previousDisplayStrLen > 1 && updateDisplay(previousDisplayStr.slice(0, previousDisplayStrLen - 1)))
   }
 
   const Button = props => {
@@ -128,6 +128,7 @@ const Calculator = () => {
           bgColor={bgColor}
           type={type}
           value={value}
+          key={name}
         />
       )
     })
