@@ -50,7 +50,11 @@ const Calculator = () => {
     e.preventDefault();
     if (buttonValue === '.' && previousDisplayStr.includes('.')) {return;}
     if (buttonValue === '0' && previousDisplayStr === '0') {return;}
-    updateDisplay(previousDisplayStr + buttonValue);
+    if (previousDisplayStr === 0 && '123456789'.includes(buttonValue)) {
+      updateDisplay(buttonValue);
+    } else {
+      updateDisplay(previousDisplayStr + buttonValue);
+    }
   }
 
   const Button = props => {
