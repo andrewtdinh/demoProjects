@@ -45,9 +45,12 @@ const Calculator = () => {
    */
   const onNumbersClick = (e) => {
     const buttonValue = e.target.value;
+    const { displayStr: previousDisplayStr } = calcState;
 
     e.preventDefault();
-    console.log(e.target.value)
+    if (buttonValue === '.' && previousDisplayStr.includes('.')) {return;}
+    if (buttonValue === '0' && previousDisplayStr === '0') {return;}
+    updateDisplay(previousDisplayStr + buttonValue);
   }
 
   const Button = props => {
