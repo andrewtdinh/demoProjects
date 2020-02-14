@@ -46,7 +46,7 @@ const Calculator = () => {
   const onNumbersClick = (e) => {
     const buttonValue = e.target.value;
     const { displayStr: previousDisplayStr } = calcState;
-
+    
     e.preventDefault();
     if (buttonValue === '.' && previousDisplayStr.includes('.')) {return;}
     if (buttonValue === '0' && previousDisplayStr === '0') {return;}
@@ -56,10 +56,19 @@ const Calculator = () => {
       updateDisplay(previousDisplayStr + buttonValue);
     }
   }
-
+  
   const onClearBtnClick = (e) => {
     e.preventDefault();
     updateDisplay('0')
+  }
+  
+  const onDeleteBtnClick = (e) => {
+    const { displayStr: previousDisplayStr } = calcState;
+    const previousDisplayStrLen = previousDisplayStr.length;
+
+    e.preventDefault();
+    previousDisplayStr && previousDisplayStrLen === 1 && updateDisplay('0') || 
+    previousDisplayStr && previousDisplayStrLen > 1 && updateDisplay(previousDisplayStr.slice(0, previousDisplayStrLen - 1))
   }
 
   const Button = props => {
@@ -104,7 +113,7 @@ const Calculator = () => {
       const onClickFn = type === 'blue-button' ? 
         onNumbersClick : 
         type === 'clear-button' ? 
-          onClearBtnClick:
+          onClearBtnClick :
           null;
 
       return (
