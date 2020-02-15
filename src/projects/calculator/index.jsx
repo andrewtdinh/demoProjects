@@ -71,6 +71,14 @@ const Calculator = () => {
     (previousDisplayStr && previousDisplayStrLen > 1 && updateDisplay(previousDisplayStr.slice(0, previousDisplayStrLen - 1)))
   }
 
+  const onSignBtnClick = (e) => {
+    const { displayStr: previousDisplayStr } = calcState;
+    const isDisplayStrNegative = previousDisplayStr.includes('-');
+
+    e.preventDefault();
+    updateDisplay(isDisplayStrNegative ? previousDisplayStr.slice(1) : '-' + previousDisplayStr);
+  }
+
   const Button = props => {
     const { onClick, label, color, bgColor, span, name, type, value } = props
     const fontSize =
