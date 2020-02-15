@@ -106,6 +106,9 @@ const Calculator = () => {
     )
   }
 
+  // TODO: Before converting the display string to a number, consider strings that end in periods,
+  // like '235.', which should be convert to 235.0
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -118,13 +121,16 @@ const Calculator = () => {
         value,
       } = buttonProps
       const span = rowSpan ? `span ${rowSpan}` : "span 1";
-      const onClickFn = type === 'blue-button' ? 
-        onNumbersClick : 
-        type === 'clear-button' ? 
-          onClearBtnClick :
-          type === 'delete-button' ?
-            onDeleteBtnClick :
-            null;
+      const onClickFn =
+        type === "blue-button"
+          ? onNumbersClick
+          : type === "clear-button"
+          ? onClearBtnClick
+          : type === "delete-button"
+          ? onDeleteBtnClick
+          : label === "±" 
+          ? onSignBtnClick
+          : null;
 
       return (
         <Button
