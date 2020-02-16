@@ -28,12 +28,14 @@ body {
 .memoryBar {
   display: flex;
   width: 43vh;
+  height: 3vh;
   justify-content: flex-end;
 }
 
 .resultsBar {
   display: flex;
   width: 43vh;
+  height: 3vh;
   justify-content: flex-end;
 }
 
