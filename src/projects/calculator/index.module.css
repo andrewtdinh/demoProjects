@@ -30,6 +30,7 @@ body {
   width: 43vh;
   height: 3vh;
   justify-content: flex-end;
+  margin-bottom: .5vh;
 }
 
 .resultsBar {
@@ -37,6 +38,7 @@ body {
   width: 43vh;
   height: 3vh;
   justify-content: flex-end;
+  margin-bottom: .5vh;
 }
 
 .calcWrapper {
