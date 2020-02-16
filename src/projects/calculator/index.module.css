@@ -25,6 +25,14 @@ body {
   font-style: italic;
 }
 
+.memoryBar {
+  display: flex;
+  width: 43vh;
+  justify-content: flex-end;
+}
+
+
+
 .calcWrapper {
   display: grid;
   height: 67vh;
