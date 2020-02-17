@@ -3,7 +3,9 @@ import Styles from './index.module.css';
 import { 
   buttons, 
   displayColor, 
-  displayBGColor, 
+  displayBGColor,
+  memoryBarBGColor,
+  resultsBarBGColor,
 } from './buttons';
 
 const Calculator = () => {
@@ -31,6 +33,23 @@ const Calculator = () => {
         }}
       >
         <div className={Styles.displayWindow}>{displayStr}</div>
+      </div>
+    )
+  }
+  const MemoryBar = ({
+    bgColor=memoryBarBGColor,
+    textColor=displayColor,
+    memories=[]
+  }) => {
+    return (
+      <div
+        className={Styles.memoryBar}
+        style={{
+          backgroundColor: bgColor,
+          color: textColor,
+        }}
+      >
+        <div></div>
       </div>
     )
   }
