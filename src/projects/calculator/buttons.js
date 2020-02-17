@@ -1,5 +1,7 @@
 export const whiteText = "#FFFFFF";
 export const displayBGColor = "#918987";
+export const memoryBarBGColor = "#918987";
+export const resultsBarBGColor = "#918987"
 export const displayColor = whiteText;
 export const orangeOperatorColor = "#f5993b"
 export const blueButtonColor = "#9dc2d4"
