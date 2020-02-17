@@ -54,6 +54,24 @@ const Calculator = () => {
     )
   }
 
+  const ResultsBar = ({
+    bgColor=resultsBarBGColor,
+    textColor=displayColor,
+    results=[]
+  }) => {
+    return (
+      <div
+        className={Styles.resultsBarBGColor}
+        style={{
+          backgroundColor: bgColor,
+          color: textColor,
+        }}
+      >
+        <div></div>
+      </div>
+    )
+  }
+
   const updateDisplay = (newDisplayStr) => {
     setCalcState({ ...calcState, displayStr: newDisplayStr})
   }
