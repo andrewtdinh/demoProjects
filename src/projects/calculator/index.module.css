@@ -28,20 +28,19 @@ body {
 .memoryBar {
   display: flex;
   width: 43vh;
-  height: 3vh;
+  height: 4vh;
   justify-content: space-between;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  align-items: center;
+  border-radius: 3px;
 }
 
 .resultsBar {
   display: flex;
   width: 43vh;
-  height: 3vh;
+  height: 4vh;
   justify-content: flex-end;
   margin-bottom: .5vh;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-radius: 3px;
 }
 
 .calcWrapper {
