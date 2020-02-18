@@ -194,7 +194,6 @@ const Calculator = () => {
 
   return (
     <div className={Styles.container} >
-      <div className={Styles.calcTitle}>Little Bean Counter</div>
       <MemoryBar />
       <ResultsBar />
       <div className={Styles.calcWrapper}>
@@ -205,6 +204,7 @@ const Calculator = () => {
         />
         {renderButtons()}
       </div>
+      <div className={Styles.calcTitle}>Little Bean Counter</div>
     </div>
   )
 }
