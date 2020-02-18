@@ -29,7 +29,7 @@ body {
   display: flex;
   width: 43vh;
   height: 3vh;
-  justify-content: flex-end;
+  justify-content: space-between;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
