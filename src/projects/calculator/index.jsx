@@ -190,8 +190,8 @@ const Calculator = () => {
   return (
     <div className={Styles.container} >
       <div className={Styles.calcTitle}>Little Bean Counter</div>
-      <div className={Styles.memoryBar}></div>
-      <div className={Styles.resultsBar}></div>
+      <MemoryBar />
+      <ResultsBar />
       <div className={Styles.calcWrapper}>
         <Display 
           bgColor={displayBGColor} 
