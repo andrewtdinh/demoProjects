@@ -63,7 +63,7 @@ const Calculator = () => {
   }) => {
     return (
       <div
-        className={Styles.resultsBarBGColor}
+        className={Styles.resultsBar}
         style={{
           backgroundColor: bgColor,
           color: textColor,
