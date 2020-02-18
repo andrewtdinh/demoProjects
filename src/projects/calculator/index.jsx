@@ -5,7 +5,9 @@ import {
   displayColor, 
   displayBGColor,
   memoryBarBGColor,
+  memoryTextColor,
   resultsBarBGColor,
+  resultsTextColor
 } from './buttons';
 
 const Calculator = () => {
@@ -38,7 +40,7 @@ const Calculator = () => {
   }
   const MemoryBar = ({
     bgColor=memoryBarBGColor,
-    textColor=displayColor,
+    textColor=memoryTextColor,
     memories=[]
   }) => {
     return (
@@ -56,7 +58,7 @@ const Calculator = () => {
 
   const ResultsBar = ({
     bgColor=resultsBarBGColor,
-    textColor=displayColor,
+    textColor=resultsTextColor,
     results=[]
   }) => {
     return (
