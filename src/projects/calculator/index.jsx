@@ -51,7 +51,12 @@ const Calculator = () => {
           color: textColor,
         }}
       >
-        <div></div>
+        <div>Memory:</div>
+        <div className={Styles.memoryCells}>
+          {memories.map((memValue, idx) => {
+            return <div key={`${idx}:${memValue}`}>{memValue}</div>
+          })}
+        </div>
       </div>
     )
   }
