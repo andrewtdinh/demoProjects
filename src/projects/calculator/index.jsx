@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Styles from './index.module.css';
+import Button from './components/button';
 import { 
   buttons, 
   displayColor, 
