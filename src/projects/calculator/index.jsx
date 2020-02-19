@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
+import Display from './components/display';
 import { 
   buttons, 
   displayColor, 
@@ -22,23 +23,6 @@ const Calculator = () => {
 
   const [ calcState, setCalcState ] = useState(initialState);
 
-  const Display = ({
-    bgColor=displayBGColor,
-    textColor=displayColor,
-    displayStr="0",
-  }) => {
-    return (
-      <div
-        className={Styles.displayWrapper}
-        style={{
-          backgroundColor: bgColor,
-          color: textColor,
-        }}
-      >
-        <div className={Styles.displayWindow}>{displayStr}</div>
-      </div>
-    )
-  }
   const MemoryBar = ({
     bgColor=memoryBarBGColor,
     textColor=memoryTextColor,
