@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
+import MemoryBar from './components/memory';
 import { 
   buttons, 
   displayColor, 
@@ -22,29 +23,6 @@ const Calculator = () => {
   }
 
   const [ calcState, setCalcState ] = useState(initialState);
-
-  const MemoryBar = ({
-    bgColor=memoryBarBGColor,
-    textColor=memoryTextColor,
-    memories=[]
-  }) => {
-    return (
-      <div
-        className={Styles.memoryBar}
-        style={{
-          backgroundColor: bgColor,
-          color: textColor,
-        }}
-      >
-        <div>Memory:</div>
-        <div className={Styles.memoryCells}>
-          {memories.map((memValue, idx) => {
-            return <div key={`${idx}:${memValue}`}>{memValue}</div>
-          })}
-        </div>
-      </div>
-    )
-  }
 
   const ResultsBar = ({
     bgColor=resultsBarBGColor,
