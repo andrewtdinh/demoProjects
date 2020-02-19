@@ -3,6 +3,7 @@ import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
 import MemoryBar from './components/memory';
+import ResultsBar from './components/results';
 import { 
   buttons, 
   displayColor, 
@@ -23,24 +24,6 @@ const Calculator = () => {
   }
 
   const [ calcState, setCalcState ] = useState(initialState);
-
-  const ResultsBar = ({
-    bgColor=resultsBarBGColor,
-    textColor=resultsTextColor,
-    results=[]
-  }) => {
-    return (
-      <div
-        className={Styles.resultsBar}
-        style={{
-          backgroundColor: bgColor,
-          color: textColor,
-        }}
-      >
-        <div></div>
-      </div>
-    )
-  }
 
   const updateDisplay = (newDisplayStr) => {
     setCalcState({ ...calcState, displayStr: newDisplayStr})
