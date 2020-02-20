@@ -110,15 +110,13 @@ const Calculator = () => {
   return (
     <div className={Styles.container}>
       <MemoryBar />
-      <div className={Styles.buttonWrapper}>
-        <Display
-          bgColor={displayBGColor}
-          textColor={displayColor}
-          displayStr={calcState.displayStr}
-        />
-        <ResultsBar />
-        {renderButtons()}
-      </div>
+      <Display
+        bgColor={displayBGColor}
+        textColor={displayColor}
+        displayStr={calcState.displayStr}
+      />
+      <ResultsBar />
+      {renderButtons()}
       <div className={Styles.calcTitle}>Little Bean Counter</div>
     </div>
   )
