@@ -110,7 +110,7 @@ const Calculator = () => {
   return (
     <div className={Styles.container}>
       <MemoryBar />
-      <div className={Styles.calcWrapper}>
+      <div className={Styles.buttonWrapper}>
         <Display
           bgColor={displayBGColor}
           textColor={displayColor}

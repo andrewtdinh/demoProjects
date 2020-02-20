@@ -50,7 +50,7 @@ body {
   border-radius: 3px;
 }
 
-.calcWrapper {
+.buttonWrapper {
   display: grid;
   height: 67vh;
   grid-template-columns: repeat(4, 10vh);
