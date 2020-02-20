@@ -8,15 +8,26 @@ const ResultsBar = ({
   results = [],
 }) => {
   return (
-    <div
-      className={Styles.resultsBar}
-      style={{
-        backgroundColor: bgColor,
-        color: textColor,
-      }}
-    >
-      <div></div>
-    </div>
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          width: '43vh'
+        }}
+      >
+        Results:
+      </div>
+      <div
+        className={Styles.resultsBar}
+        style={{
+          backgroundColor: bgColor,
+          color: textColor,
+        }}
+      >
+        <div></div>
+      </div>
+    </>
   )
 }
 
