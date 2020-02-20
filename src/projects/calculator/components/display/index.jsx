@@ -1,3 +1,6 @@
+import React from "react"
+import { displayBGColor, displayColor } from "../buttons"
+
 const Display = ({
   bgColor = displayBGColor,
   textColor = displayColor,
