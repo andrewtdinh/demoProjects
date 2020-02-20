@@ -1,5 +1,6 @@
 import React from 'react';
-import { memoryBarBGColor, memoryTextColor } from '../buttons';
+import { memoryBarBGColor, memoryTextColor } from '../../buttons';
+import Styles from "../../index.module.css"
 
 const MemoryBar = ({
   bgColor = memoryBarBGColor,
