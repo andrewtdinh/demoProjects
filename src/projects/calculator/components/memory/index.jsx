@@ -8,30 +8,22 @@ const MemoryBar = ({
   memories = [],
 }) => {
   return (
-    <>
-      <div
-        className={Styles.memoryBar}
-        style={{
-          backgroundColor: bgColor,
-          color: textColor,
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-start",
-            width: "3vh",
-          }}
-        >
-          Mem:
-        </div>
-        <div className={Styles.memoryCells}>
-          {memories.map((memValue, idx) => {
-            return <div key={`${idx}:${memValue}`}>{memValue}</div>
-          })}
-        </div>
+    <div
+      className={Styles.memoryBar}
+      style={{
+        backgroundColor: bgColor,
+        color: textColor,
+      }}
+    >
+      <div className={Styles.memoryBarLabel} >
+        Mem:
       </div>
-    </>
+      <div className={Styles.memoryCells}>
+        {memories.map((memValue, idx) => {
+          return <div key={`${idx}:${memValue}`}>{memValue}</div>
+        })}
+      </div>
+    </div>
   )
 }
 
