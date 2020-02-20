@@ -1,5 +1,6 @@
 import React from "react"
-import { displayBGColor, displayColor } from "../buttons"
+import { displayBGColor, displayColor } from "../../buttons";
+import Styles from '../../index.module.css';
 
 const Display = ({
   bgColor = displayBGColor,
