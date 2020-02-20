@@ -1,3 +1,6 @@
+import React from "react"
+import { resultsBarBGColor, resultsTextColor } from "../buttons"
+
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
   textColor = resultsTextColor,
