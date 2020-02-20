@@ -8,10 +8,6 @@ import {
   buttons, 
   displayColor, 
   displayBGColor,
-  memoryBarBGColor,
-  memoryTextColor,
-  resultsBarBGColor,
-  resultsTextColor
 } from './buttons';
 
 const Calculator = () => {
