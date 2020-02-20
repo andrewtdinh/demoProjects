@@ -10,21 +10,21 @@ const MemoryBar = ({
   return (
     <>
       <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          width: "43vh",
-        }}
-      >
-        Memory:
-      </div>
-      <div
         className={Styles.memoryBar}
         style={{
           backgroundColor: bgColor,
           color: textColor,
         }}
       >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            width: "3vh",
+          }}
+        >
+          Mem:
+        </div>
         <div className={Styles.memoryCells}>
           {memories.map((memValue, idx) => {
             return <div key={`${idx}:${memValue}`}>{memValue}</div>
