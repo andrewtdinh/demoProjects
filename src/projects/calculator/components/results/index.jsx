@@ -1,5 +1,6 @@
 import React from "react"
-import { resultsBarBGColor, resultsTextColor } from "../buttons"
+import { resultsBarBGColor, resultsTextColor } from "../../buttons";
+import Styles from "../../index.module.css";
 
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
