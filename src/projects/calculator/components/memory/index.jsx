@@ -9,7 +9,15 @@ const MemoryBar = ({
 }) => {
   return (
     <>
-      <div>Memory:</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+          width: "43vh",
+        }}
+      >
+        Memory:
+      </div>
       <div
         className={Styles.memoryBar}
         style={{
@@ -24,7 +32,7 @@ const MemoryBar = ({
         </div>
       </div>
     </>
-  );
+  )
 }
 
 export default MemoryBar;
