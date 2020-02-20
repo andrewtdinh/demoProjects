@@ -1,3 +1,5 @@
+import React from "react";
+
 const Button = props => {
   const { onClick, label, color, bgColor, span, name, type, value } = props;
   const fontSize =
