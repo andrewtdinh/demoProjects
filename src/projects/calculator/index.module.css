@@ -31,7 +31,8 @@ body {
   height: 4vh;
   justify-content: space-between;
   align-items: center;
-  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .memoryBarLabel {
@@ -64,7 +65,6 @@ body {
   justify-content: flex-end;
   align-items: center;
   grid-column: span 4;
-  border-radius: 3px;
   text-align: right
 }
 
