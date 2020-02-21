@@ -50,6 +50,12 @@ body {
   border-radius: 3px;
 }
 
+.resultsBarLabel {
+  display: flex;
+  justify-content: flex-start;
+  width: 3vh;
+}
+
 .buttonWrapper {
   display: grid;
   height: 67vh;
