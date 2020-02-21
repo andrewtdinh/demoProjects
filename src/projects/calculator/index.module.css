@@ -53,6 +53,7 @@ body {
 .resultsBarLabel {
   display: flex;
   justify-content: flex-start;
+  align-content: center;
   width: 3vh;
 }
 
@@ -70,8 +71,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  grid-column: span 4;
-  text-align: right
+  text-align: right;
+  width: 43vh;
 }
 
 .displayWindow {

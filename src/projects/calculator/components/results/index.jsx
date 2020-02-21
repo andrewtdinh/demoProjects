@@ -15,13 +15,7 @@ const ResultsBar = ({
         color: textColor,
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          width: "43vh",
-        }}
-      >
+      <div className={Styles.resultsBarLabel}>
         Results:
       </div>
       <div></div>
