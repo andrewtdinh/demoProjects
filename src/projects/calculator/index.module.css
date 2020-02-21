@@ -47,7 +47,8 @@ body {
   height: 4vh;
   justify-content: flex-end;
   margin-bottom: .5vh;
-  border-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .resultsBarLabel {
