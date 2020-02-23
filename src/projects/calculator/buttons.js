@@ -54,16 +54,9 @@ export const buttons = [
     type: "orange-operator-button",
   },
   {
-    name: "Percent Of Operator",
-    label: "% of",
+    name: "To Percent Operator",
+    label: "➡ %",
     color: whiteText,
-    bgColor: orangeOperatorColor,
-    type: "orange-operator-button",
-  },
-  {
-    name: "Division Operator",
-    label: "÷",
-    color: "#FFF",
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
   },
@@ -90,6 +83,13 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: "3",
+  },
+  {
+    name: "Percent Of Operator",
+    label: "% of",
+    color: whiteText,
+    bgColor: orangeOperatorColor,
+    type: "orange-operator-button",
   },
   {
     name: "Multiplication Operator",
@@ -123,8 +123,15 @@ export const buttons = [
     value: "6",
   },
   {
-    name: "Subtraction Operator",
-    label: "–",
+    name: "Division Operator",
+    label: "÷",
+    color: "#FFF",
+    bgColor: orangeOperatorColor,
+    type: "orange-operator-button",
+  },
+  {
+    name: "Addition Operator",
+    label: "+",
     color: "#FFF",
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
@@ -154,8 +161,8 @@ export const buttons = [
     value: "9",
   },
   {
-    name: "Addition Operator",
-    label: "+",
+    name: "Subtraction Operator",
+    label: "–",
     color: "#FFF",
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
@@ -175,7 +182,7 @@ export const buttons = [
     color: "rgba(84,103,112,.83)",
     bgColor: blueButtonColor,
     type: "blue-button",
-    value: '.'
+    value: ".",
   },
   {
     name: "Equal Operator",

@@ -63,7 +63,7 @@ body {
   display: grid;
   height: 67vh;
   grid-template-columns: repeat(4, 10vh);
-  grid-template-rows: 5vh repeat(5, 10vh);
+  grid-template-rows: repeat(9, 4.5vh);
   grid-gap: 1vh;
   padding: 110px auto;
   border-radius: 5px;
