@@ -16,7 +16,7 @@ const ResultsBar = ({
       }}
     >
       <div className={Styles.resultsBarLabel}>
-        Results:
+        Res:
       </div>
       <div></div>
     </div>

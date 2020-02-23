@@ -116,7 +116,9 @@ const Calculator = () => {
         displayStr={calcState.displayStr}
       />
       <ResultsBar />
-      {renderButtons()}
+      <div className={Styles.buttonWrapper}>
+        {renderButtons()}
+      </div> 
       <div className={Styles.calcTitle}>Little Bean Counter</div>
     </div>
   )
