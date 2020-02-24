@@ -168,13 +168,6 @@ export const buttons = [
     type: "orange-operator-button",
   },
   {
-    name: "Equal Operator",
-    label: "=",
-    color: "#FFF",
-    bgColor: orangeOperatorColor,
-    type: "orange-operator-button",
-  },
-  {
     name: "Number 0 Button",
     label: "0",
     color: "rgba(84,103,112,.83)",
@@ -191,5 +184,11 @@ export const buttons = [
     type: "blue-button",
     value: ".",
   },
-  
+  {
+    name: "Equal Operator",
+    label: "=",
+    color: "#FFF",
+    bgColor: orangeOperatorColor,
+    type: "orange-operator-button",
+  },
 ]
