@@ -85,16 +85,16 @@ export const buttons = [
     value: "3",
   },
   {
-    name: "Percent Of Operator",
-    label: "% of",
-    color: whiteText,
+    name: "Multiplication Operator",
+    label: "X",
+    color: "#FFF",
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
   },
   {
-    name: "Multiplication Operator",
-    label: "X",
-    color: "#FFF",
+    name: "Percent Of Operator",
+    label: "% of",
+    color: whiteText,
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
   },
@@ -168,6 +168,13 @@ export const buttons = [
     type: "orange-operator-button",
   },
   {
+    name: "Equal Operator",
+    label: "=",
+    color: "#FFF",
+    bgColor: orangeOperatorColor,
+    type: "orange-operator-button",
+  },
+  {
     name: "Number 0 Button",
     label: "0",
     color: "rgba(84,103,112,.83)",
@@ -184,11 +191,5 @@ export const buttons = [
     type: "blue-button",
     value: ".",
   },
-  {
-    name: "Equal Operator",
-    label: "=",
-    color: "#FFF",
-    bgColor: orangeOperatorColor,
-    type: "orange-operator-button",
-  },
+  
 ]
