@@ -80,7 +80,8 @@ const Calculator = () => {
         type,
         value,
       } = buttonProps
-      const span = rowSpan ? `span ${rowSpan}` : "span 1";
+      const rowSpanString = rowSpan ? `span ${rowSpan}` : "span 1";
+      const columnSpanString = columnSpan ? `span ${columnSpan}` : "span 1";
       const onClickFn =
         type === "blue-button"
           ? onNumbersClick
@@ -95,7 +96,8 @@ const Calculator = () => {
       return (
         <Button
           onClick={onClickFn}
-          span={span}
+          rowSpan={rowSpanString}
+          columnSpan={columnSpanString}
           name={name}
           label={label}
           color={color}
