@@ -54,6 +54,13 @@ export const buttons = [
     type: "orange-operator-button",
   },
   {
+    name: "Memory Plus Operator",
+    label: "MEM+",
+    color: whiteText,
+    bgColor: orangeOperatorColor,
+    type: "orange-operator-button",
+  },
+  {
     name: "To Percent Operator",
     label: "➡ %",
     color: whiteText,
