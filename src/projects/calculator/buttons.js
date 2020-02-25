@@ -47,6 +47,7 @@ export const buttons = [
     color: "rgba(84,103,112,.83)",
     bgColor: blueButtonColor,
     type: "blue-button",
+    rowSpan: 2,
     value: "1",
   },
   {
@@ -55,6 +56,7 @@ export const buttons = [
     color: "rgba(84,103,112,.83)",
     bgColor: blueButtonColor,
     type: "blue-button",
+    rowSpan: 2,
     value: "2",
   },
   {
@@ -63,6 +65,7 @@ export const buttons = [
     color: "rgba(84,103,112,.83)",
     bgColor: blueButtonColor,
     type: "blue-button",
+    rowSpan: 2,
     value: "3",
   },
   {
@@ -86,6 +89,7 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: "4",
+    rowSpan: 2,
   },
   {
     name: "Number Five Button",
@@ -94,6 +98,7 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: "5",
+    rowSpan: 2,
   },
   {
     name: "Number Six Button",
@@ -102,6 +107,7 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: "6",
+    rowSpan: 2,
   },
   {
     name: "Multiplication Operator",
@@ -124,6 +130,7 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: "7",
+    rowSpan: 2,
   },
   {
     name: "Number Eight Button",
@@ -132,6 +139,7 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: "8",
+    rowSpan: 2,
   },
   {
     name: "Number Nine Button",
@@ -140,6 +148,7 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: "9",
+    rowSpan: 2,
   },
   {
     name: "Addition Operator",
