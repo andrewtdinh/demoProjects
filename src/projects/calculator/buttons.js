@@ -11,6 +11,22 @@ export const redOperatorColor = "#e0301e"
 export const yellowOperatorColor = "#fffc9a"
 
 export const buttons = [
+  // The MEM+ button is special because its background is orange, but its type is
+  // orange-button, not orange-operator-button because we need its font to be smaller 
+  {
+    name: "Save To Memory Button",
+    label: "MEM+",
+    color: whiteText,
+    bgColor: orangeOperatorColor,
+    type: "orange-button",
+  },
+  {
+    name: "Sign Toggle Operator",
+    label: "±",
+    color: whiteText,
+    bgColor: orangeOperatorColor,
+    type: "orange-operator-button",
+  },
   {
     name: "Clear Display Operator",
     label: "CLR",
@@ -39,22 +55,8 @@ export const buttons = [
     bgColor: redOperatorColor,
     type: "delete-button",
   },
-  {
-    name: "Sign Toggle Operator",
-    label: "±",
-    color: whiteText,
-    bgColor: orangeOperatorColor,
-    type: "orange-operator-button",
-  },
-  // The MEM+ button is special because its background is orange, but its type is
-  // orange-button, not orange-operator-button because we need its font to be smaller 
-  {
-    name: "Save To Memory Button",
-    label: "MEM+",
-    color: whiteText,
-    bgColor: orangeOperatorColor,
-    type: "orange-button",
-  },
+  
+  
   {
     name: "To Percent Operator",
     label: "➡ %",
