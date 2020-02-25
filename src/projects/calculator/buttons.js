@@ -181,6 +181,7 @@ export const buttons = [
     bgColor: blueButtonColor,
     type: "blue-button",
     value: ".",
+    rowSpan: 2,
   },
   {
     name: "Equal Operator",
@@ -188,5 +189,6 @@ export const buttons = [
     color: "#FFF",
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
+    rowSpan: 2,
   },
 ]
