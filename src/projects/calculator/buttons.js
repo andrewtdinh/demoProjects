@@ -46,12 +46,14 @@ export const buttons = [
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
   },
+  // The MEM+ button is special because its background is orange, but its type is
+  // orange-button, not orange-operator-button because we need its font to be smaller 
   {
     name: "Save To Memory Button",
     label: "MEM+",
     color: whiteText,
     bgColor: orangeOperatorColor,
-    type: "yellow-operator-button",
+    type: "orange-button",
   },
   {
     name: "To Percent Operator",
