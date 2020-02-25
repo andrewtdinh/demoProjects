@@ -173,6 +173,7 @@ export const buttons = [
     color: "rgba(84,103,112,.83)",
     bgColor: blueButtonColor,
     type: "blue-button",
+    columnSpan: 2,
     rowSpan: 2,
     value: "0",
   },
