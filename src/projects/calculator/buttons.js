@@ -34,20 +34,6 @@ export const buttons = [
     bgColor: redOperatorColor,
     type: "clear-button",
   },
-  // {
-  //   name: "Get Next Value To Memory Button",
-  //   label: "MEM–",
-  //   color: "rgba(84,103,112,.83)",
-  //   bgColor: yellowOperatorColor,
-  //   type: "yellow-operator-button",
-  // },
-  // {
-  //   name: "Last Result",
-  //   label: "PREV",
-  //   color: "rgba(84,103,112,.83)",
-  //   bgColor: yellowOperatorColor,
-  //   type: "yellow-operator-button",
-  // },
   {
     name: "Delete Last Character Button",
     label: "⌫",
@@ -55,8 +41,6 @@ export const buttons = [
     bgColor: redOperatorColor,
     type: "delete-button",
   },
-  
-  
   {
     name: "To Percent Operator",
     label: "➡ %",
