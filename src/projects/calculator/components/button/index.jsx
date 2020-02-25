@@ -1,7 +1,7 @@
 import React from "react";
 
 const Button = props => {
-  const { onClick, label, color, bgColor, span, name, type, value } = props;
+  const { onClick, label, color, bgColor, columnSpan, rowSpan, name, type, value } = props;
   const fontSize =
     type === "blue-button" 
       ? "3rem" 
@@ -13,7 +13,8 @@ const Button = props => {
     <button
       onClick={onClick ? onClick : () => {}}
       style={{
-        gridColumn: span,
+        gridColumn: columnSpan,
+        gridRow: rowSpan,
         color: color,
         backgroundColor: bgColor,
         fontWeight: 600,

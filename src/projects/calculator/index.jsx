@@ -75,6 +75,7 @@ const Calculator = () => {
         color,
         bgColor,
         rowSpan,
+        columnSpan,
         name,
         type,
         value,
