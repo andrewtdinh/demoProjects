@@ -19,13 +19,6 @@ export const buttons = [
     type: "clear-button",
   },
   // {
-  //   name: "Save To Memory Button",
-  //   label: "MEM+",
-  //   color: "rgba(84,103,112,.83)",
-  //   bgColor: yellowOperatorColor,
-  //   type: "yellow-operator-button",
-  // },
-  // {
   //   name: "Get Next Value To Memory Button",
   //   label: "MEM–",
   //   color: "rgba(84,103,112,.83)",
@@ -54,11 +47,11 @@ export const buttons = [
     type: "orange-operator-button",
   },
   {
-    name: "Memory Plus Operator",
+    name: "Save To Memory Button",
     label: "MEM+",
     color: whiteText,
     bgColor: orangeOperatorColor,
-    type: "orange-operator-button",
+    type: "yellow-operator-button",
   },
   {
     name: "To Percent Operator",
