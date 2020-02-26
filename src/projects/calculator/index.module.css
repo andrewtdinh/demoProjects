@@ -78,6 +78,15 @@ body {
   width: 43vh;
 }
 
+.displayFeaturesBar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  width: 43vh;
+}
+
 .displayWindow {
   display: inline-block;
   width: 100%;
