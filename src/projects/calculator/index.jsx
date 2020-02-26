@@ -128,6 +128,7 @@ const Calculator = () => {
         textColor={displayColor}
         displayStr={calcState.displayStr}
       />
+      {renderDisplayFeatures()}
       <ResultsBar />
       <div className={Styles.buttonWrapper}>
         {renderButtons()}
