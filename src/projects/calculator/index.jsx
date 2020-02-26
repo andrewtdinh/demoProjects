@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
+import DisplayFeatures from './components/display-features';
 import MemoryBar from './components/memory';
 import ResultsBar from './components/results';
 import { 
@@ -67,6 +68,15 @@ const Calculator = () => {
 
   // TODO: Before converting the display string to a number, consider strings that end in periods,
   // like '235.', which should be convert to 235.0
+
+  const renderDisplayFeatures = () => {
+    return (
+      <DisplayFeatures>
+        <button>export</button>
+        <button>export</button>
+      </DisplayFeatures>
+    )
+  }
 
   const renderButtons = () => {
     return buttons.map(buttonProps => {
