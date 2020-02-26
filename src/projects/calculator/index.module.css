@@ -61,7 +61,7 @@ body {
 
 .buttonWrapper {
   display: grid;
-  height: 67vh;
+  height: 50vh;
   box-sizing: border-box;
   grid-template-columns: repeat(4, 10vh);
   grid-template-rows: repeat(9, 4.5vh);
