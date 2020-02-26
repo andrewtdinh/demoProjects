@@ -3,19 +3,19 @@ import { displayBGColor, displayColor } from "../../buttons"
 import Styles from "../../index.module.css"
 
 const DisplayFeatures = ({
-  bgColor = displayBGColor,
-  textColor = displayColor,
-  displayStr = "0",
+  bgColor=displayBGColor,
+  textColor=displayColor,
+  children,
 }) => {
   return (
     <div
-      className={Styles.displayWrapper}
+      className={Styles.displayFeaturesBar}
       style={{
         backgroundColor: bgColor,
         color: textColor,
       }}
     >
-      <div className={Styles.displayWindow}>{displayStr}</div>
+      {children}
     </div>
   )
 }
