@@ -4,7 +4,7 @@ const Button = props => {
   const { onClick, label, color, bgColor, columnSpan, rowSpan, name, type, value } = props;
   const fontSize =
     type === "blue-button" 
-      ? "3rem" 
+      ? "2.6rem" 
       : type === "orange-operator-button" 
       ? "1.3rem" 
       : "0.9rem";
