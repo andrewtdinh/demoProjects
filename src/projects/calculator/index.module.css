@@ -81,7 +81,7 @@ body {
 .displayFeaturesBar {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   text-align: right;
   width: 43vh;
