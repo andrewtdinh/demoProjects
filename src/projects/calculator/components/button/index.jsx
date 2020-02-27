@@ -6,7 +6,7 @@ const Button = props => {
     type === "blue-button" 
       ? "2.6rem" 
       : type === "orange-operator-button" 
-      ? "1.3rem" 
+      ? "1.1rem" 
       : "0.9rem";
 
   return (
