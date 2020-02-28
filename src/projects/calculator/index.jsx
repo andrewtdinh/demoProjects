@@ -72,8 +72,7 @@ const Calculator = () => {
   const renderDisplayFeatures = () => {
     return (
       <DisplayFeatures>
-        <button>export1</button>
-        <button>export2</button>
+        <button>export</button>
       </DisplayFeatures>
     )
   }
