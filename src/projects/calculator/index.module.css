@@ -81,10 +81,14 @@ body {
 .displayFeaturesBar {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: flex-start;
+  justify-items: flex-start;
   align-items: center;
   text-align: right;
   width: 43vh;
+}
+
+.displayFeaturesBar button:hover {
+  cursor: pointer;
 }
 
 .displayWindow {
