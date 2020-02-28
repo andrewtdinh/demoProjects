@@ -87,6 +87,14 @@ body {
   width: 43vh;
 }
 
+.displayFeaturesBar button {
+  margin-left: 3px;
+  background: #6d6866;
+  color: yellow;
+  border: none;
+  cursor: pointer;
+}
+
 .displayFeaturesBar button:hover {
   cursor: pointer;
 }
