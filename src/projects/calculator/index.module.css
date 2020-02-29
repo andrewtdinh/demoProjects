@@ -71,6 +71,10 @@ body {
   border-radius: 5px;
 }
 
+.buttonWrapper button {
+  cursor: pointer;
+}
+
 .displayWrapper {
   display: flex;
   justify-content: flex-end;
