@@ -1,5 +1,5 @@
 import React from "react"
-import { scrollBarBGColor, scrollBarTextColor } from "../../buttons"
+import { scrollBarBGColor, scrollBarTextColor } from "../../constants"
 import Styles from "../../index.module.css"
 
 const ScrollBar = ({
