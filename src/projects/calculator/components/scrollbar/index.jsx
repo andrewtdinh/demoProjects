@@ -15,9 +15,9 @@ const ResultsBar = ({
         color: textColor,
       }}
     >
-      <div><</div>
+      <div>{"<"}</div>
       <div>Entry</div>
-      <div>></div>
+      <div>{">"}</div>
     </div>
   )
 }
