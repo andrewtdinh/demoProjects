@@ -1,22 +1,23 @@
 import React from "react"
-import { resultsBarBGColor, resultsTextColor } from "../../buttons"
+import { scrollBarBGColor, scrollBarTextColor } from "../../buttons"
 import Styles from "../../index.module.css"
 
 const ResultsBar = ({
-  bgColor = resultsBarBGColor,
-  textColor = resultsTextColor,
-  results = [],
+  bgColor = scrollBarBGColor,
+  textColor = scrollBarTextColor,
+  entries = [],
 }) => {
   return (
     <div
-      className={Styles.resultsBar}
+      className={Styles.scrollBar}
       style={{
         backgroundColor: bgColor,
         color: textColor,
       }}
     >
-      <div className={Styles.resultsBarLabel}>Res:</div>
-      <div></div>
+      <div><</div>
+      <div>Entry</div>
+      <div>></div>
     </div>
   )
 }
