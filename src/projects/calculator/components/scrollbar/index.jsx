@@ -2,7 +2,7 @@ import React from "react"
 import { scrollBarBGColor, scrollBarTextColor } from "../../buttons"
 import Styles from "../../index.module.css"
 
-const ResultsBar = ({
+const ScrollBar = ({
   bgColor = scrollBarBGColor,
   textColor = scrollBarTextColor,
   entries = [],
@@ -22,4 +22,4 @@ const ResultsBar = ({
   )
 }
 
-export default ResultsBar
+export default ScrollBar
