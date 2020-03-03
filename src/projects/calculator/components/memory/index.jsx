@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Children } from 'react';
 import { memoryBarBGColor, memoryTextColor } from '../../buttons';
 import Styles from "../../index.module.css"
 
 const MemoryBar = ({
   bgColor = memoryBarBGColor,
   textColor = memoryTextColor,
-  memories = [],
+  children
+  // memories = [],
 }) => {
   return (
     <div
@@ -18,11 +19,12 @@ const MemoryBar = ({
       <div className={Styles.memoryBarLabel} >
         Mem:
       </div>
-      <div className={Styles.memoryCells}>
+      {/* <div className={Styles.memoryCells}>
         {memories.map((memValue, idx) => {
           return <div key={`${idx}:${memValue}`}>{memValue}</div>
         })}
-      </div>
+      </div> */}
+      {children}
     </div>
   )
 }
