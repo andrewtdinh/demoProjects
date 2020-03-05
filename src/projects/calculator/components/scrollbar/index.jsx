@@ -17,7 +17,9 @@ const ScrollBar = ({
     >
       <div>{"<"}</div>
       <div className={Styles.scrollBarEntries}>
-        Entry
+        {entries.map(entry => {
+          return <span key={entry}>{entry}</span>
+        })}
       </div>
       <div>{">"}</div>
     </div>
