@@ -57,8 +57,10 @@ body {
   display: grid;
   width: 34vh;
   height: 95%;
-  justify-content: space-between;
   align-items: center;
+  border: 1px solid white;
+  grid-template-columns: 1vh 32vh 1vh;
+  grid-gap: none;
   border: 1px solid white;
 }
 
