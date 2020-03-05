@@ -19,7 +19,7 @@ const ResultsBar = ({
       <div className={Styles.resultsBarLabel}>
         Res:
       </div>
-      <ScrollBar />
+      <ScrollBar entries={[34.34, 463.23, 3728.2, 2398237]} />
     </div>
   )
 }

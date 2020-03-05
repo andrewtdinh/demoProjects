@@ -58,10 +58,8 @@ body {
   width: 38vh;
   height: 95%;
   align-items: center;
-  border: 1px solid white;
   grid-template-columns: 1vh 36vh 1vh;
   grid-gap: none;
-  border: 1px solid white;
 }
 
 .resultsBarLabel {
