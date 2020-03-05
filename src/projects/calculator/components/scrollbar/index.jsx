@@ -16,7 +16,9 @@ const ScrollBar = ({
       }}
     >
       <div>{"<"}</div>
-      <div>Entry</div>
+      <div className={Styles.scrollBarEntries}>
+        Entry
+      </div>
       <div>{">"}</div>
     </div>
   )
