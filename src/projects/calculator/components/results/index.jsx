@@ -1,6 +1,7 @@
 import React from "react"
 import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
+import ScrollBar from "../scrollbar";
 
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
@@ -18,7 +19,7 @@ const ResultsBar = ({
       <div className={Styles.resultsBarLabel}>
         Res:
       </div>
-      <div></div>
+      <ScrollBar />
     </div>
   )
 }
