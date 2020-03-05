@@ -5,7 +5,6 @@ import Display from './components/display';
 import DisplayFeatures from './components/display-features';
 import MemoryBar from './components/memory';
 import ResultsBar from './components/results';
-import ScrollBar from './components/scrollbar';
 import { 
   buttons, 
   displayColor, 
