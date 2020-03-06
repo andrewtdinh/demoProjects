@@ -81,7 +81,10 @@ body {
 }
 
 .buttonWrapper button {
+  display: grid;
   cursor: pointer;
+  vertical-align: center;
+  align-content: center;
 }
 
 .buttonWrapper button:hover {
