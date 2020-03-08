@@ -55,11 +55,11 @@ body {
 
 .scrollBar {
   display: grid;
-  width: 38vh;
+  width: calc(34vh + 32);
   height: 95%;
   align-items: center;
   justify-items: space-between;
-  grid-template-columns: 1vh 36vh 1vh;
+  grid-template-columns: 16px 34vh 16px;
   grid-gap: none;
 }
 
