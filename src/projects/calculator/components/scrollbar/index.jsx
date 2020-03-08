@@ -15,13 +15,13 @@ const ScrollBar = ({
         color: textColor,
       }}
     >
-      <div>{"◀️"}</div>
+      <div>{"◀"}</div>
       <div className={Styles.scrollBarEntries}>
         {entries.map(entry => {
           return <span key={entry}>{entry}</span>
         })}
       </div>
-      <div>{"▶️"}</div>
+      <div>{"▶"}</div>
     </div>
   )
 }
