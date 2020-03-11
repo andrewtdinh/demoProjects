@@ -67,10 +67,19 @@ body {
   width: 8vh;
 }
 
+.scrollBar > .shift-left {
+  display: flex;
+  justify-content: right;
+}
+
 .scrollBarEntries {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3px;
+}
+
+.scrollBarEntries span {
+  text-align: center;
 }
 
 .resultsBarLabel {
