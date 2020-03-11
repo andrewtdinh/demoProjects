@@ -82,6 +82,10 @@ body {
   text-align: center;
 }
 
+.scrollBarEntries span:not(:last-of-type) {
+  border-right: 1px solid white;
+}
+
 .resultsBarLabel {
   display: flex;
   justify-content: flex-start;
