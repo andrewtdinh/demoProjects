@@ -3,9 +3,9 @@ import { scrollBarBGColor, scrollBarTextColor } from "../../constants"
 import Styles from "../../index.module.css"
 
 const ScrollBar = ({
-  bgColor = scrollBarBGColor,
-  textColor = scrollBarTextColor,
-  entries = [],
+  bgColor=scrollBarBGColor,
+  textColor=scrollBarTextColor,
+  entries=[],
 }) => {
   return (
     <div
