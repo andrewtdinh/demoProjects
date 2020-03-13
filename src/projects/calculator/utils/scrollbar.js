@@ -5,10 +5,11 @@ export const getValuesFrom = (arr=[], startingIndex) => {
     if (length <= maxResultsEntries) {
         return arr;
     } else {
-        const startIndex =
-          startingIndex && startingIndex <= length - maxResultsEntries
+        const startIndex = startingIndex
+          ? startingIndex <= length - maxResultsEntries
             ? startingIndex
-            : (length - maxResultsEntries)
+            : length - maxResultsEntries
+          : length - maxResultsEntries;
         return arr.slice(startIndex)
     }
 }
