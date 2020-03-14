@@ -8,7 +8,7 @@ const ResultsBar = ({
   textColor = resultsTextColor,
   results = [],
 }) => {
-  const displayEntries = results;
+  const displayedResults = results;
   return (
     <div
       className={Styles.resultsBar}
@@ -20,7 +20,7 @@ const ResultsBar = ({
       <div className={Styles.resultsBarLabel}>
         Res:
       </div>
-      <ScrollBar entries={[34.34, 463.23, 3728.2, 298237]} />
+      <ScrollBar entries={displayedResults} />
     </div>
   )
 }
