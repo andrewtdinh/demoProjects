@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
 import ScrollBar from "../scrollbar";
@@ -8,6 +8,7 @@ const ResultsBar = ({
   textColor = resultsTextColor,
   results = [],
 }) => {
+  const displayEntries = results;
   return (
     <div
       className={Styles.resultsBar}
