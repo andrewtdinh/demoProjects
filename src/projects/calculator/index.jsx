@@ -32,8 +32,15 @@ const Calculator = () => {
     setCalcState({ ...calcState, displayStr: newDisplayStr})
   }
 
+  const onResultsShiftLeftClick = (e) => {
+    const { resultsStartIndex: currentStartIndex } = calcState;
+
+    e.preventDefault()
+    currentStartIndex === 0
+      ? null
+      : setCalcState({ ...calcState, resultsStartIndex: currentStartIndex - 1});
+  }
   /**
-   * 
    * onNumbersClick is activated when user click on numbers or dot (.) buttons
    */
   const onNumbersClick = (e) => {
