@@ -17,29 +17,42 @@ const Calculator = () => {
     displayStr: '0',
     operand1: null,
     operand2: null,
-    prevResult: null,
+    lastResult: null,
+    prevResults: [],
     operation: null,
     resultsStartIndex: 0,
     memoryStartIndex: 0,
   }
   
-  const qtyResultsEntries = maxResultsEntries;
-  const qtyMemoryEntries = maxMemoryEntries;
-
   const [ calcState, setCalcState ] = useState(initialState);
+  
+  const { resultsStartIndex: currentResultsStartIdx } = calcState;
 
   const updateDisplay = (newDisplayStr) => {
-    setCalcState({ ...calcState, displayStr: newDisplayStr})
+    setCalcState({ ...calcState, displayStr: newDisplayStr })
   }
 
   const onResultsShiftLeftClick = (e) => {
-    const { resultsStartIndex: currentStartIndex } = calcState;
+    e.preventDefault()
+    currentResultsStartIdx === 0
+      ? null
+      : setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx - 1});
+  }
+
+  const onResultsShiftRightClick = (e) => {
+    const { prevResults } = calcState;
+    const qtyPreviousResults = prevResults.length;
 
     e.preventDefault()
-    currentStartIndex === 0
-      ? null
-      : setCalcState({ ...calcState, resultsStartIndex: currentStartIndex - 1});
+    qtyPreviousResults < maxResultsEntries
+      ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
+        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+        : null
+      : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
+        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+        : null
   }
+  
   /**
    * onNumbersClick is activated when user click on numbers or dot (.) buttons
    */
