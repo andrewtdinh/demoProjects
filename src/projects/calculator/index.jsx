@@ -5,6 +5,7 @@ import Display from './components/display';
 import DisplayFeatures from './components/display-features';
 import MemoryBar from './components/memory';
 import ResultsBar from './components/results';
+import { maxResultsEntries, maxMemoryEntries, displayedMemoryEntries, displayedResultsEntries } from './constants';
 import {  
   buttons, 
   displayColor, 
@@ -21,6 +22,9 @@ const Calculator = () => {
     resultsStartIndex: 0,
     memoryStartIndex: 0,
   }
+  
+  const qtyResultsEntries = maxResultsEntries;
+  const qtyMemoryEntries = maxMemoryEntries;
 
   const [ calcState, setCalcState ] = useState(initialState);
 
