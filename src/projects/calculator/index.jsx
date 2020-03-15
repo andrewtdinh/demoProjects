@@ -5,7 +5,7 @@ import Display from './components/display';
 import DisplayFeatures from './components/display-features';
 import MemoryBar from './components/memory';
 import ResultsBar from './components/results';
-import { 
+import {  
   buttons, 
   displayColor, 
   displayBGColor,
@@ -17,7 +17,9 @@ const Calculator = () => {
     operand1: null,
     operand2: null,
     prevResult: null,
-    operation: null
+    operation: null,
+    resultsStartIndex: 0,
+    memoryStartIndex: 0,
   }
 
   const [ calcState, setCalcState ] = useState(initialState);
