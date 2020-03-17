@@ -32,6 +32,7 @@ const Calculator = () => {
     setCalcState({ ...calcState, displayStr: newDisplayStr })
   }
 
+  // TODO: have the displayResults array in state and change it when people shift results left or right
   const onResultsShiftLeftClick = (e) => {
     e.preventDefault()
     currentResultsStartIdx === 0
@@ -52,7 +53,7 @@ const Calculator = () => {
         ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
         : null
   }
-  
+
   /**
    * onNumbersClick is activated when user click on numbers or dot (.) buttons
    */
