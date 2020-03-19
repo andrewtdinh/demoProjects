@@ -19,6 +19,7 @@ const Calculator = () => {
     operand2: null,
     lastResult: null,
     prevResults: [],
+    memories: [],
     operation: null,
     resultsStartIndex: 0,
     memoryStartIndex: 0,
@@ -62,6 +63,20 @@ const Calculator = () => {
     return currentMemoryStartIdx === 0
       ? null
       : setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx - 1 });
+  }
+
+  const onMemoryShiftRightClick = (e) => {
+    const { memories } = calcState;
+    const qtyMemoryEntries = memories.length;
+
+    e.preventDefault()
+    return qtyMemoryEntries < maxMemoryEntries
+      ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
+        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+        : null
+      : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
+        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+        : null
   }
 
   /**
