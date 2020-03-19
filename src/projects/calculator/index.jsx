@@ -35,7 +35,7 @@ const Calculator = () => {
   // TODO: have the displayResults array in state and change it when people shift results left or right
   const onResultsShiftLeftClick = (e) => {
     e.preventDefault()
-    currentResultsStartIdx === 0
+    return currentResultsStartIdx === 0
       ? null
       : setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx - 1});
   }
@@ -45,7 +45,7 @@ const Calculator = () => {
     const qtyPreviousResults = prevResults.length;
 
     e.preventDefault()
-    qtyPreviousResults < maxResultsEntries
+    return qtyPreviousResults < maxResultsEntries
       ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
         ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
         : null
