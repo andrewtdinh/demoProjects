@@ -26,7 +26,10 @@ const Calculator = () => {
   
   const [ calcState, setCalcState ] = useState(initialState);
   
-  const { resultsStartIndex: currentResultsStartIdx } = calcState;
+  const { 
+    resultsStartIndex: currentResultsStartIdx,
+    memoryStartIndex: currentMemoryStartIdx
+  } = calcState;
 
   const updateDisplay = (newDisplayStr) => {
     setCalcState({ ...calcState, displayStr: newDisplayStr })
@@ -52,6 +55,13 @@ const Calculator = () => {
       : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
         ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
         : null
+  }
+
+  const onMemoryShiftLeftClick = (e) => {
+    e.preventDefault()
+    return currentMemoryStartIdx === 0
+      ? null
+      : setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx - 1 });
   }
 
   /**
