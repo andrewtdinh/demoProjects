@@ -23,9 +23,14 @@ const Calculator = () => {
     operation: null,
     resultsStartIndex: 0,
     memoryStartIndex: 0,
+    onResultsShiftLeftClick,
+    onResultsShiftRightClick,
+    onMemoryShiftRightClick,
+    onMemoryShiftRightClick
   }
   
   const [ calcState, setCalcState ] = useState(initialState);
+  const AppContext = createContext(initialState)
   
   const { 
     resultsStartIndex: currentResultsStartIdx,
@@ -129,13 +134,6 @@ const Calculator = () => {
     )
   }
 
-  const ScrollbarContext = createContext({
-    onMemoryShiftLeftClick, 
-    onMemoryShiftRightClick,
-    onResultsShiftLeftClick,
-    onResultsShiftRightClick
-  })
-
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -179,20 +177,22 @@ const Calculator = () => {
   }
 
   return (
-    <div className={Styles.container}>
-      <MemoryBar />
-      <Display
-        bgColor={displayBGColor}
-        textColor={displayColor}
-        displayStr={calcState.displayStr}
-      />
-      {renderDisplayFeatures()}
-      <ResultsBar />
-      <div className={Styles.buttonWrapper}>
-        {renderButtons()}
-      </div> 
-      <div className={Styles.calcTitle}>Little Bean Counter</div>
-    </div>
+    <AppContext.Provider>
+      <div className={Styles.container}>
+        <MemoryBar />
+        <Display
+          bgColor={displayBGColor}
+          textColor={displayColor}
+          displayStr={calcState.displayStr}
+        />
+        {renderDisplayFeatures()}
+        <ResultsBar />
+        <div className={Styles.buttonWrapper}>
+          {renderButtons()}
+        </div>
+        <div className={Styles.calcTitle}>Little Bean Counter</div>
+      </div>
+    </AppContext.Provider>
   )
 }
 
