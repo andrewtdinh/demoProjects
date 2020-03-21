@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -128,6 +128,13 @@ const Calculator = () => {
       </DisplayFeatures>
     )
   }
+
+  const ScrollbarContext = createContext({
+    onMemoryShiftLeftClick, 
+    onMemoryShiftRightClick,
+    onResultsShiftLeftClick,
+    onResultsShiftRightClick
+  })
 
   const renderButtons = () => {
     return buttons.map(buttonProps => {
