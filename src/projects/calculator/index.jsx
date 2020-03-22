@@ -12,6 +12,8 @@ import {
   displayBGColor,
 } from './buttons';
 
+export const AppContext = createContext();
+
 const Calculator = () => {
   const initialState = {
     displayStr: '0',
@@ -30,7 +32,7 @@ const Calculator = () => {
   }
   
   const [ calcState, setCalcState ] = useState(initialState);
-  export const AppContext = createContext(initialState)
+  
   
   const { 
     resultsStartIndex: currentResultsStartIdx,
@@ -177,7 +179,7 @@ const Calculator = () => {
   }
 
   return (
-    <AppContext.Provider>
+    <AppContext.Provider value={initialState} >
       <div className={Styles.container}>
         <MemoryBar />
         <Display
