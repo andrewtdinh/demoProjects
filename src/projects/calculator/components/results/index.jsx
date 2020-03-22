@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext } from "react"
 import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
 import ScrollBar from "../scrollbar";
@@ -10,7 +10,7 @@ const ResultsBar = ({
   results = [],
 }) => {
   const displayedResults = results;
-  const { onResultsShiftLeftClick, onResultsShiftRightClick } = AppContext;
+  const { onResultsShiftLeftClick, onResultsShiftRightClick } = useContext(AppContext);
 
   return (
     <div
