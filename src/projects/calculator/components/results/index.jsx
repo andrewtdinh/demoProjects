@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
 import ScrollBar from "../scrollbar";
+import { AppContext } from '../../index';
 
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
@@ -9,6 +10,8 @@ const ResultsBar = ({
   results = [],
 }) => {
   const displayedResults = results;
+  const { onResultsShiftLeftClick, onResultsShiftRightClick } = AppContext;
+
   return (
     <div
       className={Styles.resultsBar}
@@ -20,7 +23,11 @@ const ResultsBar = ({
       <div className={Styles.resultsBarLabel}>
         Res:
       </div>
-      <ScrollBar entries={displayedResults} />
+      <ScrollBar 
+        entries={displayedResults}
+        onShiftLeftClick={onResultsShiftLeftClick}
+        onShiftRightClick={onResultsShiftRightClick}
+      />
     </div>
   )
 }
