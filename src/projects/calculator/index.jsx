@@ -30,7 +30,7 @@ const Calculator = () => {
   }
   
   const [ calcState, setCalcState ] = useState(initialState);
-  const AppContext = createContext(initialState)
+  export const AppContext = createContext(initialState)
   
   const { 
     resultsStartIndex: currentResultsStartIdx,
