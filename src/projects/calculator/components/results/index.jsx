@@ -7,7 +7,7 @@ import { AppContext } from '../../index';
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
   textColor = resultsTextColor,
-  results = [1,2,3,4,5,6,7],
+  results = [1,2,3,4,5,6,7,8, 9],
 }) => {
   const displayedResults = results;
   const { onResultsShiftLeftClick, onResultsShiftRightClick } = useContext(AppContext);
