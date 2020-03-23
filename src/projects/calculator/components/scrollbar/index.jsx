@@ -8,8 +8,11 @@ const ScrollBar = ({
   textColor=scrollBarTextColor,
   entries=[],
   onShiftLeftClick,
-  onShiftRightClick
+  onShiftRightClick,
+  startIndex=0
 }) => {
+  const displayedEntries = getValuesFrom(entries, startIndex);
+
   return (
     <div
       className={Styles.scrollBar}
@@ -20,7 +23,7 @@ const ScrollBar = ({
     >
       <div className="shift-left" onClick={onShiftLeftClick} >{"◀"}</div>
       <div className={Styles.scrollBarEntries}>
-        {entries.map(entry => {
+        {displayedEntries.map(entry => {
           return <span key={entry}>{entry}</span>
         })}
       </div>
