@@ -3,14 +3,15 @@ import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
 import ScrollBar from "../scrollbar";
 import { AppContext } from '../../index';
+import { getValuesFrom } from '../../utils/scrollbar';
 
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
   textColor = resultsTextColor,
-  results = [1,2,3,4,5,6,7,8, 9],
+  results = [1,2,3,4,5,6,7,8,9],
 }) => {
-  const displayedResults = results;
-  const { onResultsShiftLeftClick, onResultsShiftRightClick } = useContext(AppContext);
+  const { onResultsShiftLeftClick, onResultsShiftRightClick, resultsStartIndex } = useContext(AppContext);
+  const displayedResults = getValuesFrom(results, resultsStartIndex);
 
   return (
     <div

@@ -1,7 +1,7 @@
-import React, { useContext } from "react"
+import React from "react"
 import { scrollBarBGColor, scrollBarTextColor } from "../../constants"
 import Styles from "../../index.module.css"
-import { getValuesFrom } from '../../utils/scrollbar'
+
 
 const ScrollBar = ({
   bgColor=scrollBarBGColor,

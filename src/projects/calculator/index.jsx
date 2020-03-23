@@ -27,7 +27,7 @@ const Calculator = () => {
     memoryStartIndex: 0,
     onResultsShiftLeftClick,
     onResultsShiftRightClick,
-    onMemoryShiftRightClick,
+    onMemoryShiftLeftClick,
     onMemoryShiftRightClick
   }
   
@@ -54,6 +54,7 @@ const Calculator = () => {
   const onResultsShiftRightClick = (e) => {
     const { prevResults } = calcState;
     const qtyPreviousResults = prevResults.length;
+    console.log({prevResults})
 
     e.preventDefault()
     return qtyPreviousResults < maxResultsEntries
