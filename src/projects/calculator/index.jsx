@@ -35,7 +35,6 @@ const Calculator = () => {
   
   const [ calcState, setCalcState ] = useContext(CalculatorContext);
   
-  
   const { 
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx
@@ -46,48 +45,48 @@ const Calculator = () => {
   }
 
   // TODO: have the displayResults array in state and change it when people shift results left or right
-  const onResultsShiftLeftClick = (e) => {
-    e.preventDefault()
-    return currentResultsStartIdx === 0
-      ? null
-      : setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx - 1});
-  }
+  // const onResultsShiftLeftClick = (e) => {
+  //   e.preventDefault()
+  //   return currentResultsStartIdx === 0
+  //     ? null
+  //     : setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx - 1});
+  // }
 
-  const onResultsShiftRightClick = (e) => {
-    const { prevResults } = calcState;
-    const qtyPreviousResults = prevResults.length;
-    console.log({prevResults})
+  // const onResultsShiftRightClick = (e) => {
+  //   const { prevResults } = calcState;
+  //   const qtyPreviousResults = prevResults.length;
+  //   console.log({prevResults})
 
-    e.preventDefault()
-    return qtyPreviousResults < maxResultsEntries
-      ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
-        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
-        : null
-      : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
-        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
-        : null
-  }
+  //   e.preventDefault()
+  //   return qtyPreviousResults < maxResultsEntries
+  //     ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
+  //       ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+  //       : null
+  //     : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
+  //       ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+  //       : null
+  // }
 
-  const onMemoryShiftLeftClick = (e) => {
-    e.preventDefault()
-    return currentMemoryStartIdx === 0
-      ? null
-      : setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx - 1 });
-  }
+  // const onMemoryShiftLeftClick = (e) => {
+  //   e.preventDefault()
+  //   return currentMemoryStartIdx === 0
+  //     ? null
+  //     : setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx - 1 });
+  // }
 
-  const onMemoryShiftRightClick = (e) => {
-    const { memories } = calcState;
-    const qtyMemoryEntries = memories.length;
+  // const onMemoryShiftRightClick = (e) => {
+  //   const { memories } = calcState;
+  //   const qtyMemoryEntries = memories.length;
 
-    e.preventDefault()
-    return qtyMemoryEntries < maxMemoryEntries
-      ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
-        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
-        : null
-      : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
-        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
-        : null
-  }
+  //   e.preventDefault()
+  //   return qtyMemoryEntries < maxMemoryEntries
+  //     ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
+  //       ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+  //       : null
+  //     : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
+  //       ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+  //       : null
+  // }
 
   /**
    * onNumbersClick is activated when user click on numbers or dot (.) buttons
