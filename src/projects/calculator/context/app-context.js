@@ -22,10 +22,15 @@ export const CalculatorContextProvider = props => {
   }
 
   const [ calcState, setCalcState ] = useState(initialState);
+  const {
+    resultsStartIndex: currentResultsStartIdx,
+    memoryStartIndex: currentMemoryStartIdx,
+  } = calcState;
 
   // TODO: have the displayResults array in state and change it when people shift results left or right
   const onResultsShiftLeftClick = (e) => {
     e.preventDefault()
+    console.log({currentResultsStartIdx})
     return currentResultsStartIdx === 0
       ? null
       : setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx - 1});
