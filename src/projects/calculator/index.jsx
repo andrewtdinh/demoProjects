@@ -12,7 +12,7 @@ import {
   displayBGColor,
 } from './buttons';
 
-import { CalculatorContext } from './context/app-context';
+import { CalculatorContext, CalculatorContextProvider } from './context/app-context';
 
 // export const AppContext = createContext();
 
@@ -181,7 +181,7 @@ const Calculator = () => {
   }
 
   return (
-    <AppContext.Provider value={initialState} >
+    <CalculatorContextProvider >
       <div className={Styles.container}>
         <MemoryBar />
         <Display
@@ -196,7 +196,7 @@ const Calculator = () => {
         </div>
         <div className={Styles.calcTitle}>Little Bean Counter</div>
       </div>
-    </AppContext.Provider>
+    </CalculatorContextProvider>
   )
 }
 
