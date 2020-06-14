@@ -8,7 +8,7 @@ import { getValuesFrom } from '../../utils/scrollbar';
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
   textColor = resultsTextColor,
-  results = [1,2,3,4,5,6,7,8,9],
+  results = [0, 1,2,3,4,5,6,7,8,9],
 }) => {
   const { onResultsShiftLeftClick, onResultsShiftRightClick, resultsStartIndex } = useContext(AppContext);
   const displayedResults = getValuesFrom(results, resultsStartIndex);
