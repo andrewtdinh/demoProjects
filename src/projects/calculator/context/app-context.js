@@ -20,11 +20,11 @@ export const CalculatorContextProvider = props => {
     onMemoryShiftLeftClick,
     onMemoryShiftRightClick,
   }
-  
-  const [count, setCount] = useState(0)
+
+  const [ calcState, setCalcState ] = useState(initialState);
 
   return (
-    <CalculatorContext.Provider value={[count, setCount]}>
+    <CalculatorContext.Provider value={[ calcState, setCalcState ]}>
       {props.children}
     </CalculatorContext.Provider>
   )
