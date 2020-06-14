@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useContext } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -12,26 +12,28 @@ import {
   displayBGColor,
 } from './buttons';
 
-export const AppContext = createContext();
+import { CalculatorContext } from './context/app-context';
+
+// export const AppContext = createContext();
 
 const Calculator = () => {
-  const initialState = {
-    displayStr: '0',
-    operand1: null,
-    operand2: null,
-    lastResult: null,
-    prevResults: [],
-    memories: [],
-    operation: null,
-    resultsStartIndex: 0,
-    memoryStartIndex: 0,
-    onResultsShiftLeftClick,
-    onResultsShiftRightClick,
-    onMemoryShiftLeftClick,
-    onMemoryShiftRightClick
-  }
+  // const initialState = {
+  //   displayStr: '0',
+  //   operand1: null,
+  //   operand2: null,
+  //   lastResult: null,
+  //   prevResults: [],
+  //   memories: [],
+  //   operation: null,
+  //   resultsStartIndex: 0,
+  //   memoryStartIndex: 0,
+  //   onResultsShiftLeftClick,
+  //   onResultsShiftRightClick,
+  //   onMemoryShiftLeftClick,
+  //   onMemoryShiftRightClick
+  // }
   
-  const [ calcState, setCalcState ] = useState(initialState);
+  const [ calcState, setCalcState ] = useContext(CalculatorContext);
   
   
   const { 
