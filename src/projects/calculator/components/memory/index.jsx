@@ -1,7 +1,7 @@
 import React, { Children, useContext } from 'react';
 import { memoryBarBGColor, memoryTextColor } from '../../buttons';
 import Styles from "../../index.module.css";
-import { AppContext } from "../../index";
+import { CalculatorContext } from "../../context/app-context";
 
 const MemoryBar = ({
   bgColor = memoryBarBGColor,
@@ -9,7 +9,7 @@ const MemoryBar = ({
   children,
   memories = []
 }) => {
-  const { onMemoryShiftLeftClick, onMemoryShiftRightClick } = useContext(AppContext);
+  const { onMemoryShiftLeftClick, onMemoryShiftRightClick } = useContext(CalculatorContext);
 
   return (
     <div

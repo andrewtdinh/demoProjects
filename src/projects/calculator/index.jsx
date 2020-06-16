@@ -14,6 +14,7 @@ import {
 import { CalculatorContext, CalculatorContextProvider } from './context/app-context';
 
 const Calculator = () => {
+  console.log({CalculatorContext});
   const [ calcState, setCalcState ] = useContext(CalculatorContext);
   
   const { 
