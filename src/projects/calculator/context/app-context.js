@@ -1,4 +1,10 @@
-import React, { useState, createContext } from "react"
+import React, { useState, createContext } from "react";
+import {
+  maxResultsEntries,
+  maxMemoryEntries,
+  displayedMemoryEntries,
+  displayedResultsEntries,
+} from "../constants";
 
 // Create Calculator Object
 export const CalculatorContext = createContext();
