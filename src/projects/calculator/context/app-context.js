@@ -16,10 +16,6 @@ const initialState = {
   operation: null,
   resultsStartIndex: 0,
   memoryStartIndex: 0,
-  onResultsShiftLeftClick,
-  onResultsShiftRightClick,
-  onMemoryShiftLeftClick,
-  onMemoryShiftRightClick,
 }
 
 // Create Calculator Context

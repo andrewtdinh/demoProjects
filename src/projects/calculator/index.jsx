@@ -76,6 +76,51 @@ const Calculator = () => {
     )
   }
 
+  // TODO: have the displayResults array in state and change it when people shift results left or right
+  const onResultsShiftLeftClick = (e) => {
+    e.preventDefault()
+    console.log({currentResultsStartIdx})
+    return currentResultsStartIdx === 0
+      ? null
+      : setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx - 1});
+  }
+
+  const onResultsShiftRightClick = (e) => {
+    const { prevResults } = calcState;
+    const qtyPreviousResults = prevResults.length;
+    console.log({prevResults})
+
+    e.preventDefault()
+    return qtyPreviousResults < maxResultsEntries
+      ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
+        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+        : null
+      : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
+        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+        : null
+  }
+
+  const onMemoryShiftLeftClick = (e) => {
+    e.preventDefault()
+    return currentMemoryStartIdx === 0
+      ? null
+      : setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx - 1 });
+  }
+
+  const onMemoryShiftRightClick = (e) => {
+    const { memories } = calcState;
+    const qtyMemoryEntries = memories.length;
+
+    e.preventDefault()
+    return qtyMemoryEntries < maxMemoryEntries
+      ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
+        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+        : null
+      : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
+        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+        : null
+  }
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
