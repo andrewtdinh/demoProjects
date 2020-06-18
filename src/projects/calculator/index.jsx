@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -11,8 +11,8 @@ import { maxResultsEntries, maxMemoryEntries, displayedMemoryEntries, displayedR
 import { CalculatorContext, CalculatorContextProvider } from './context/app-context';
 
 const Calculator = () => {
-  const [ calcState, setCalcState ] = useContext(CalculatorContext);
-  
+  const calcInitialState = useContext(CalculatorContext);
+  const [ calcState, setCalcState ] = useState(calcInitialState);
   const { 
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx
