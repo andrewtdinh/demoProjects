@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -13,6 +13,17 @@ import { CalculatorContext, CalculatorContextProvider } from './context/app-cont
 const Calculator = () => {
   const calcInitialState = useContext(CalculatorContext);
   const [ calcState, setCalcState ] = useState(calcInitialState);
+
+  useEffect(() => {
+    setCalcState(
+      { ...calcState },
+      onResultsShiftLeftClick,
+      onResultsShiftRightClick,
+      onMemoryShiftLeftClick,
+      onMemoryShiftRightClick
+    )
+  }, []);
+  
   const { 
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx
