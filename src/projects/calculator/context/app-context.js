@@ -17,13 +17,30 @@ const reducer = (state, action) => {
   const {
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx,
+    prevResults
   } = state;
+  const qtyPreviousResults = prevResults.length
 
   switch (action.type) {
     case 'RESULTS_SHIFT_LEFT':
       return currentResultsStartIdx === 0
         ? state
         : { ...state, resultsStartIndex: currentResultsStartIdx - 1 };
+
+    case 'RESULTS_SHIFT_RIGHT':
+      return qtyPreviousResults < maxResultsEntries
+        ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
+          ? setCalcState({
+              ...calcState,
+              resultsStartIndex: currentResultsStartIdx + 1,
+            })
+          : null
+        : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
+        ? setCalcState({
+            ...calcState,
+            resultsStartIndex: currentResultsStartIdx + 1,
+          })
+        : null
   }
 }
 
