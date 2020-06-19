@@ -1,4 +1,11 @@
 import React, { createContext, useReducer } from "react";
+import {
+  maxResultsEntries,
+  maxMemoryEntries,
+  displayedMemoryEntries,
+  displayedResultsEntries,
+} from "../constants";
+
 
 const initialState = {
   displayStr: "0",
@@ -30,17 +37,11 @@ const reducer = (state, action) => {
     case 'RESULTS_SHIFT_RIGHT':
       return qtyPreviousResults < maxResultsEntries
         ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
-          ? setCalcState({
-              ...calcState,
-              resultsStartIndex: currentResultsStartIdx + 1,
-            })
-          : null
+          ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
+          : state
         : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
-        ? setCalcState({
-            ...calcState,
-            resultsStartIndex: currentResultsStartIdx + 1,
-          })
-        : null
+        ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
+        : state
   }
 }
 
