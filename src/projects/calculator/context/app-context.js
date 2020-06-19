@@ -58,17 +58,20 @@ const reducer = (state, action) => {
         : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
         ? { ...state, memoryStartIndex: currentMemoryStartIdx + 1 }
         : state
+    
+    default: 
+      return state;
   }
-}
+};
 
 const [state, dispatch] = useReducer(reducer, initialState)
 // Create Calculator Context
-export const CalculatorContext = createContext(initialState);
+export const CalculatorContext = createContext();
 
 // Create a provider for components to consume and subscribe to changes
 export const CalculatorContextProvider = props => {
   return (
-    <CalculatorContext.Provider value={initialState}>
+    <CalculatorContext.Provider value={[state, dispatch]}>
       {props.children}
     </CalculatorContext.Provider>
   )

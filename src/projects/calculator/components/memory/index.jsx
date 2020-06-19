@@ -1,4 +1,4 @@
-import React, { Children, useContext } from 'react';
+import React, { useContext } from 'react';
 import { memoryBarBGColor, memoryTextColor } from '../../buttons';
 import Styles from "../../index.module.css";
 import { CalculatorContext } from "../../context/app-context";
