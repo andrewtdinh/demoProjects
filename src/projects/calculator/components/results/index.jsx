@@ -10,6 +10,7 @@ const ResultsBar = ({
   textColor = resultsTextColor,
   results = [0,1,2,3,4,5,6,7,8,9],
 }) => {
+  console.log({CalculatorContext})
   const { onResultsShiftLeftClick, onResultsShiftRightClick, resultsStartIndex } = useContext(CalculatorContext);
   const displayedResults = getValuesFrom(results, resultsStartIndex);
 

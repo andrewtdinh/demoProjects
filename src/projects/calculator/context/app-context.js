@@ -12,6 +12,22 @@ const initialState = {
   memoryStartIndex: 0,
 };
 
+
+const reducer = (state, action) => {
+  const {
+    resultsStartIndex: currentResultsStartIdx,
+    memoryStartIndex: currentMemoryStartIdx,
+  } = state;
+
+  switch (action.type) {
+    case 'RESULTS_SHIFT_LEFT':
+      return currentResultsStartIdx === 0
+        ? state
+        : { ...calcState, resultsStartIndex: currentResultsStartIdx - 1 };
+  }
+}
+
+const [state, dispatch] = useReducer(reducer, initialState)
 // Create Calculator Context
 export const CalculatorContext = createContext(initialState);
 
