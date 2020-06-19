@@ -42,6 +42,10 @@ const reducer = (state, action) => {
         : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
         ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
         : state
+    case 'MEMORY_SHIFT_LEFT':
+      return currentMemoryStartIdx === 0
+        ? state
+        : { ...state, memoryStartIndex: currentMemoryStartIdx - 1 }
   }
 }
 
