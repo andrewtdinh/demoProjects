@@ -24,17 +24,19 @@ const reducer = (state, action) => {
   const {
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx,
-    prevResults
+    prevResults,
+    memories,
   } = state;
   const qtyPreviousResults = prevResults.length
+  const qtyMemoryEntries = memories.length
 
   switch (action.type) {
-    case 'RESULTS_SHIFT_LEFT':
+    case "RESULTS_SHIFT_LEFT":
       return currentResultsStartIdx === 0
         ? state
-        : { ...state, resultsStartIndex: currentResultsStartIdx - 1 };
+        : { ...state, resultsStartIndex: currentResultsStartIdx - 1 }
 
-    case 'RESULTS_SHIFT_RIGHT':
+    case "RESULTS_SHIFT_RIGHT":
       return qtyPreviousResults < maxResultsEntries
         ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
           ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
@@ -42,10 +44,20 @@ const reducer = (state, action) => {
         : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
         ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
         : state
-    case 'MEMORY_SHIFT_LEFT':
+
+    case "MEMORY_SHIFT_LEFT":
       return currentMemoryStartIdx === 0
         ? state
         : { ...state, memoryStartIndex: currentMemoryStartIdx - 1 }
+
+    case "MEMORY_SHIFT_RIGHT":
+      return qtyMemoryEntries < maxMemoryEntries
+        ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
+          ? { ...state, memoryStartIndex: currentMemoryStartIdx + 1 }
+          : state
+        : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
+        ? { ...state, memoryStartIndex: currentMemoryStartIdx + 1 }
+        : state
   }
 }
 
