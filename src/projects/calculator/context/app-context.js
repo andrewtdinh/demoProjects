@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useReducer } from "react";
 
 const initialState = {
   displayStr: "0",
@@ -23,7 +23,7 @@ const reducer = (state, action) => {
     case 'RESULTS_SHIFT_LEFT':
       return currentResultsStartIdx === 0
         ? state
-        : { ...calcState, resultsStartIndex: currentResultsStartIdx - 1 };
+        : { ...state, resultsStartIndex: currentResultsStartIdx - 1 };
   }
 }
 
