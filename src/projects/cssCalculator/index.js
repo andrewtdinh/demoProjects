@@ -1,4 +1,4 @@
-const { useReducer } = React;
+import React, { useReducer } from 'react';
 
 const initialState = {
   value: 0,
@@ -69,7 +69,7 @@ const reducer = (state, action) => {
   }
 }
 
-const App = () => {
+export const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   
   return (
@@ -101,9 +101,3 @@ const App = () => {
     </div>
   );
 };
-
-const ROOT = document.getElementById("app");
-ReactDOM.render(<App />, ROOT);
-View Compiled
-
-Resources1×0.5×0.25×Rerun
