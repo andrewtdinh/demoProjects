@@ -70,7 +70,7 @@ const reducer = (state, action) => {
   }
 }
 
-export const App = () => {
+export const CssCalc = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   
   return (
