@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import Styles from './index.module.css';
 
 const initialState = {
   value: 0,
@@ -73,30 +74,30 @@ export const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   
   return (
-    <div className="calculator">
-      <div className="container">
-        <div className="display">
+    <div className={Styles.calculator}>
+      <div className={Styles.container}>
+        <div className={Styles.display}>
            {!state.num2 ? state.value : state.num2} 
-          <span className="cursor" />
+          <span className={Styles.cursor} />
         </div>
-        <button className="btn" onClick={() => dispatch({ type: 'ac'})}>AC</button>
-        <button className="btn" onClick={() => dispatch({ type: 'c'})}>C</button>
-        <button className="btn" onClick={() => dispatch({ type: '2', payload: '*'})}>x</button>
-        <button className="btn" onClick={() => dispatch({ type: '2', payload: '/'})}>/</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '7'})}>7</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '8'})}>8</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '9'})}>9</button>
-        <button className="btn" onClick={() => dispatch({ type: '2', payload: '+'})}>+</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '4'})}>4</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '5'})}>5</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '6'})}>6</button>
-        <button className="btn" onClick={() => dispatch({ type: '2', payload: '-'})}>-</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '1'})}>1</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '2'})}>2</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '3'})}>3</button>
-        <button className="btn zero" onClick={() => dispatch({ type: '1', payload: '0'})}>0</button>
-        <button className="btn" onClick={() => dispatch({ type: '1', payload: '.'})}>.</button>
-        <button className="btn eq" onClick={() => dispatch({ type: '3'})}>=</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: 'ac'})}>AC</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: 'c'})}>C</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '2', payload: '*'})}>x</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '2', payload: '/'})}>/</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '7'})}>7</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '8'})}>8</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '9'})}>9</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '2', payload: '+'})}>+</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '4'})}>4</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '5'})}>5</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '6'})}>6</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '2', payload: '-'})}>-</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '1'})}>1</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '2'})}>2</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '3'})}>3</button>
+        <button className={`${Styles.btn} ${Styles.zero}`} onClick={() => dispatch({ type: '1', payload: '0'})}>0</button>
+        <button className={Styles.btn} onClick={() => dispatch({ type: '1', payload: '.'})}>.</button>
+        <button className={`${Styles.btn} ${Styles.eq}`} onClick={() => dispatch({ type: '3'})}>=</button>
       </div>
     </div>
   );
