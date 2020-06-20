@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -11,23 +11,24 @@ import { maxResultsEntries, maxMemoryEntries, displayedMemoryEntries, displayedR
 import { CalculatorContext, CalculatorContextProvider } from './context/app-context';
 
 const Calculator = () => {
-  const calcInitialState = useContext(CalculatorContext);
-  const [ calcState, setCalcState ] = useState(calcInitialState);
+  const [ state, dispatch ] = useContext(CalculatorContext);
+  const [ calcState, setCalcState ] = useState(state);
+  console.log({CalculatorContext, state, calcState, dispatch})
 
-  useEffect(() => {
-    setCalcState(
-      { ...calcState },
-      onResultsShiftLeftClick,
-      onResultsShiftRightClick,
-      onMemoryShiftLeftClick,
-      onMemoryShiftRightClick
-    )
-  }, []);
-  
+  // useEffect(() => {
+  //   setCalcState(
+  //     { ...calcState },
+  //     onResultsShiftLeftClick,
+  //     onResultsShiftRightClick,
+  //     onMemoryShiftLeftClick,
+  //     onMemoryShiftRightClick
+  //   )
+  // }, []);
+
   const { 
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx
-  } = calcState;
+  } = state;
 
   const updateDisplay = (newDisplayStr) => {
     setCalcState({ ...calcState, displayStr: newDisplayStr })

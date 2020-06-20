@@ -6,24 +6,23 @@ import {
   displayedResultsEntries,
 } from "../constants";
 
-
+const initialState = {
+  displayStr: "0",
+  operand1: null,
+  operand2: null,
+  lastResult: null,
+  prevResults: [],
+  memories: [],
+  operation: null,
+  resultsStartIndex: 0,
+  memoryStartIndex: 0,
+}
 
 // Create Calculator Context
-export const CalculatorContext = createContext();
+export const CalculatorContext = createContext(initialState, () => {});
 
 // Create a provider for components to consume and subscribe to changes
 export const CalculatorContextProvider = props => {
-  const initialState = {
-    displayStr: "0",
-    operand1: null,
-    operand2: null,
-    lastResult: null,
-    prevResults: [],
-    memories: [],
-    operation: null,
-    resultsStartIndex: 0,
-    memoryStartIndex: 0,
-  }
 
   const reducer = (state, action) => {
     const {
@@ -31,7 +30,7 @@ export const CalculatorContextProvider = props => {
       memoryStartIndex: currentMemoryStartIdx,
       prevResults,
       memories,
-    } = state
+    } = state;
     const qtyPreviousResults = prevResults.length
     const qtyMemoryEntries = memories.length
 
@@ -71,9 +70,10 @@ export const CalculatorContextProvider = props => {
   }
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  console.log({dispatch})
 
   return (
-    <CalculatorContext.Provider value={[state, dispatch]}>
+    <CalculatorContext.Provider value={[ state, dispatch ]}>
       {props.children}
     </CalculatorContext.Provider>
   )
