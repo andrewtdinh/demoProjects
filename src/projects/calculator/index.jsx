@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useReducer, useEffect } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -8,22 +8,21 @@ import ResultsBar from './components/results';
 import { buttons, displayColor, displayBGColor } from './buttons';
 import { maxResultsEntries, maxMemoryEntries, displayedMemoryEntries, displayedResultsEntries } from "./constants";
 
-import { CalculatorContext, CalculatorContextProvider } from './context/app-context';
+import { CalculatorContext, CalculatorContextProvider, reducer } from './context/app-context';
 
 const Calculator = () => {
-  const [ state, dispatch ] = useContext(CalculatorContext);
-  const [ calcState, setCalcState ] = useState(state);
-  console.log({CalculatorContext, state, calcState, dispatch})
-
-  // useEffect(() => {
-  //   setCalcState(
-  //     { ...calcState },
-  //     onResultsShiftLeftClick,
-  //     onResultsShiftRightClick,
-  //     onMemoryShiftLeftClick,
-  //     onMemoryShiftRightClick
-  //   )
-  // }, []);
+  const initialState = useContext(CalculatorContext);
+  const [ calcState, setCalcState ] = useState(initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  useEffect(() => {
+    setCalcState(
+      { ...calcState },
+      onResultsShiftLeftClick,
+      onResultsShiftRightClick,
+      onMemoryShiftLeftClick,
+      onMemoryShiftRightClick
+    )
+  }, []);
 
   const { 
     resultsStartIndex: currentResultsStartIdx,
@@ -88,9 +87,7 @@ const Calculator = () => {
   const onResultsShiftLeftClick = (e) => {
     e.preventDefault()
     console.log({currentResultsStartIdx})
-    return currentResultsStartIdx === 0
-      ? null
-      : setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx - 1});
+    dispatch({ type: "RESULTS_SHIFT_LEFT" })
   }
 
   const onResultsShiftRightClick = (e) => {
