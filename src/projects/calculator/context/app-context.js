@@ -34,7 +34,7 @@ export const reducer = (state, action) => {
 
   switch (action.type) {
     case "UPDATE_DISPLAY":
-      return action.payload;
+      return { ...state, displayStr: action.payload}
     case "RESULTS_SHIFT_LEFT":
       return currentResultsStartIdx === 0
         ? state

@@ -1,4 +1,4 @@
-import React, { useContext, useState, useReducer, useEffect } from 'react';
+import React, { useContext, useReducer } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -22,7 +22,7 @@ const Calculator = () => {
   const updateDisplay = (newDisplayStr) => {
     dispatch({
       type: 'UPDATE_DISPLAY',
-      payload: { ...calcState, displayStr: newDisplayStr }
+      payload: newDisplayStr,
     });
   }
 
@@ -31,7 +31,7 @@ const Calculator = () => {
    */
   const onNumbersClick = (e) => {
     const buttonValue = e.target.value;
-    const { displayStr: previousDisplayStr } = calcState;
+    const { displayStr: previousDisplayStr } = state;
     
     e.preventDefault();
     if (buttonValue === '.' && previousDisplayStr.includes('.')) {return;}
@@ -49,7 +49,7 @@ const Calculator = () => {
   }
   
   const onDeleteBtnClick = (e) => {
-    const { displayStr: previousDisplayStr } = calcState;
+    const { displayStr: previousDisplayStr } = state;
     const previousDisplayStrLen = previousDisplayStr.length;
 
     e.preventDefault();
@@ -58,7 +58,7 @@ const Calculator = () => {
   }
 
   const onSignBtnClick = (e) => {
-    const { displayStr: previousDisplayStr } = calcState;
+    const { displayStr: previousDisplayStr } = state;
     const isDisplayStrNegative = previousDisplayStr.includes('-');
 
     e.preventDefault();
@@ -84,17 +84,17 @@ const Calculator = () => {
   }
 
   const onResultsShiftRightClick = (e) => {
-    const { prevResults } = calcState;
+    const { prevResults } = state;
     const qtyPreviousResults = prevResults.length;
     console.log({prevResults})
 
     e.preventDefault()
     return qtyPreviousResults < maxResultsEntries
       ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
-        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+        ? dispatch({ ...state, resultsStartIndex: currentResultsStartIdx + 1})
         : null
       : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
-        ? setCalcState({ ...calcState, resultsStartIndex: currentResultsStartIdx + 1})
+        ? dispatch({ ...state, resultsStartIndex: currentResultsStartIdx + 1})
         : null
   }
 
@@ -102,20 +102,20 @@ const Calculator = () => {
     e.preventDefault()
     return currentMemoryStartIdx === 0
       ? null
-      : setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx - 1 });
+      : dispatch({ ...state, memoryStartIndex: currentMemoryStartIdx - 1 });
   }
 
   const onMemoryShiftRightClick = (e) => {
-    const { memories } = calcState;
+    const { memories } = state;
     const qtyMemoryEntries = memories.length;
 
     e.preventDefault()
     return qtyMemoryEntries < maxMemoryEntries
       ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
-        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+        ? dispatch({ ...state, memoryStartIndex: currentMemoryStartIdx + 1 })
         : null
       : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
-        ? setCalcState({ ...calcState, memoryStartIndex: currentMemoryStartIdx + 1 })
+        ? dispatch({ ...state, memoryStartIndex: currentMemoryStartIdx + 1 })
         : null
   }
 
@@ -161,6 +161,8 @@ const Calculator = () => {
     })
   }
 
+  const updatedState = { ...state, onResultsShiftLeftClick, onResultsShiftRightClick};
+
   return (
     <CalculatorContextProvider >
       <div className={Styles.container}>
@@ -168,10 +170,10 @@ const Calculator = () => {
         <Display
           bgColor={displayBGColor}
           textColor={displayColor}
-          displayStr={calcState.displayStr}
+          displayStr={state.displayStr}
         />
         {renderDisplayFeatures()}
-        <ResultsBar props={ ...state, onResultsShiftLeftClick, onResultsShiftRightClick} />
+        <ResultsBar {...updatedState} />
         <div className={Styles.buttonWrapper}>
           {renderButtons()}
         </div>
