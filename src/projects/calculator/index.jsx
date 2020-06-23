@@ -12,17 +12,7 @@ import { CalculatorContext, CalculatorContextProvider, reducer } from './context
 
 const Calculator = () => {
   const initialState = useContext(CalculatorContext);
-  const [ calcState, setCalcState ] = useState(initialState);
   const [state, dispatch] = useReducer(reducer, initialState);
-  useEffect(() => {
-    setCalcState(
-      { ...calcState },
-      onResultsShiftLeftClick,
-      onResultsShiftRightClick,
-      onMemoryShiftLeftClick,
-      onMemoryShiftRightClick
-    )
-  }, []);
 
   const { 
     resultsStartIndex: currentResultsStartIdx,
@@ -30,7 +20,10 @@ const Calculator = () => {
   } = state;
 
   const updateDisplay = (newDisplayStr) => {
-    setCalcState({ ...calcState, displayStr: newDisplayStr })
+    dispatch({
+      type: 'UPDATE_DISPLAY',
+      payload: { ...calcState, displayStr: newDisplayStr }
+    });
   }
 
   /**
@@ -178,7 +171,7 @@ const Calculator = () => {
           displayStr={calcState.displayStr}
         />
         {renderDisplayFeatures()}
-        <ResultsBar />
+        <ResultsBar props={ ...state, onResultsShiftLeftClick, onResultsShiftRightClick} />
         <div className={Styles.buttonWrapper}>
           {renderButtons()}
         </div>

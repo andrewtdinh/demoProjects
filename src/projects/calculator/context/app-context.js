@@ -33,6 +33,8 @@ export const reducer = (state, action) => {
   const qtyMemoryEntries = memories.length
 
   switch (action.type) {
+    case "UPDATE_DISPLAY":
+      return action.payload;
     case "RESULTS_SHIFT_LEFT":
       return currentResultsStartIdx === 0
         ? state
