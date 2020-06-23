@@ -34,16 +34,16 @@ export const reducer = (state, action) => {
 
   switch (action.type) {
     case "UPDATE_DISPLAY":
-      return { ...state, displayStr: action.payload}
-    case "RESULTS_SHIFT_LEFT":
+      return { ...state, displayStr: action.payload }
+
+    case "SHIFT_RESULTS_LEFT":
       return currentResultsStartIdx === 0
         ? state
         : { ...state, resultsStartIndex: currentResultsStartIdx - 1 }
 
-    case "RESULTS_SHIFT_RIGHT":
+    case "SHIFT_RESULTS_RIGHT":
       return qtyPreviousResults < maxResultsEntries
-        ? currentResultsStartIdx <
-          qtyPreviousResults - displayedResultsEntries
+        ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
           ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
           : state
         : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
