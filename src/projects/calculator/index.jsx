@@ -79,6 +79,7 @@ const Calculator = () => {
   // TODO: have the displayResults array in state and change it when people shift results left or right
   const onResultsShiftLeftClick = (e) => {
     e.preventDefault()
+    console.log('On resultsLeftClick triggered')
     dispatch({ type: "SHIFT_RESULTS_LEFT" })
   }
 

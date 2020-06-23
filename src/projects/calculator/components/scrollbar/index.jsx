@@ -18,7 +18,7 @@ const ScrollBar = ({
 				color: textColor
 			}}
 		>
-			<div className="shift-left" onClick={onShiftLeftClick}>
+			<div className={Styles.shiftLeft} onClick={onShiftLeftClick}>
 				{'◀'}
 			</div>
 			<div className={Styles.scrollBarEntries}>
@@ -26,7 +26,7 @@ const ScrollBar = ({
 					return <span key={entry}>{entry}</span>;
 				})}
 			</div>
-			<div className="shift-right" onClick={onShiftRightClick}>
+			<div className={Styles.shiftRight} onClick={onShiftRightClick}>
 				{'▶'}
 			</div>
 		</div>

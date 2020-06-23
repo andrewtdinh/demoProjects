@@ -67,9 +67,13 @@ body {
   width: 8vh;
 }
 
-.scrollBar > .shift-left {
+.scrollBar > .shiftLeft {
   display: flex;
   justify-content: right;
+}
+
+.shiftLeft, .shiftRight {
+  cursor: pointer;
 }
 
 .scrollBarEntries {
