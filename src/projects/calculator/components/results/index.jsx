@@ -8,7 +8,7 @@ import { getValuesFrom } from '../../utils/scrollbar';
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
   textColor = resultsTextColor,
-  results = [0,1,2,3,4,5,6,7,8,9],
+  results = [],
   onResultsShiftLeftClick,
   onResultsShiftRightClick
 }) => {

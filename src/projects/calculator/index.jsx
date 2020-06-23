@@ -84,9 +84,9 @@ const Calculator = () => {
   }
 
   const onResultsShiftRightClick = (e) => {
-    const { prevResults } = state;
+    const { prevResults, resultsStartIndex } = state;
     const qtyPreviousResults = prevResults.length;
-    console.log({prevResults})
+    console.log({prevResults, resultsStartIndex})
 
     e.preventDefault()
     dispatch({ type: "SHIFT_RESULTS_RIGHT"})
@@ -162,7 +162,7 @@ const Calculator = () => {
     })
   }
 
-  const updatedState = { ...state, onResultsShiftLeftClick, onResultsShiftRightClick};
+  const updatedState = { ...state, onResultsShiftLeftClick, onResultsShiftRightClick };
 
   return (
     <CalculatorContextProvider >
@@ -174,7 +174,7 @@ const Calculator = () => {
           displayStr={state.displayStr}
         />
         {renderDisplayFeatures()}
-        <ResultsBar {...updatedState} />
+        <ResultsBar results={state.prevResults} { ...updatedState } />
         <div className={Styles.buttonWrapper}>
           {renderButtons()}
         </div>
