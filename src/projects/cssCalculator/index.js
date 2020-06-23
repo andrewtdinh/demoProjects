@@ -13,6 +13,7 @@ const reducer = (state, action) => {
   console.log(state)
   switch (action.type) {
     case "2":
+      console.log('case 2', state)
       if (!state.num1) {
         return {...state, num1: state.num2, op: action.payload, num2: ''}
       }
@@ -39,6 +40,7 @@ const reducer = (state, action) => {
       }
       
     case "3":
+      console.log('case 3')
       if (state.op && state.num2) {
         return {...state, value: eval(state.num1+state.op+state.num2), num2: '', num1: eval(state.num1+state.op+state.num2), num3 : state.num2}
       } else if (state.op && state.value) {
