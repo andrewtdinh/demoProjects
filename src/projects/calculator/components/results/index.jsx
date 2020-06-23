@@ -12,9 +12,9 @@ const ResultsBar = ({
   onResultsShiftLeftClick,
   onResultsShiftRightClick
 }) => {
-  console.log('Inside ResultsBar', {CalculatorContext})
   const { resultsStartIndex } = useContext(CalculatorContext);
   const displayedResults = getValuesFrom(results, resultsStartIndex);
+  console.log('Inside ResultsBar', {CalculatorContext, resultsStartIndex})
 
   return (
     <div
