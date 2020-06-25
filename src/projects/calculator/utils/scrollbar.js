@@ -1,19 +1,17 @@
+import { maxMemoryEntries } from "../constants";
 
 
-export const getValuesFrom = (arr=[], startingIndex) => {
+export const getValuesFrom = (arr=[], startingIndex=0) => {
   const length = arr.length;
   const maxEntriesDisplayed = 4;
-  
   
   if (length <= maxEntriesDisplayed) {
       return arr;
   } else {
-      const startIndex = startingIndex
-        ? startingIndex <= length - maxEntriesDisplayed
-          ? startingIndex
-          : length - maxEntriesDisplayed
-        : length - maxEntriesDisplayed;
-      console.log({ startIndex, length, maxEntriesDisplayed, arr })
-      return arr.slice(startIndex)
+      const subset =
+        startingIndex < length - maxEntriesDisplayed
+          ? arr.slice(startingIndex, startingIndex + maxEntriesDisplayed)
+          : arr.slice(length - maxEntriesDisplayed)
+      return subset;
   }
 }

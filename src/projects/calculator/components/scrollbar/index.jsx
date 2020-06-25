@@ -9,7 +9,6 @@ const ScrollBar = ({
 	onShiftLeftClick,
 	onShiftRightClick
 }) => {
-	console.log({onShiftLeftClick, onShiftRightClick})
 	return (
 		<div
 			className={Styles.scrollBar}
