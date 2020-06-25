@@ -79,24 +79,12 @@ const Calculator = () => {
   // TODO: have the displayResults array in state and change it when people shift results left or right
   const onResultsShiftLeftClick = (e) => {
     e.preventDefault()
-    console.log('On resultsLeftClick triggered')
     dispatch({ type: "SHIFT_RESULTS_LEFT" })
   }
 
   const onResultsShiftRightClick = (e) => {
-    const { prevResults, resultsStartIndex } = state;
-    const qtyPreviousResults = prevResults.length;
-    console.log({prevResults, resultsStartIndex})
-
     e.preventDefault()
     dispatch({ type: "SHIFT_RESULTS_RIGHT"})
-    // return qtyPreviousResults < maxResultsEntries
-    //   ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
-    //     ? dispatch({ ...state, resultsStartIndex: currentResultsStartIdx + 1})
-    //     : null
-    //   : currentResultsStartIdx < maxResultsEntries - displayedResultsEntries
-    //     ? dispatch({ ...state, resultsStartIndex: currentResultsStartIdx + 1})
-    //     : null
   }
 
   const onMemoryShiftLeftClick = (e) => {
