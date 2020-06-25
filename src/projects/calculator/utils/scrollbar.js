@@ -1,9 +1,7 @@
 import { maxMemoryEntries } from "../constants";
 
-
-export const getValuesFrom = (arr=[], startingIndex=0) => {
+export const getValuesFrom = (arr=[], startingIndex=0, maxEntriesDisplayed=4) => {
   const length = arr.length;
-  const maxEntriesDisplayed = 4;
   
   if (length <= maxEntriesDisplayed) {
       return arr;
