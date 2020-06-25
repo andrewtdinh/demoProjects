@@ -50,12 +50,12 @@ export const reducer = (state, action) => {
         ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
         : state
 
-    case "MEMORY_SHIFT_LEFT":
+    case "SHIFT_MEMORY_LEFT":
       return currentMemoryStartIdx === 0
         ? state
         : { ...state, memoryStartIndex: currentMemoryStartIdx - 1 }
 
-    case "MEMORY_SHIFT_RIGHT":
+    case "SHIFT_MEMORY_RIGHT":
       return qtyMemoryEntries < maxMemoryEntries
         ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
           ? { ...state, memoryStartIndex: currentMemoryStartIdx + 1 }
