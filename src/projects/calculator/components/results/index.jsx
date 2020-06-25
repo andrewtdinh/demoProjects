@@ -8,13 +8,12 @@ import { getValuesFrom } from '../../utils/scrollbar';
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
   textColor = resultsTextColor,
-  results = [],
+  prevResults = [],
+  resultsStartIndex = 0,
   onResultsShiftLeftClick,
   onResultsShiftRightClick
 }) => {
-  const { resultsStartIndex } = useContext(CalculatorContext);
-  const displayedResults = getValuesFrom(results, resultsStartIndex);
-  console.log('Inside ResultsBar', {CalculatorContext, resultsStartIndex})
+  const displayedResults = getValuesFrom(prevResults, resultsStartIndex);
 
   return (
     <div

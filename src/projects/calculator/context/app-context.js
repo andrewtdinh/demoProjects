@@ -37,13 +37,11 @@ export const reducer = (state, action) => {
       return { ...state, displayStr: action.payload }
 
     case "SHIFT_RESULTS_LEFT":
-      console.log({state})
       return currentResultsStartIdx === 0
         ? state
         : { ...state, resultsStartIndex: currentResultsStartIdx - 1 }
 
     case "SHIFT_RESULTS_RIGHT":
-      console.log({state})
       return qtyPreviousResults < maxResultsEntries
         ? currentResultsStartIdx < qtyPreviousResults - displayedResultsEntries
           ? { ...state, resultsStartIndex: currentResultsStartIdx + 1 }
