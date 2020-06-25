@@ -1,9 +1,9 @@
-import React, { useContext } from "react"
+import React from "react"
 import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
 import ScrollBar from "../scrollbar";
-import { CalculatorContext } from '../../context/app-context';
 import { getValuesFrom } from '../../utils/scrollbar';
+import { displayedResultsEntries } from '../../constants';
 
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
@@ -13,7 +13,7 @@ const ResultsBar = ({
   onResultsShiftLeftClick,
   onResultsShiftRightClick
 }) => {
-  const displayedResults = getValuesFrom(prevResults, resultsStartIndex);
+  const displayedResults = getValuesFrom(prevResults, resultsStartIndex, displayedResultsEntries);
 
   return (
     <div
