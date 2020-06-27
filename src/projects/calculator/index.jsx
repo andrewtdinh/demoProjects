@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext, useReducer, useEffect } from 'react';
 import Styles from './index.module.css';
 import Button from './components/button';
 import Display from './components/display';
@@ -13,6 +13,19 @@ import { CalculatorContext, CalculatorContextProvider, reducer } from './context
 const Calculator = () => {
   const initialState = useContext(CalculatorContext);
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    dispatch({
+      type: 'UPDATE_STATE',
+      payload: {
+        ...state,
+        onMemoryShiftLeftClick,
+        onMemoryShiftRightClick,
+        onResultsShiftLeftClick,
+        onResultsShiftRightClick
+      }
+    })
+  }, []);
 
   const { 
     resultsStartIndex: currentResultsStartIdx,
@@ -139,7 +152,11 @@ const Calculator = () => {
     })
   }
 
-  const updatedState = { ...state, onResultsShiftLeftClick, onResultsShiftRightClick };
+  const updatedState = { 
+    ...state, 
+    onResultsShiftLeftClick, 
+    onResultsShiftRightClick
+  };
 
   return (
     <CalculatorContextProvider >
