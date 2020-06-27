@@ -78,34 +78,23 @@ const Calculator = () => {
 
   // TODO: have the displayResults array in state and change it when people shift results left or right
   const onResultsShiftLeftClick = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     dispatch({ type: "SHIFT_RESULTS_LEFT" })
   }
 
   const onResultsShiftRightClick = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     dispatch({ type: "SHIFT_RESULTS_RIGHT"})
   }
 
   const onMemoryShiftLeftClick = (e) => {
-    e.preventDefault()
-    return currentMemoryStartIdx === 0
-      ? null
-      : dispatch({ ...state, memoryStartIndex: currentMemoryStartIdx - 1 });
+    e.preventDefault();
+    dispatch({ type: "SHIFT_MEMORY_LEFT" });
   }
 
   const onMemoryShiftRightClick = (e) => {
-    const { memories } = state;
-    const qtyMemoryEntries = memories.length;
-
-    e.preventDefault()
-    return qtyMemoryEntries < maxMemoryEntries
-      ? currentMemoryStartIdx < qtyMemoryEntries - displayedMemoryEntries
-        ? dispatch({ ...state, memoryStartIndex: currentMemoryStartIdx + 1 })
-        : null
-      : currentMemoryStartIdx < maxMemoryEntries - displayedMemoryEntries
-        ? dispatch({ ...state, memoryStartIndex: currentMemoryStartIdx + 1 })
-        : null
+    e.preventDefault();
+    dispatch({ type: "SHIFT_MEMORY_RIGHT" });
   }
 
   const renderButtons = () => {
