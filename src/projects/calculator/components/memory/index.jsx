@@ -8,10 +8,10 @@ const MemoryBar = ({
   bgColor = memoryBarBGColor,
   textColor = memoryTextColor,
   children,
-  memories = []
+  memories = [],
+  onMemoryShiftLeftClick,
+  onMemoryShiftRightClick,
 }) => {
-  const { onMemoryShiftLeftClick, onMemoryShiftRightClick } = useContext(CalculatorContext);
-
   return (
     <div
       className={Styles.memoryBar}
@@ -20,17 +20,13 @@ const MemoryBar = ({
         color: textColor,
       }}
     >
-      <div className={Styles.memoryBarLabel} >
-        Mem:
-      </div>
-      <ScrollBar
-
-      />
+      <div className={Styles.memoryBarLabel}>Mem:</div>
+      <ScrollBar />
     </div>
   )
 }
 
-const temp = () => {
+const temp = ({ children, memories}) => {
   return (
     <div>
       <div className={Styles.memoryCells}>
