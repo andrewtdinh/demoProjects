@@ -152,11 +152,11 @@ const Calculator = () => {
     })
   }
 
-  const updatedState = { 
-    ...state, 
-    onResultsShiftLeftClick, 
-    onResultsShiftRightClick
-  };
+  // const updatedState = { 
+  //   ...state, 
+  //   onResultsShiftLeftClick, 
+  //   onResultsShiftRightClick
+  // };
 
   return (
     <CalculatorContextProvider >
@@ -168,7 +168,7 @@ const Calculator = () => {
           displayStr={state.displayStr}
         />
         {renderDisplayFeatures()}
-        <ResultsBar results={state.prevResults} { ...updatedState } />
+        <ResultsBar results={state.prevResults} { ...state } />
         <div className={Styles.buttonWrapper}>
           {renderButtons()}
         </div>
