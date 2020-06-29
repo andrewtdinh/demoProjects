@@ -155,7 +155,7 @@ const Calculator = () => {
   return (
     <CalculatorContextProvider >
       <div className={Styles.container}>
-        <MemoryBar />
+        <MemoryBar memories={state.memories} {...state} />
         <Display
           bgColor={displayBGColor}
           textColor={displayColor}

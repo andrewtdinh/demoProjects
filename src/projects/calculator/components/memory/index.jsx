@@ -2,16 +2,25 @@ import React, { useContext } from 'react';
 import { memoryBarBGColor, memoryTextColor } from '../../buttons';
 import Styles from "../../index.module.css";
 import { CalculatorContext } from "../../context/app-context";
-import ScrollBar from "../scrollbar"
+import { getValuesFrom } from "../../utils/scrollbar";
+import ScrollBar from "../scrollbar";
+import { displayedMemoryEntries } from "../../constants"
 
 const MemoryBar = ({
   bgColor = memoryBarBGColor,
   textColor = memoryTextColor,
   children,
   memories = [],
+  memoryStartIndex,
   onMemoryShiftLeftClick,
   onMemoryShiftRightClick,
 }) => {
+  const displayedMemories = getValuesFrom(
+    memories,
+    onMemoryShiftLeftClick,
+    displayedMemoryEntries
+  )
+
   return (
     <div
       className={Styles.memoryBar}
