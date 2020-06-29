@@ -152,12 +152,6 @@ const Calculator = () => {
     })
   }
 
-  // const updatedState = { 
-  //   ...state, 
-  //   onResultsShiftLeftClick, 
-  //   onResultsShiftRightClick
-  // };
-
   return (
     <CalculatorContextProvider >
       <div className={Styles.container}>
