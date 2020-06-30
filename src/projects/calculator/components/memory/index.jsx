@@ -30,7 +30,9 @@ const MemoryBar = ({
       }}
     >
       <div className={Styles.memoryBarLabel}>Mem:</div>
-      <ScrollBar />
+      <ScrollBar 
+        entries={displayedMemories}
+      />
     </div>
   )
 }
