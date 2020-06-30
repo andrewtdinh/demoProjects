@@ -11,13 +11,13 @@ const MemoryBar = ({
   textColor = memoryTextColor,
   children,
   memories = [],
-  memoryStartIndex,
+  memoryStartIndex=0,
   onMemoryShiftLeftClick,
   onMemoryShiftRightClick,
 }) => {
   const displayedMemories = getValuesFrom(
     memories,
-    onMemoryShiftLeftClick,
+    memoryStartIndex,
     displayedMemoryEntries
   )
 
