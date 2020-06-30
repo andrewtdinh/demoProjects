@@ -32,6 +32,8 @@ const MemoryBar = ({
       <div className={Styles.memoryBarLabel}>Mem:</div>
       <ScrollBar 
         entries={displayedMemories}
+        onMemoryShiftLeftClick={onMemoryShiftLeftClick}
+        onShiftRightClick={onMemoryShiftRightClick}
       />
     </div>
   )
