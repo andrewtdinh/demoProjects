@@ -6,7 +6,6 @@ import DisplayFeatures from './components/display-features';
 import MemoryBar from './components/memory';
 import ResultsBar from './components/results';
 import { buttons, displayColor, displayBGColor } from './buttons';
-import { maxResultsEntries, maxMemoryEntries, displayedMemoryEntries, displayedResultsEntries } from "./constants";
 
 import { CalculatorContext, CalculatorContextProvider, reducer } from './context/app-context';
 
