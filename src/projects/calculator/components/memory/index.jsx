@@ -20,7 +20,7 @@ const MemoryBar = ({
     memoryStartIndex,
     displayedMemoryEntries
   )
-
+  console.log({memories, memoryStartIndex, displayedMemoryEntries})
   return (
     <div
       className={Styles.memoryBar}
