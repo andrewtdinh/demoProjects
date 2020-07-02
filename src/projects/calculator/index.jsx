@@ -111,7 +111,7 @@ const Calculator = () => {
 
   const onMemoryAdded = (e) => {
     e.preventDefault();
-    dispatch({ type: "MEMORY_IN" });
+    dispatch({ type: "MEMORY_IN", payload: state.displayStr });
   }
 
   const renderButtons = () => {
