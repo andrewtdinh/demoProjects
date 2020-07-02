@@ -109,6 +109,11 @@ const Calculator = () => {
     dispatch({ type: "SHIFT_MEMORY_RIGHT" });
   }
 
+  const onMemoryAdded = (e) => {
+    e.preventDefault();
+    dispatch({ type: "MEMORY_IN" });
+  }
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -132,6 +137,8 @@ const Calculator = () => {
           ? onDeleteBtnClick
           : label === "±" 
           ? onSignBtnClick
+          : label === "MEM+"
+          ? onMemoryAdded
           : null;
 
       return (
