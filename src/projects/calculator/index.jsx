@@ -28,7 +28,8 @@ const Calculator = () => {
 
   const { 
     resultsStartIndex: currentResultsStartIdx,
-    memoryStartIndex: currentMemoryStartIdx
+    memoryStartIndex: currentMemoryStartIdx,
+    isPercentMode
   } = state;
 
   const updateDisplay = (newDisplayStr) => {
@@ -116,6 +117,11 @@ const Calculator = () => {
 
   const onConvertNumberClick = (e) => {
     e.preventDefault();
+    if (isPercentMode){
+
+    } else {
+      
+    }
   }
 
   const renderButtons = () => {
@@ -145,6 +151,7 @@ const Calculator = () => {
           ? onMemoryAdded
           : name = "Percent Of Operator"
           ? onConvertNumberClick
+          : null;
 
       return (
         <Button
