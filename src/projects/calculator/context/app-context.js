@@ -74,6 +74,13 @@ export const reducer = (state, action) => {
         : [...memories, action.payload]
       return { ...state, memoryStartIndex: currentMemoryStartIdx + 1, memories: newMemoryArray }
 
+    case "RESULTS_IN":
+      const isMaxResultsReached = qtyPreviousResults >= maxResultsEntries;
+      const newResultsArray = isMaxResultsReached
+        ? [...prevResults, action.payload].slice(1)
+        : [...prevResults, action.payload]
+      return { ...state, resultsStartIndex: currentResultsStartIdx + 1, prevResults: newResultsArray }
+
     default:
       return state
   }
