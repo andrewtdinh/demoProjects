@@ -120,7 +120,7 @@ const Calculator = () => {
     if (isPercentMode){
 
     } else {
-      
+
     }
   }
 
@@ -149,7 +149,7 @@ const Calculator = () => {
           ? onSignBtnClick
           : label === "MEM+"
           ? onMemoryAdded
-          : name = "Percent Of Operator"
+          : name === "Percent Of Operator"
           ? onConvertNumberClick
           : null;
 
