@@ -114,6 +114,10 @@ const Calculator = () => {
     dispatch({ type: "MEMORY_IN", payload: state.displayStr });
   }
 
+  const onConvertNumberClick = (e) => {
+    e.preventDefault();
+  }
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -139,7 +143,8 @@ const Calculator = () => {
           ? onSignBtnClick
           : label === "MEM+"
           ? onMemoryAdded
-          : null;
+          : name = "Percent Of Operator"
+          ? onConvertNumberClick
 
       return (
         <Button
