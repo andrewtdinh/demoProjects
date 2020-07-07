@@ -149,9 +149,15 @@ const Calculator = () => {
           ? onSignBtnClick
           : label === "MEM+"
           ? onMemoryAdded
-          : name === "Percent Of Operator"
+          : name === "To Percent Operator"
           ? onConvertNumberClick
           : null;
+      const buttonLabel =
+        name === "To Percent Operator" 
+          ? isPercentMode
+            ? "➡ fr"
+            : "➡ %"
+          : label;
 
       return (
         <Button
@@ -159,7 +165,7 @@ const Calculator = () => {
           rowSpan={rowSpanString}
           columnSpan={columnSpanString}
           name={name}
-          label={label}
+          label={buttonLabel}
           color={color}
           bgColor={bgColor}
           type={type}
