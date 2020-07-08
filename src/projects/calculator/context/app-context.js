@@ -30,6 +30,7 @@ export const reducer = (state, action) => {
     memoryStartIndex: currentMemoryStartIdx,
     prevResults,
     memories,
+    isPercentMode,
   } = state;
   const qtyPreviousResults = prevResults.length
   const qtyMemoryEntries = memories.length
@@ -82,6 +83,9 @@ export const reducer = (state, action) => {
         ? [...prevResults, action.payload].slice(1)
         : [...prevResults, action.payload]
       return { ...state, resultsStartIndex: currentResultsStartIdx + 1, prevResults: newResultsArray }
+
+    case "CONVERT_TO_FRACTION":
+      return { ...state, isPercentMode: !isPercentMode, displayStr: `${displayStr * 1 / 100}`}
 
     default:
       return state
