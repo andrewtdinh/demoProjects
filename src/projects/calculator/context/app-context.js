@@ -31,6 +31,7 @@ export const reducer = (state, action) => {
     prevResults,
     memories,
     isPercentMode,
+    displayStr
   } = state;
   const qtyPreviousResults = prevResults.length
   const qtyMemoryEntries = memories.length
