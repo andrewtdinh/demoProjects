@@ -115,13 +115,17 @@ const Calculator = () => {
     dispatch({ type: "MEMORY_IN", payload: state.displayStr });
   }
 
-  const onConvertNumberClick = (e) => {
+  const onConvertButtonClick = (e) => {
     e.preventDefault();
     if (isPercentMode){
-
+      dispatch({ type: "CONVERT_TO_FRACTION"})
     } else {
-
+      dispatch({ type: "CONVERT_TO_PERCENT"})
     }
+  }
+
+  const onPercentOfBtnClick = (e) => {
+    e.preventDefault();
   }
 
   const renderButtons = () => {
@@ -150,7 +154,7 @@ const Calculator = () => {
           : label === "MEM+"
           ? onMemoryAdded
           : name === "To Percent Operator"
-          ? onConvertNumberClick
+          ? onConvertButtonClick
           : null;
       const buttonLabel =
         name === "To Percent Operator" 
