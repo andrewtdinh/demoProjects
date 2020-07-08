@@ -87,6 +87,9 @@ export const reducer = (state, action) => {
     case "CONVERT_TO_FRACTION":
       return { ...state, isPercentMode: !isPercentMode, displayStr: `${displayStr * 1 / 100}`}
 
+    case "CONVERT_TO_PERCENT":
+      return { ...state, isPercentMode: !isPercentMode, displayStr: `${displayStr * 100}`}
+
     default:
       return state
   }
