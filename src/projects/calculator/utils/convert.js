@@ -1,4 +1,4 @@
-export const convertToDecimal = (percentStr) => {
+export const convertToDecimal = (percentStr='0') => {
   const parts = percentStr.split('.');
   const firstPartLength = parts[0].length;
   if (firstPartLength === 0) {
@@ -10,8 +10,8 @@ export const convertToDecimal = (percentStr) => {
   }
 }
 
-export const convertToPercent = (fractionStr) => {
-  const parts = fractionStr.split('.');
+export const convertToPercent = (decimalStr='0') => {
+  const parts = decimalStr.split('.');
   const secondPartLength = parts[1].length;
   if (secondPartLength === 0) {
     return parts[0] + '00.0';
