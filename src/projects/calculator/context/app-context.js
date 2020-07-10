@@ -5,6 +5,7 @@ import {
   displayedMemoryEntries,
   displayedResultsEntries,
 } from "../constants";
+import { convertToDecimal, convertToPercent } from '../utils/convert';
 
 const initialState = {
   displayStr: "0",
@@ -86,10 +87,10 @@ export const reducer = (state, action) => {
       return { ...state, resultsStartIndex: currentResultsStartIdx + 1, prevResults: newResultsArray }
 
     case "CONVERT_TO_FRACTION":
-      return { ...state, isPercentMode: !isPercentMode, displayStr: `${displayStr * 1 / 100}`}
+      return { ...state, isPercentMode: !isPercentMode, displayStr: convertToDecimal(displayStr) }
 
     case "CONVERT_TO_PERCENT":
-      return { ...state, isPercentMode: !isPercentMode, displayStr: `${displayStr * 100}`}
+      return { ...state, isPercentMode: !isPercentMode, displayStr: convertToPercent(displayStr) }
 
     default:
       return state
