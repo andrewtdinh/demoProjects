@@ -119,7 +119,7 @@ const Calculator = () => {
     console.log('On convert button clicked')
     e.preventDefault();
     if (isPercentMode){
-      dispatch({ type: "CONVERT_TO_FRACTION"})
+      dispatch({ type: "CONVERT_TO_DECIMAL"})
     } else {
       dispatch({ type: "CONVERT_TO_PERCENT"})
     }
