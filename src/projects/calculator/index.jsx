@@ -160,7 +160,7 @@ const Calculator = () => {
       const buttonLabel =
         name === "To Percent Operator" 
           ? isPercentMode
-            ? "➡ fr"
+            ? "➡ dec"
             : "➡ %"
           : label;
 
