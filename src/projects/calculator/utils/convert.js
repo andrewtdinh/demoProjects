@@ -1,12 +1,22 @@
-export const convertToDecimal = (percentStr='0.0') => {
-  const parts = percentStr.split('.');
-  const firstPartLength = parts[0].length;
-  if (firstPartLength === 0) {
-    return "0.00" + parts[1]
-  } else if (firstPartLength === 1) {
-    return "0.0" + parts[0] + parts[1]
-  } else {
-    return parts[0].splice(firstPartLength - 2, 0, '.') + parts[1];
+export const convertToDecimal = (percentStr) => {
+  if (!percentStr) {
+    return '0.0';
+  } 
+  const chars = percentStr.split('');
+  const charsLength = chars.length;
+  const oldDecimalPosition = chars.indexOf('.');
+  const hasDecimalPoint = oldDecimalPosition >= 0;
+  if (!hasDecimalPoint) {
+    if (charsLength === 1 && chars[0] === '0') {
+      return '0';
+    } else if (charsLength === 1) {
+      return '0.0' + chars[0];
+    } else if (charsLength === 2) {
+      return '0.' + chars.join('');
+    } else if (charsLength > 2) {
+      chars.splice(charsLength - 2, 0, '.');
+      return chars.join('');
+    }
   }
 }
 
