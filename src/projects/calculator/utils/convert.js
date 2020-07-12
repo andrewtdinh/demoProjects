@@ -2,7 +2,8 @@ export const convertToDecimal = (percentStr) => {
   if (!percentStr) {
     return '0.0';
   } 
-  const chars = percentStr.split('');
+  const isNegative = percentStr[0] === '-';
+  const chars = isNegative ? percentStr.split('').slice(1) : percentStr.split('');
   const charsLength = chars.length;
   const oldDecimalPosition = chars.indexOf('.');
   const hasDecimalPoint = oldDecimalPosition >= 0;
@@ -16,6 +17,14 @@ export const convertToDecimal = (percentStr) => {
     } else if (charsLength > 2) {
       chars.splice(charsLength - 2, 0, '.');
       return chars.join('');
+    }
+  } else {
+    if (oldDecimalPosition === 0) {
+      chars.shift();
+      return '0.00' + chars.join('');
+    } else if (oldDecimalPosition === 1) {
+      chars.splice(oldDecimalPosition, 1);
+      return '0.0' + chars.join('');
     }
   }
 }
