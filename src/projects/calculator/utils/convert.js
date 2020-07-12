@@ -8,23 +8,32 @@ export const convertToDecimal = (percentStr) => {
   const oldDecimalPosition = chars.indexOf('.');
   const hasDecimalPoint = oldDecimalPosition >= 0;
   if (!hasDecimalPoint) {
+    // For cases where there is no decimal point
     if (charsLength === 1 && chars[0] === '0') {
       return '0.00';
     } else if (charsLength === 1) {
-      return isNegative ? "-0.0" + chars[0] : "0.0" + chars[0]
+      return isNegative ? '-0.0' + chars[0] : '0.0' + chars[0]
     } else if (charsLength === 2) {
-      return isNegative ? "-0." + chars.join("") : "0." + chars.join("")
+      return isNegative ? '-0.' + chars.join('') : '0.' + chars.join('')
     } else if (charsLength > 2) {
       chars.splice(charsLength - 2, 0, '.');
-      return isNegative ? '-' + chars.join("") : chars.join("")
+      return isNegative ? '-' + chars.join('') : chars.join('')
     }
   } else {
+    // For cases with decimal point
     if (oldDecimalPosition === 0) {
       chars.shift();
-      return '0.00' + chars.join('');
+      return isNegative ? '-0.00' + chars.join('') : '0.00' + chars.join('')
     } else if (oldDecimalPosition === 1) {
       chars.splice(oldDecimalPosition, 1);
-      return '0.0' + chars.join('');
+      return isNegative ? '-0.0' + chars.join('') : '0.0' + chars.join('');
+    } else if (oldDecimalPosition === 2) {
+      chars.splice(oldDecimalPosition, 1);
+      return isNegative ? '-0.' + chars.join('') : '0.' + chars.join('')
+    } else if (oldDecimalPosition >=3 ) {
+      chars.splice(oldDecimalPosition, 1);
+      chars.splice(oldDecimalPosition - 2, 0, '.');
+      return isNegative ? '-' + chars.join('') : chars.join('');
     }
   }
 }
