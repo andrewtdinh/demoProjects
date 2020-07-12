@@ -9,7 +9,7 @@ export const convertToDecimal = (percentStr) => {
   const hasDecimalPoint = oldDecimalPosition >= 0;
   if (!hasDecimalPoint) {
     if (charsLength === 1 && chars[0] === '0') {
-      return '0';
+      return '0.00';
     } else if (charsLength === 1) {
       return '0.0' + chars[0];
     } else if (charsLength === 2) {
