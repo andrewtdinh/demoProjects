@@ -24,16 +24,16 @@ export const convertToDecimal = (percentStr) => {
     if (oldDecimalPosition === 0) {
       chars.shift();
       return isNegative ? '-0.00' + chars.join('') : '0.00' + chars.join('')
-    } else if (oldDecimalPosition === 1) {
-      chars.splice(oldDecimalPosition, 1);
-      return isNegative ? '-0.0' + chars.join('') : '0.0' + chars.join('');
-    } else if (oldDecimalPosition === 2) {
-      chars.splice(oldDecimalPosition, 1);
-      return isNegative ? '-0.' + chars.join('') : '0.' + chars.join('')
-    } else if (oldDecimalPosition >=3 ) {
-      chars.splice(oldDecimalPosition, 1);
-      chars.splice(oldDecimalPosition - 2, 0, '.');
-      return isNegative ? '-' + chars.join('') : chars.join('');
+    } else {
+      chars.splice(oldDecimalPosition, 1)
+      if (oldDecimalPosition === 1) {
+        return isNegative ? "-0.0" + chars.join("") : "0.0" + chars.join("")
+      } else if (oldDecimalPosition === 2) {
+        return isNegative ? "-0." + chars.join("") : "0." + chars.join("")
+      } else if (oldDecimalPosition >= 3) {
+        chars.splice(oldDecimalPosition - 2, 0, ".")
+        return isNegative ? "-" + chars.join("") : chars.join("")
+      }
     }
   }
 }
