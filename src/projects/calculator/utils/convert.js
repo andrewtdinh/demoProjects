@@ -11,12 +11,12 @@ export const convertToDecimal = (percentStr) => {
     if (charsLength === 1 && chars[0] === '0') {
       return '0.00';
     } else if (charsLength === 1) {
-      return '0.0' + chars[0];
+      return isNegative ? "-0.0" + chars[0] : "0.0" + chars[0]
     } else if (charsLength === 2) {
-      return '0.' + chars.join('');
+      return isNegative ? "-0." + chars.join("") : "0." + chars.join("")
     } else if (charsLength > 2) {
       chars.splice(charsLength - 2, 0, '.');
-      return chars.join('');
+      return isNegative ? '-' + chars.join("") : chars.join("")
     }
   } else {
     if (oldDecimalPosition === 0) {
