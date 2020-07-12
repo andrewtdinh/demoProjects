@@ -87,7 +87,10 @@ export const reducer = (state, action) => {
       const newResultsArray = isMaxResultsReached
         ? [...prevResults, action.payload].slice(1)
         : [...prevResults, action.payload]
-      return { ...state, resultsStartIndex: currentResultsStartIdx + 1, prevResults: newResultsArray }
+      const newResultsStartIdx = newResultsArray.length - displayedResultsEntries >= 0
+        ? newResultsArray.length - displayedResultsEntries
+        : 0
+      return { ...state, resultsStartIndex: newResultsStartIdx, prevResults: newResultsArray }
 
     case "CONVERT_TO_DECIMAL":
       return { ...state, isPercentMode: !isPercentMode, displayStr: convertToDecimal(displayStr) }
