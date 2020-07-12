@@ -67,3 +67,23 @@ export const convertToPercent = (decimalStr) => {
     }
   }
 }
+
+const trimLeadingZeros = (numberStr) => {
+  const isNegative = numberStr[0] === "-";
+  const chars = isNegative ? numberStr.split("").slice(1) : numberStr.split("");
+  const charsLength = chars.length;
+  const oldDecimalPosition = chars.indexOf(".");
+  const hasDecimalPoint = oldDecimalPosition >= 0;
+  if (charsLength <= 1) {
+    return numberStr;
+  } else {
+    while (chars.length >= 2) {
+      if (chars[0] === '0' && chars[1] !== '.') {
+        chars.splice(0, 0);
+      } else {
+        break;
+      }
+    }
+    return isNegative ? '-' + chars.join('') : chars.join('');
+  }
+}
