@@ -47,23 +47,23 @@ export const convertToPercent = (decimalStr) => {
   const oldDecimalPosition = chars.indexOf(".");
   const hasDecimalPoint = oldDecimalPosition >= 0;
   if (!hasDecimalPoint) {
-    return chars.join('') + '00';
+    return trimLeadingZeros(chars.join('') + '00');
   } else {
     // For cases when number has decimal point
     chars.splice(oldDecimalPosition, 1);
     if (charsLength - oldDecimalPosition === 1) {
       // Decimal point is at the end of the number
-      return chars.join('') + '00';
+      return trimLeadingZeros(chars.join('') + '00');
     } else if (charsLength - oldDecimalPosition === 2) {
       // For xxx.x numbers
-      return chars.join('') + '0';
+      return trimLeadingZeros(chars.join('') + '0');
     } else if (charsLength - oldDecimalPosition === 3) {
       // For xxx.xx numbers
-      return chars.join('');
+      return trimLeadingZeros(chars.join(''));
     } else if (charsLength - oldDecimalPosition > 3) {
       // For all other cases
       chars.splice(oldDecimalPosition + 2, 0, ".");
-      return chars.join('');
+      return trimLeadingZeros(chars.join(''));
     }
   }
 }
@@ -75,9 +75,9 @@ const trimLeadingZeros = (numberStr) => {
   if (charsLength <= 1) {
     return numberStr;
   } else {
-    while (chars.length >= 2) {
-      if (chars[0] === '0' && chars[1] !== '.') {
-        chars.splice(0, 0);
+    while (chars[0] === '0' && chars.length >=2) {
+      if (chars[1] !== '.') {
+        chars.splice(0, 1);
       } else {
         break;
       }
