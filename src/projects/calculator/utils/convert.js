@@ -38,16 +38,32 @@ export const convertToDecimal = (percentStr) => {
   }
 }
 
-export const convertToPercent = (decimalStr='0.0') => {
-  const parts = decimalStr.split('.');
-  const secondPartLength = parts[1].length;
-  if (secondPartLength === 0) {
-    return parts[0] + '00.0';
-  } else if (secondPartLength === 1) {
-    return parts[0] + parts[1] + '0.0';
-  } else if (secondPartLength === 2) {
-    return parts[0] + parts[1] + '.0';
+export const convertToPercent = (decimalStr) => {
+  if (!decimalStr) {
+    return '0';
+  }
+  const chars = decimalStr.split("");
+  const charsLength = chars.length;
+  const oldDecimalPosition = chars.indexOf(".");
+  const hasDecimalPoint = oldDecimalPosition >= 0;
+  if (!hasDecimalPoint) {
+    return chars.join('') + '00';
   } else {
-    return parts[0] + parts[1].splice(2, 0, '.')
+    // For cases when number has decimal point
+    chars.splice(oldDecimalPosition, 1);
+    if (charsLength - oldDecimalPosition === 1) {
+      // Decimal point is at the end of the number
+      return chars.join('') + '00';
+    } else if (charsLength - oldDecimalPosition === 2) {
+      // For xxx.x numbers
+      return chars.join('') + '0';
+    } else if (charsLength - oldDecimalPosition === 3) {
+      // For xxx.xx numbers
+      return chars.join('');
+    } else if (charsLength - oldDecimalPosition > 3) {
+      // For all other cases
+      chars.splice(oldDecimalPosition + 2, 0, ".");
+      return chars.join('');
+    }
   }
 }
