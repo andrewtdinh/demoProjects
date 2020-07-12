@@ -72,8 +72,6 @@ const trimLeadingZeros = (numberStr) => {
   const isNegative = numberStr[0] === "-";
   const chars = isNegative ? numberStr.split("").slice(1) : numberStr.split("");
   const charsLength = chars.length;
-  const oldDecimalPosition = chars.indexOf(".");
-  const hasDecimalPoint = oldDecimalPosition >= 0;
   if (charsLength <= 1) {
     return numberStr;
   } else {
