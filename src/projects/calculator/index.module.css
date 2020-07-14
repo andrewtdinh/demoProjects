@@ -160,4 +160,6 @@ body {
   display: inline-block;
   width: 3%;
   margin-right: 3px;
+  top: 5px;
+  height: 2rem;
 }
