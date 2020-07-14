@@ -16,6 +16,7 @@ const Display = ({
       }}
     >
       <div className={Styles.displayWindow}>{displayStr}</div>
+      <div className={Styles.displayMode}>%</div>
     </div>
   )
 }

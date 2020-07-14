@@ -151,7 +151,12 @@ body {
 
 .displayWindow {
   display: inline-block;
-  width: 100%;
-  margin-right: 3px;
+  width: 96%;
   font-size: 2.8rem;
+}
+
+.displayMode {
+  display: inline-block;
+  width: 4%;
+  margin-right: 3px;
 }
