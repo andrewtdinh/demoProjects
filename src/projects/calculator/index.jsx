@@ -188,6 +188,7 @@ const Calculator = () => {
       <div className={Styles.container}>
         <MemoryBar memories={state.memories} { ...state } />
         <Display
+          isPercentMode={state.isPercentMode}
           bgColor={displayBGColor}
           textColor={displayColor}
           displayStr={state.displayStr}
