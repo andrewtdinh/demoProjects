@@ -1,13 +1,14 @@
 import React from "react";
 
 const Button = props => {
-  const { onClick, label, color, bgColor, columnSpan, rowSpan, name, type, value } = props;
+  const { onClick, label, color, bgColor, columnSpan, rowSpan, name, type, value, isEnabled } = props;
   const fontSize =
     type === "blue-button" 
       ? "2.6rem" 
       : type === "orange-operator-button" 
       ? "1.1rem" 
       : "0.9rem";
+  const disabled = isEnabled ? '' : 'disabled';
 
   return (
     <button
@@ -24,6 +25,7 @@ const Button = props => {
       key={name}
       aria-label={name}
       value={value ? value : null}
+      disabled={disabled}
     >
       {label}
     </button>
