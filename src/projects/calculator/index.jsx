@@ -118,7 +118,6 @@ const Calculator = () => {
   }
 
   const onConvertButtonClick = (e) => {
-    console.log('On convert button clicked')
     e.preventDefault();
     if (isPercentMode){
       dispatch({ type: "CONVERT_TO_DECIMAL"})
