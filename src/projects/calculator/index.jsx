@@ -166,6 +166,8 @@ const Calculator = () => {
             : "➡ %"
           : label;
 
+      const isEnabled = name === 'Percent Of Operator' ? isPercentMode : true; 
+
       return (
         <Button
           onClick={onClickFn}
@@ -178,6 +180,7 @@ const Calculator = () => {
           type={type}
           value={value}
           key={name}
+          isEnabled={isEnabled}
         />
       )
     })
