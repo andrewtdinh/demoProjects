@@ -9,6 +9,8 @@ const Button = props => {
       ? "1.1rem" 
       : "0.9rem";
   const disabled = isEnabled ? '' : 'disabled';
+  const backgroundColor = isEnabled ? bgColor : "#e8c5c56b";
+  const fontColor = isEnabled ? color : "#c3bcb1eb"
 
   return (
     <button
@@ -16,8 +18,8 @@ const Button = props => {
       style={{
         gridColumn: columnSpan,
         gridRow: rowSpan,
-        color: color,
-        backgroundColor: bgColor,
+        color: fontColor,
+        backgroundColor,
         fontWeight: 600,
         fontSize: fontSize,
         borderRadius: "7px",
