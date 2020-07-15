@@ -10,7 +10,9 @@ const Button = props => {
       : "0.9rem";
   const disabled = isEnabled ? '' : 'disabled';
   const backgroundColor = isEnabled ? bgColor : "#e8c5c56b";
-  const fontColor = isEnabled ? color : "#c3bcb1eb"
+  const fontColor = isEnabled ? color : "#c3bcb1eb";
+  const cursor = isEnabled ? 'pointer' : 'none';
+  const pointerEvents = isEnabled ? 'auto' : 'none'
 
   return (
     <button
@@ -23,6 +25,8 @@ const Button = props => {
         fontWeight: 600,
         fontSize: fontSize,
         borderRadius: "7px",
+        cursor,
+        pointerEvents
       }}
       key={name}
       aria-label={name}
