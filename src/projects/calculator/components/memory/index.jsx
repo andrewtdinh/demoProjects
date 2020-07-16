@@ -13,6 +13,7 @@ const MemoryBar = ({
   memoryStartIndex=0,
   onMemoryShiftLeftClick,
   onMemoryShiftRightClick,
+  onScrollBarEntryClick
 }) => {
   const displayedMemories = getValuesFrom(
     memories,
@@ -33,6 +34,7 @@ const MemoryBar = ({
         entries={displayedMemories}
         onShiftLeftClick={onMemoryShiftLeftClick}
         onShiftRightClick={onMemoryShiftRightClick}
+        onScrollBarEntryClick={onScrollBarEntryClick}
       />
     </div>
   )
