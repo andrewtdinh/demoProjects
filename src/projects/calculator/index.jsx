@@ -133,7 +133,7 @@ const Calculator = () => {
 
   const onScrollBarEntryClick = (e) => {
     e.preventDefault();
-    console.log({e})
+    updateDisplay(`${e.currentTarget.innerText}`)
   }
 
   const renderButtons = () => {
