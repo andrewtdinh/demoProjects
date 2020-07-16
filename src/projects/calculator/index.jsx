@@ -22,7 +22,7 @@ const Calculator = () => {
         onMemoryShiftRightClick,
         onResultsShiftLeftClick,
         onResultsShiftRightClick,
-        onScrollBarEntriesClick
+        onScrollBarEntryClick
       }
     })
   }, []);
@@ -131,8 +131,9 @@ const Calculator = () => {
     e.preventDefault();
   }
 
-  const onScrollBarEntriesClick = (e) => {
+  const onScrollBarEntryClick = (e) => {
     e.preventDefault();
+    console.log({e})
   }
 
   const renderButtons = () => {
