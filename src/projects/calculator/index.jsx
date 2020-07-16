@@ -21,7 +21,8 @@ const Calculator = () => {
         onMemoryShiftLeftClick,
         onMemoryShiftRightClick,
         onResultsShiftLeftClick,
-        onResultsShiftRightClick
+        onResultsShiftRightClick,
+        onScrollBarEntriesClick
       }
     })
   }, []);
@@ -127,6 +128,10 @@ const Calculator = () => {
   }
 
   const onPercentOfBtnClick = (e) => {
+    e.preventDefault();
+  }
+
+  const onScrollBarEntriesClick = (e) => {
     e.preventDefault();
   }
 
