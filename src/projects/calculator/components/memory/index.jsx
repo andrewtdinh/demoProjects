@@ -9,7 +9,6 @@ import { displayedMemoryEntries } from "../../constants"
 const MemoryBar = ({
   bgColor = memoryBarBGColor,
   textColor = memoryTextColor,
-  children,
   memories = [],
   memoryStartIndex=0,
   onMemoryShiftLeftClick,
@@ -35,19 +34,6 @@ const MemoryBar = ({
         onShiftLeftClick={onMemoryShiftLeftClick}
         onShiftRightClick={onMemoryShiftRightClick}
       />
-    </div>
-  )
-}
-
-const temp = ({ children, memories}) => {
-  return (
-    <div>
-      <div className={Styles.memoryCells}>
-        {memories.map((memValue, idx) => {
-          return <div key={`${idx}:${memValue}`}>{memValue}</div>
-        })}
-      </div>
-      {children}
     </div>
   )
 }
