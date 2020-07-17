@@ -57,6 +57,10 @@ const Calculator = () => {
     }
   }
   
+  const resetDisplay = () => {
+    updateDisplay("0");
+  }
+
   const onClearBtnClick = (e) => {
     e.preventDefault();
     updateDisplay('0')
