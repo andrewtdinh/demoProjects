@@ -63,7 +63,7 @@ const Calculator = () => {
 
   const onClearBtnClick = (e) => {
     e.preventDefault();
-    updateDisplay('0')
+    resetDisplay();
   }
   
   const onDeleteBtnClick = (e) => {
