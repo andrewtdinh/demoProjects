@@ -11,7 +11,8 @@ const ResultsBar = ({
   prevResults = [],
   resultsStartIndex = 0,
   onResultsShiftLeftClick,
-  onResultsShiftRightClick
+  onResultsShiftRightClick,
+  onScrollBarEntryClick,
 }) => {
   const displayedResults = getValuesFrom(prevResults, resultsStartIndex, displayedResultsEntries);
 
@@ -30,6 +31,7 @@ const ResultsBar = ({
         entries={displayedResults}
         onShiftLeftClick={onResultsShiftLeftClick}
         onShiftRightClick={onResultsShiftRightClick}
+        onScrollBarEntryClick={onScrollBarEntryClick}
       />
     </div>
   )
