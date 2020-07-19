@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-sass": "^2.1.27",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "prettier": "^1.19.1"
   },
