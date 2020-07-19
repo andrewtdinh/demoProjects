@@ -87,6 +87,11 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.scrollBarEntries span:hover {
+  color: aqua;
 }
 
 .scrollBarEntries span:not(:last-of-type) {
