@@ -155,6 +155,7 @@ body {
 
 .displayFeaturesBar button:hover {
   cursor: pointer;
+  color: aqua;
 }
 
 .displayWindow {
