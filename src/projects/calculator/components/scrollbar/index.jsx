@@ -10,6 +10,12 @@ const ScrollBar = ({
 	onShiftRightClick,
 	onScrollBarEntryClick,
 }) => {
+	const disabledStyle = {
+    cursor: "default",
+    color: "#675c5c",
+	}
+	// const shiftButtonsStyle = 
+
 	return (
 		<div
 			className={Styles.scrollBar}
@@ -18,7 +24,10 @@ const ScrollBar = ({
 				color: textColor
 			}}
 		>
-			<div className={Styles.shiftLeft} onClick={onShiftLeftClick}>
+			<div 
+				className={Styles.shiftLeft} 
+				onClick={onShiftLeftClick}
+			>
 				{'◀'}
 			</div>
 			<div className={Styles.scrollBarEntries}>
@@ -26,7 +35,10 @@ const ScrollBar = ({
 					return <span key={entry} onClick={onScrollBarEntryClick} >{entry}</span>;
 				})}
 			</div>
-			<div className={Styles.shiftRight} onClick={onShiftRightClick}>
+			<div 
+				className={Styles.shiftRight} 
+				onClick={onShiftRightClick}
+			>
 				{'▶'}
 			</div>
 		</div>

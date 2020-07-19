@@ -76,6 +76,10 @@ body {
   cursor: pointer;
 }
 
+.shiftLeft:hover, .shiftRight:hover {
+  color: aqua;
+}
+
 .scrollBarEntries {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
