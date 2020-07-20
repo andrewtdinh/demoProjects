@@ -26,7 +26,6 @@ const MemoryBar = ({
     numMemoryEntries <= displayedMemoryEntries || 
     memoryStartIndex >= numMemoryEntries - displayedMemoryEntries;
 
-
   return (
     <div
       className={Styles.memoryBar}
@@ -41,6 +40,8 @@ const MemoryBar = ({
         onShiftLeftClick={onMemoryShiftLeftClick}
         onShiftRightClick={onMemoryShiftRightClick}
         onScrollBarEntryClick={onScrollBarEntryClick}
+        isLeftShiftBtnDisabled={isLeftShiftBtnDisabled}
+        isRightShiftBtnDisabled={isRightShiftBtnDisabled}
       />
     </div>
   )
