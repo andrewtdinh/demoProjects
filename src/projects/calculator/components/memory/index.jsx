@@ -21,6 +21,8 @@ const MemoryBar = ({
     displayedMemoryEntries
   );
 
+  const isLeftShiftBtnDisabled = memories.length <= displayedMemoryEntries || memoryStartIndex === 0;
+
   return (
     <div
       className={Styles.memoryBar}
