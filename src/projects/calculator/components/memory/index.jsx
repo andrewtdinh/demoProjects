@@ -20,8 +20,12 @@ const MemoryBar = ({
     memoryStartIndex,
     displayedMemoryEntries
   );
+  const numMemoryEntries = memories.length;
+  const isLeftShiftBtnDisabled = numMemoryEntries <= displayedMemoryEntries || memoryStartIndex === 0;
+  const isRightShiftBtnDisabled = 
+    numMemoryEntries <= displayedMemoryEntries || 
+    memoryStartIndex >= numMemoryEntries - displayedMemoryEntries;
 
-  const isLeftShiftBtnDisabled = memories.length <= displayedMemoryEntries || memoryStartIndex === 0;
 
   return (
     <div
