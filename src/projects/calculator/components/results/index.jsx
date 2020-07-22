@@ -3,7 +3,7 @@ import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
 import ScrollBar from "../scrollbar";
 import { getValuesFrom } from '../../utils/scrollbar';
-import { displayedResultsEntries } from '../../constants';
+import { displayedResultsEntries, displayedMemoryEntries } from '../../constants';
 
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
@@ -15,6 +15,12 @@ const ResultsBar = ({
   onScrollBarEntryClick,
 }) => {
   const displayedResults = getValuesFrom(prevResults, resultsStartIndex, displayedResultsEntries);
+  const numResultEntries = prevResults.length;
+  const isLeftShiftBtnDisabled =
+    numResultEntries <= displayedResultsEntries || resultsStartIndex === 0
+  const isRightShiftBtnDisabled =
+    numResultEntries <= displayedResultsEntries ||
+    resultsStartIndex >= numResultEntries - displayedResultsEntries
 
   return (
     <div
