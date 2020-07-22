@@ -13,7 +13,7 @@ const ScrollBar = ({
 	isRightShiftBtnDisabled,
 }) => {
 	const disabledShiftBtnColor = '#675c5c';
-	const createDisabledButton = ({ isButtonDisabled, disabledButtonColor }) => {
+	const createDisabledBtnStyle = ({ isButtonDisabled, disabledButtonColor }) => {
 		return isButtonDisabled
       ? {
 					cursor: "default",
@@ -21,7 +21,6 @@ const ScrollBar = ({
         }
       : {}
 	}
-	// const shiftButtonsStyle = 
 
 	return (
 		<div
