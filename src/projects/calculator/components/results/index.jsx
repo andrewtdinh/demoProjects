@@ -3,7 +3,7 @@ import { resultsBarBGColor, resultsTextColor } from "../../buttons";
 import Styles from "../../index.module.css";
 import ScrollBar from "../scrollbar";
 import { getValuesFrom } from '../../utils/scrollbar';
-import { displayedResultsEntries, displayedMemoryEntries } from '../../constants';
+import { displayedResultsEntries } from '../../constants';
 
 const ResultsBar = ({
   bgColor = resultsBarBGColor,
