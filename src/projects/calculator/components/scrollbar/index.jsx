@@ -9,10 +9,17 @@ const ScrollBar = ({
 	onShiftLeftClick,
 	onShiftRightClick,
 	onScrollBarEntryClick,
+	isLeftShiftBtnDisabled,
+	isRightShiftBtnDisabled,
 }) => {
-	const disabledStyle = {
-    cursor: "default",
-    color: "#675c5c",
+	const disabledShiftBtnColor = '#675c5c';
+	const createDisabledButton = ({ isButtonDisabled, disabledButtonColor }) => {
+		return isButtonDisabled
+      ? {
+					cursor: "default",
+					color: disabledButtonColor
+        }
+      : {}
 	}
 	// const shiftButtonsStyle = 
 
