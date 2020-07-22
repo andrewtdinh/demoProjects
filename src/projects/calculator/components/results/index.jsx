@@ -38,6 +38,8 @@ const ResultsBar = ({
         onShiftLeftClick={onResultsShiftLeftClick}
         onShiftRightClick={onResultsShiftRightClick}
         onScrollBarEntryClick={onScrollBarEntryClick}
+        isLeftShiftBtnDisabled={isLeftShiftBtnDisabled}
+        isRightShiftBtnDisabled={isRightShiftBtnDisabled}
       />
     </div>
   )
