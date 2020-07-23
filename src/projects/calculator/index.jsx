@@ -55,11 +55,13 @@ const Calculator = () => {
   }
 
   const setOperandValue = (operandOrder, nextValue) => {
-    if (operandOrder === 1) {
-      // Call dispatch to set nextValue for operand1
-    } else if (operandOrder === 2)
-      // Call dispatch to set nextValue for operand2
-    }
+    dispatch({
+      type: 'SET_OPERAND',
+      payload: {
+        operandOrder,
+        value: nextValue
+      }
+    });
   }
 
   /**
