@@ -34,15 +34,16 @@ export const reducer = (state, action) => {
     isPercentMode,
     displayStr
   } = state;
+  const { type, payload } = action;
   const qtyPreviousResults = prevResults.length
   const qtyMemoryEntries = memories.length
 
-  switch (action.type) {
+  switch (type) {
     case "UPDATE_DISPLAY":
-      return { ...state, displayStr: action.payload }
+      return { ...state, displayStr: payload }
 
     case "UPDATE_STATE":
-      return {...action.payload}
+      return {...payload}
 
     case "SHIFT_RESULTS_LEFT":
       return currentResultsStartIdx === 0
@@ -75,8 +76,8 @@ export const reducer = (state, action) => {
     case "MEMORY_IN":
       const isMaxMemoryReached = qtyMemoryEntries >= maxMemoryEntries;
       const newMemoryArray = isMaxMemoryReached
-        ? [...memories, action.payload].slice(1)
-        : [...memories, action.payload]
+        ? [...memories, payload].slice(1)
+        : [...memories, payload]
       const newMemoryStartIdx = newMemoryArray.length - displayedMemoryEntries >= 0 
         ? newMemoryArray.length - displayedMemoryEntries
         : 0
@@ -85,8 +86,8 @@ export const reducer = (state, action) => {
     case "RESULTS_IN":
       const isMaxResultsReached = qtyPreviousResults >= maxResultsEntries;
       const newResultsArray = isMaxResultsReached
-        ? [...prevResults, action.payload].slice(1)
-        : [...prevResults, action.payload]
+        ? [...prevResults, payload].slice(1)
+        : [...prevResults, payload]
       const newResultsStartIdx = newResultsArray.length - displayedResultsEntries >= 0
         ? newResultsArray.length - displayedResultsEntries
         : 0
@@ -99,7 +100,7 @@ export const reducer = (state, action) => {
       return { ...state, isPercentMode: !isPercentMode, displayStr: convertToPercent(displayStr) }
 
     case "CLEAR_OPERAND":
-      const nextState = action.payload === 1
+      const nextState = payload === 1
         ? { ...state, operand1: ''}
         : { ...state, operand2: ''};
       return nextState;
