@@ -41,17 +41,10 @@ const Calculator = () => {
   }
 
   const clearOperand = (operandOrder) => {
-    if (operandOrder === 1) {
-      dispatch({
-        type: 'CLEAR_OPERAND',
-        payload: 1
-      });
-    } else if (operandOrder === 2)
-      dispatch({
-        type: 'CLEAR_OPERAND',
-        payload: 2
-      });
-    }
+    dispatch({
+      type: 'CLEAR_OPERAND',
+      payload: operandOrder
+    });
   }
 
   const setOperandValue = (operandOrder, nextValue) => {
