@@ -104,6 +104,13 @@ export const reducer = (state, action) => {
         ? { ...state, operand1: ''}
         : { ...state, operand2: ''};
       return nextState;
+    
+    case "SET_OPERAND":
+      const { operandOrder, value } = payload;
+      const nextState = operandOrder === 1
+        ? { ...state, operand1: value}
+        : { ...state, operand2: value};
+      return nextState;
 
     default:
       return state
