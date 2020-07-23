@@ -98,6 +98,12 @@ export const reducer = (state, action) => {
     case "CONVERT_TO_PERCENT":
       return { ...state, isPercentMode: !isPercentMode, displayStr: convertToPercent(displayStr) }
 
+    case "CLEAR_OPERAND":
+      const nextState = action.payload === 1
+        ? { ...state, operand1: ''}
+        : { ...state, operand2: ''};
+      return nextState;
+
     default:
       return state
   }
