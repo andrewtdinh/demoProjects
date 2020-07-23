@@ -48,6 +48,14 @@ const Calculator = () => {
     }
   }
 
+  const setOperandValue = (operandOrder, nextValue) => {
+    if (operandOrder === 1) {
+      // Call dispatch to set nextValue for operand1
+    } else if (operandOrder === 2)
+      // Call dispatch to set nextValue for operand2
+    }
+  }
+
   /**
    * onNumbersClick is activated when user click on numbers or dot (.) buttons
    */
