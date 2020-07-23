@@ -40,6 +40,14 @@ const Calculator = () => {
     });
   }
 
+  const clearOperand = (operandOrder) => {
+    if (operandOrder === 1) {
+      // Call dispatch to clear operand1
+    } else if (operandOrder === 2)
+      // Call dispatch to clear operand2
+    }
+  }
+
   /**
    * onNumbersClick is activated when user click on numbers or dot (.) buttons
    */
