@@ -36,7 +36,8 @@ const ScrollBar = ({
 			</div>
 			<div className={Styles.scrollBarEntries}>
 				{entries.map((entry) => {
-					return <span key={entry} onClick={onScrollBarEntryClick} >{entry}</span>;
+					const timeStamp = new Date().getMilliseconds();
+					return <span key={timeStamp} onClick={onScrollBarEntryClick} >{entry}</span>;
 				})}
 			</div>
 			<div 
