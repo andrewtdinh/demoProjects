@@ -37,6 +37,7 @@ export const reducer = (state, action) => {
   const { type, payload } = action;
   const qtyPreviousResults = prevResults.length
   const qtyMemoryEntries = memories.length
+  let nextState;
 
   switch (type) {
     case "UPDATE_DISPLAY":
@@ -100,14 +101,14 @@ export const reducer = (state, action) => {
       return { ...state, isPercentMode: !isPercentMode, displayStr: convertToPercent(displayStr) }
 
     case "CLEAR_OPERAND":
-      const nextState = payload === 1
+      nextState = payload === 1
         ? { ...state, operand1: ''}
         : { ...state, operand2: ''};
       return nextState;
     
     case "SET_OPERAND":
       const { operandOrder, value } = payload;
-      const nextState = operandOrder === 1
+      nextState = operandOrder === 1
         ? { ...state, operand1: value}
         : { ...state, operand2: value};
       return nextState;
