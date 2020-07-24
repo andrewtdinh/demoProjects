@@ -1,5 +1,6 @@
 import React from 'react';
 import { scrollBarBGColor, scrollBarTextColor } from '../../constants';
+import getRandomInteger from '../../utils/getRandomInt';
 import Styles from '../../index.module.css';
 
 const ScrollBar = ({
@@ -37,7 +38,8 @@ const ScrollBar = ({
 			<div className={Styles.scrollBarEntries}>
 				{entries.map((entry) => {
 					const timeStamp = new Date().getMilliseconds();
-					return <span key={timeStamp} onClick={onScrollBarEntryClick} >{entry}</span>;
+					const randomNum = getRandomInteger(timeStamp);
+					return <span key={randomNum} onClick={onScrollBarEntryClick} >{entry}</span>;
 				})}
 			</div>
 			<div 
