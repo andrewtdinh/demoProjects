@@ -165,6 +165,10 @@ const Calculator = () => {
     e.preventDefault();
   }
 
+  const onDivisionOperatorClick = (e) => {
+    e.preventDefault();
+  }
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -196,6 +200,8 @@ const Calculator = () => {
           ? onPercentOfOperatorClick
           : name === "Multiplication Operator"
           ? onMultOperatorClick
+          : name === "Division Operator"
+          ? onDivisionOperatorClick
           : null
       const buttonLabel =
         name === "To Percent Operator" 
