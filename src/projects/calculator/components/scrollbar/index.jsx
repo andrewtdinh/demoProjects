@@ -37,8 +37,7 @@ const ScrollBar = ({
 			</div>
 			<div className={Styles.scrollBarEntries}>
 				{entries.map((entry) => {
-					const timeStamp = new Date().getTime();
-					const randomNum = getRandomInteger(timeStamp);
+					const randomNum = getRandomInteger();
 					return <span key={randomNum} onClick={onScrollBarEntryClick} >{entry}</span>;
 				})}
 			</div>

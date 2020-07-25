@@ -1,3 +1,6 @@
 export default function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max))
+  const timeStamp = new Date().getTime();
+  const maxInteger = max ?? timeStamp
+
+  return Math.floor(Math.random() * Math.floor(maxInteger));
 }
