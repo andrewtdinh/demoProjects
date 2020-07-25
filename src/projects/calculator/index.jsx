@@ -178,13 +178,15 @@ const Calculator = () => {
           ? onClearBtnClick
           : type === "delete-button"
           ? onDeleteBtnClick
-          : label === "±" 
+          : label === "±"
           ? onSignBtnClick
           : label === "MEM+"
           ? onMemoryAdded
           : name === "To Percent Operator"
           ? onConvertButtonClick
-          : null;
+          : name === "Percent Of Operator"
+          ? onPercentOfOperatorClick
+          : null
       const buttonLabel =
         name === "To Percent Operator" 
           ? isPercentMode
