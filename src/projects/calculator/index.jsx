@@ -157,6 +157,14 @@ const Calculator = () => {
     updateDisplay(`${e.currentTarget.innerText}`)
   }
 
+  const onPercentOfOperatorClick = (e) => {
+    e.preventDefault();
+  }
+
+  const onMultOperatorClick = (e) => {
+    e.preventDefault();
+  }
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -186,6 +194,8 @@ const Calculator = () => {
           ? onConvertButtonClick
           : name === "Percent Of Operator"
           ? onPercentOfOperatorClick
+          : name === "Multiplication Operator"
+          ? onMultOperatorClick
           : null
       const buttonLabel =
         name === "To Percent Operator" 
