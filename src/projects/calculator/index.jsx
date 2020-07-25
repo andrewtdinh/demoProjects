@@ -177,6 +177,10 @@ const Calculator = () => {
     e.preventDefault()
   }
 
+  const onEqualOperatorClick = e => {
+    e.preventDefault()
+  }
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -214,6 +218,8 @@ const Calculator = () => {
           ? onAdditionOperatorClick
           : name === "Subtraction Operator"
           ? onSubtractionOperatorClick
+          : name === "Equal Operator"
+          ? onEqualOperatorClick
           : null
       const buttonLabel =
         name === "To Percent Operator" 
