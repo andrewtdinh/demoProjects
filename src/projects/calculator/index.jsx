@@ -30,7 +30,9 @@ const Calculator = () => {
   const { 
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx,
-    isPercentMode
+    isPercentMode,
+    operand1,
+    operand2,
   } = state;
 
   const updateDisplay = (newDisplayStr) => {
@@ -148,10 +150,6 @@ const Calculator = () => {
     }
   }
 
-  const onPercentOfBtnClick = (e) => {
-    e.preventDefault();
-  }
-
   const onScrollBarEntryClick = (e) => {
     e.preventDefault();
     updateDisplay(`${e.currentTarget.innerText}`)
@@ -163,6 +161,7 @@ const Calculator = () => {
 
   const onMultOperatorClick = (e) => {
     e.preventDefault();
+    
   }
 
   const onDivisionOperatorClick = (e) => {
