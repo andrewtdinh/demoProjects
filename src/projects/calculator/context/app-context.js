@@ -113,6 +113,13 @@ export const reducer = (state, action) => {
         : { ...state, operand2: value};
       return nextState;
 
+    case "UPDATE_OPERAND_AND_DISPLAY_VALUE":
+      const { operandOrder, operandValue, nextDisplayValue } = payload;
+      nextState = operandOrder === 1
+        ? { ...state, operand1: operandValue, displayStr: nextDisplayValue }
+        : { ...state, operand2: operandValue, displayStr: nextDisplayValue }
+      return nextState;
+
     default:
       return state
   }
