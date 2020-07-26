@@ -17,6 +17,7 @@ const initialState = {
   operation: null,
   resultsStartIndex: 0,
   memoryStartIndex: 0,
+  shouldDisplayResetNext: false,
   // We start in the percent mode and can toggle to fraction mode or back
   isPercentMode: true
 }
