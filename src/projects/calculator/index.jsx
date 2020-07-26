@@ -170,6 +170,16 @@ const Calculator = () => {
           nextDisplayValue: '0'
         }
       })
+    } else {
+      const newOperandValue = (operand1 * 1) + (displayStr * 1)
+      dispatch({
+        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+        payload: {
+          operandOrder: 1,
+          operandValue: `${newOperandValue}`,
+          nextDisplayValue: `${newOperandValue}`,
+        },
+      })
     }
   }
 
