@@ -177,7 +177,7 @@ const Calculator = () => {
       dispatch({
         type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
         payload: {
-          operandOrder: 1,
+          operandNum: 1,
           operandValue: displayStr,
           nextDisplayValue: '0'
         }
@@ -187,7 +187,7 @@ const Calculator = () => {
       dispatch({
         type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
         payload: {
-          operandOrder: 1,
+          operandNum: 1,
           operandValue: `${newOperandValue}`,
           nextDisplayValue: `${newOperandValue}`,
         },
