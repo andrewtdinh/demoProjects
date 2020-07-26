@@ -163,17 +163,14 @@ const Calculator = () => {
     e.preventDefault();
     if (!operand1) {
       dispatch({
-        type: "SET_OPERAND",
+        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
         payload: {
           operandOrder: 1,
-          value: displayStr
+          operandValue: displayStr,
+          nextDisplayValue: '0'
         }
       })
-      dispatch({
-        type: "UPDATE_DISPLAY",
-        payload: "0"
-      })
-    } 
+    }
   }
 
   const onDivisionOperatorClick = (e) => {
