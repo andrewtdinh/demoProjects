@@ -161,7 +161,19 @@ const Calculator = () => {
 
   const onMultOperatorClick = (e) => {
     e.preventDefault();
-    const timeStamp = new Date().getTime()
+    if (!operand1) {
+      dispatch({
+        type: "SET_OPERAND",
+        payload: {
+          operandOrder: 1,
+          value: displayStr
+        }
+      })
+      dispatch({
+        type: "UPDATE_DISPLAY",
+        payload: "0"
+      })
+    } 
   }
 
   const onDivisionOperatorClick = (e) => {
