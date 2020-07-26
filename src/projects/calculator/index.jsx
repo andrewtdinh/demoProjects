@@ -33,6 +33,7 @@ const Calculator = () => {
     isPercentMode,
     operand1,
     operand2,
+    shouldDisplayResetOnNext,
   } = state;
 
   const updateDisplay = (newDisplayStr) => {
@@ -59,6 +60,12 @@ const Calculator = () => {
     });
   }
 
+  const resetDisplayOnNextKeyTap = () => {
+    dispatch({
+      type: 'RESET_DISPLAY_ON_NEXT_KEY_TAP'
+    })
+  }
+
   /**
    * onNumbersClick is activated when user click on numbers or dot (.) buttons
    */
@@ -72,7 +79,12 @@ const Calculator = () => {
     if (previousDisplayStr === '0' && '123456789'.includes(buttonValue)) {
       updateDisplay(buttonValue);
     } else {
-      updateDisplay(previousDisplayStr + buttonValue);
+      if (shouldDisplayResetOnNext) {
+        resetDisplayOnNextKeyTap();
+        updateDisplay(buttonValue);
+      } else {
+        updateDisplay(previousDisplayStr + buttonValue);
+      }
     }
   }
   
