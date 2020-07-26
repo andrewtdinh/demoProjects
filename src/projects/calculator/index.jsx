@@ -161,7 +161,7 @@ const Calculator = () => {
 
   const onMultOperatorClick = (e) => {
     e.preventDefault();
-    
+    const timeStamp = new Date().getTime()
   }
 
   const onDivisionOperatorClick = (e) => {
