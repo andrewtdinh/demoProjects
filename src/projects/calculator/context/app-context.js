@@ -17,7 +17,7 @@ const initialState = {
   operation: null,
   resultsStartIndex: 0,
   memoryStartIndex: 0,
-  shouldDisplayResetNext: false,
+  shouldDisplayResetOnNext: false,
   // We start in the percent mode and can toggle to fraction mode or back
   isPercentMode: true
 }
@@ -115,10 +115,10 @@ export const reducer = (state, action) => {
       return nextState;
 
     case "UPDATE_OPERAND_AND_DISPLAY_VALUE":
-      const { operandOrder, operandValue, nextDisplayValue } = payload;
+      const { operandOrder, operandValue, nextDisplayValue, shouldDisplayResetOnNext } = payload;
       nextState = operandOrder === 1
-        ? { ...state, operand1: operandValue, displayStr: nextDisplayValue }
-        : { ...state, operand2: operandValue, displayStr: nextDisplayValue }
+        ? { ...state, operand1: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext }
+        : { ...state, operand2: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext }
       return nextState;
 
     default:
