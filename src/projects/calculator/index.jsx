@@ -80,7 +80,7 @@ const Calculator = () => {
       updateDisplay(buttonValue);
     } else {
       if (shouldDisplayResetOnNext) {
-        resetDisplayOnNextKeyTap();
+        resetDisplay();
         updateDisplay(buttonValue);
       } else {
         updateDisplay(previousDisplayStr + buttonValue);
@@ -191,6 +191,7 @@ const Calculator = () => {
           operandNum: 1,
           operandValue: `${newOperandValue}`,
           nextDisplayValue: `${newOperandValue}`,
+          shouldDisplayResetOnNext: true
         },
       })
     }
