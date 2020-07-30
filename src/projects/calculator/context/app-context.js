@@ -121,6 +121,13 @@ export const reducer = (state, action) => {
         : { ...state, operand2: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext }
       return nextState;
 
+    case "ADD_DECIMAL_POINT":
+      return { 
+        ...state,
+        displayStr: payload.nextDisplayValue,
+        shouldDisplayResetOnNext : payload.shouldDisplayResetOnNext
+      }
+
     default:
       return state
   }

@@ -215,7 +215,7 @@ const Calculator = () => {
 
   const onPeriodButtonClick = e => {
     e.preventDefault()
-    const { displayStr: previousDisplayStr, shouldDisplayResetOnNext } = state
+    const { displayStr: previousDisplayStr, shouldDisplayResetOnNext } = state;
 
 
   }
