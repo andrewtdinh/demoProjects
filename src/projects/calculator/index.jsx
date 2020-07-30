@@ -217,6 +217,26 @@ const Calculator = () => {
     e.preventDefault()
     const { displayStr: previousDisplayStr, shouldDisplayResetOnNext } = state;
 
+    if (shouldDisplayResetOnNext) {
+      dispatch({
+        type: "ADD_DECIMAL_POINT",
+        payload: {
+          nextDisplayValue: "0.",
+          shouldDisplayResetOnNext: false
+        }
+      })
+    } else {
+      if (previousDisplayStr.includes('.')) {return;}
+      else {
+        dispatch({
+          type: "ADD_DECIMAL_POINT",
+          payload: {
+            nextDisplayValue: previousDisplayStr + ".",
+            shouldDisplayResetOnNext: false,
+          },
+        })
+      }
+    }
 
   }
 
