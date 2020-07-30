@@ -128,6 +128,9 @@ export const reducer = (state, action) => {
         shouldDisplayResetOnNext : payload.shouldDisplayResetOnNext
       }
 
+    case "UNRESET_DISPLAY_ON_NEXT_CLICK":
+      return { ...state, shouldDisplayResetOnNext: false }
+
     default:
       return state
   }
