@@ -213,6 +213,13 @@ const Calculator = () => {
     e.preventDefault()
   }
 
+  const onPeriodButtonClick = e => {
+    e.preventDefault()
+    const { displayStr: previousDisplayStr, shouldDisplayResetOnNext } = state
+
+
+  }
+
   const renderButtons = () => {
     return buttons.map(buttonProps => {
       const {
@@ -229,7 +236,9 @@ const Calculator = () => {
       const columnSpanString = columnSpan ? `span ${columnSpan}` : "span 1";
       const onClickFn =
         type === "blue-button"
-          ? onNumbersClick
+          ? name === "Period Button"
+          ? onPeriodButtonClick
+          : onNumbersClick
           : type === "clear-button"
           ? onClearBtnClick
           : type === "delete-button"
