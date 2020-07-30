@@ -95,6 +95,15 @@ const Calculator = () => {
   const onClearBtnClick = (e) => {
     e.preventDefault();
     resetDisplay();
+    dispatch({
+      type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+      payload: {
+        operandNum: 1,
+        operandValue: '',
+        nextDisplayValue: '0',
+        shouldDisplayResetOnNext: false,
+      }
+    })
   }
   
   const onDeleteBtnClick = (e) => {
