@@ -164,11 +164,6 @@ const Calculator = () => {
 
   const onConvertButtonClick = (e) => {
     e.preventDefault();
-    if (isPercentMode){
-      dispatch({ type: "CONVERT_TO_DECIMAL"})
-    } else {
-      dispatch({ type: "CONVERT_TO_PERCENT"})
-    }
   }
 
   const onScrollBarEntryClick = (e) => {
