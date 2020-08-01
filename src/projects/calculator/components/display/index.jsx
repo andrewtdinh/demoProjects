@@ -8,7 +8,7 @@ const Display = ({
   displayStr = "0",
   isPercentMode,
 }) => {
-  const displayMode = isPercentMode ?  <div className={Styles.displayMode}>%</div> : null;
+  const displayMode = isPercentMode ?  <div className={Styles.displayMode}></div> : null;
   return (
     <div
       className={Styles.displayWrapper}
