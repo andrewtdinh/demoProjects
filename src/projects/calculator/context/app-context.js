@@ -95,12 +95,6 @@ export const reducer = (state, action) => {
         : 0
       return { ...state, resultsStartIndex: newResultsStartIdx, prevResults: newResultsArray }
 
-    case "CONVERT_TO_DECIMAL":
-      return { ...state, isPercentMode: !isPercentMode, displayStr: convertToDecimal(displayStr) }
-
-    case "CONVERT_TO_PERCENT":
-      return { ...state, isPercentMode: !isPercentMode, displayStr: convertToPercent(displayStr) }
-
     case "CLEAR_OPERAND":
       nextState = payload === 1
         ? { ...state, operand1: ''}
