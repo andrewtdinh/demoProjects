@@ -69,7 +69,7 @@ export const buttons = [
     value: "3",
   },
   {
-    name: "To Percent Operator",
+    name: "Square Root Operator",
     label: "➡ %",
     color: whiteText,
     bgColor: orangeOperatorColor,

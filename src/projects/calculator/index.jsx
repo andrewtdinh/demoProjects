@@ -30,7 +30,6 @@ const Calculator = () => {
   const { 
     resultsStartIndex: currentResultsStartIdx,
     memoryStartIndex: currentMemoryStartIdx,
-    isPercentMode,
     operand1,
     operand2,
     shouldDisplayResetOnNext,
@@ -271,7 +270,7 @@ const Calculator = () => {
           ? onSignBtnClick
           : label === "MEM+"
           ? onMemoryAdded
-          : name === "To Percent Operator"
+          : name === "Square Root Operator"
           ? onConvertButtonClick
           : name === "Percent Of Operator"
           ? onPercentOfOperatorClick
@@ -286,12 +285,7 @@ const Calculator = () => {
           : name === "Equal Operator"
           ? onEqualOperatorClick
           : null
-      const buttonLabel =
-        name === "To Percent Operator" 
-          ? isPercentMode
-            ? "➡ dec"
-            : "➡ %"
-          : label;
+      const buttonLabel = name === "Square Root Operator" ? "SQRT" : label;
 
       const isEnabled = name === 'Percent Of Operator' ? isPercentMode : true; 
 
