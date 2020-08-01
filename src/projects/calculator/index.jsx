@@ -161,7 +161,7 @@ const Calculator = () => {
     dispatch({ type: "MEMORY_IN", payload: state.displayStr });
   }
 
-  const onConvertButtonClick = (e) => {
+  const onSquareRootButtonClick = (e) => {
     e.preventDefault();
   }
 
@@ -271,7 +271,7 @@ const Calculator = () => {
           : label === "MEM+"
           ? onMemoryAdded
           : name === "Square Root Operator"
-          ? onConvertButtonClick
+          ? onSquareRootButtonClick
           : name === "Percent Of Operator"
           ? onPercentOfOperatorClick
           : name === "Multiplication Operator"
