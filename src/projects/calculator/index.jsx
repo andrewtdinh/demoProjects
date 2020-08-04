@@ -65,9 +65,6 @@ const Calculator = () => {
     })
   }
 
-  /**
-   * onNumbersClick is activated when user click on numbers or dot (.) buttons
-   */
   const onNumbersClick = (e) => {
     const buttonValue = e.target.value;
     const { displayStr: previousDisplayStr } = state;
@@ -287,8 +284,6 @@ const Calculator = () => {
           : null
       const buttonLabel = name === "Square Root Operator" ? "SQRT" : label;
 
-      const isEnabled = name === 'Percent Of Operator' ? isPercentMode : true; 
-
       return (
         <Button
           onClick={onClickFn}
@@ -301,7 +296,7 @@ const Calculator = () => {
           type={type}
           value={value}
           key={name}
-          isEnabled={isEnabled}
+          isEnabled={true}
         />
       )
     })
@@ -312,7 +307,6 @@ const Calculator = () => {
       <div className={Styles.container}>
         <MemoryBar memories={state.memories} { ...state } />
         <Display
-          isPercentMode={state.isPercentMode}
           bgColor={displayBGColor}
           textColor={displayColor}
           displayStr={state.displayStr}

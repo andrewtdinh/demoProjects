@@ -18,8 +18,6 @@ const initialState = {
   resultsStartIndex: 0,
   memoryStartIndex: 0,
   shouldDisplayResetOnNext: false,
-  // We start in the percent mode and can toggle to fraction mode or back
-  isPercentMode: true
 }
 
 // Create Calculator Context
@@ -32,7 +30,6 @@ export const reducer = (state, action) => {
     memoryStartIndex: currentMemoryStartIdx,
     prevResults,
     memories,
-    isPercentMode,
     displayStr
   } = state;
   const { type, payload } = action;

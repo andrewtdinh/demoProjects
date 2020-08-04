@@ -6,9 +6,8 @@ const Display = ({
   bgColor = displayBGColor,
   textColor = displayColor,
   displayStr = "0",
-  isPercentMode,
 }) => {
-  const displayMode = isPercentMode ?  <div className={Styles.displayMode}></div> : null;
+  const displayMode = <div className={Styles.displayMode}></div>;
   return (
     <div
       className={Styles.displayWrapper}
