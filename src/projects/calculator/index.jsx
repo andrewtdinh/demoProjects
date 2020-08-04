@@ -70,7 +70,6 @@ const Calculator = () => {
     const { displayStr: previousDisplayStr } = state;
     
     e.preventDefault();
-    if (buttonValue === '.' && previousDisplayStr.includes('.')) {return;}
     if (buttonValue === '0' && previousDisplayStr === '0') {return;}
     if (previousDisplayStr === '0' && '123456789'.includes(buttonValue)) {
       updateDisplay(buttonValue);
