@@ -150,6 +150,9 @@ export const executeOperation = (op, operand1, operand2) => {
       return (operand1 * 1) * (operand2 * 1)
 
     case ':':
-      
+      if (operand2 * 1 === 0) {
+        return 'ERROR: Divide by zero'
+      }
+      return (operand1 * 1) / (operand2 * 1);
   }
 }
