@@ -14,7 +14,7 @@ const initialState = {
   lastResult: null,
   prevResults: [],
   memories: [],
-  operation: null,
+  pendingOp: null,
   resultsStartIndex: 0,
   memoryStartIndex: 0,
   shouldDisplayResetOnNext: false,
@@ -122,6 +122,9 @@ export const reducer = (state, action) => {
     case "UNRESET_DISPLAY_ON_NEXT_CLICK":
       return { ...state, shouldDisplayResetOnNext: false }
 
+    case "UPDATE_PENDING_OPERATION":
+      return { ...state, pendingOp: payload }
+
     default:
       return state
   }
@@ -133,4 +136,20 @@ export const CalculatorContextProvider = props => {
       {props.children}
     </CalculatorContext.Provider>
   )
+}
+
+export const executeOperation = (op, operand1, operand2) => {
+  switch (op) {
+    case '+':
+      return (operand1 * 1) + (operand2 * 1)
+
+    case '-':
+      return (operand1 * 1) - (operand2 * 1)
+
+    case 'x':
+      return (operand1 * 1) * (operand2 * 1)
+
+    case ':':
+      
+  }
 }
