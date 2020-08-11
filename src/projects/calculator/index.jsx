@@ -7,7 +7,7 @@ import MemoryBar from './components/memory';
 import ResultsBar from './components/results';
 import { buttons, displayColor, displayBGColor } from './buttons';
 
-import { CalculatorContext, CalculatorContextProvider, reducer } from './context/app-context';
+import { CalculatorContext, CalculatorContextProvider, reducer, executeOperation } from './context/app-context';
 
 const Calculator = () => {
   const initialState = useContext(CalculatorContext);
