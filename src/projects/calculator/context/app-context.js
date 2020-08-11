@@ -142,18 +142,18 @@ export const CalculatorContextProvider = props => {
 export const executeOperation = (op, operand1, operand2) => {
   switch (op) {
     case '+':
-      return (operand1 * 1) + (operand2 * 1)
+      return plus((operand1 * 1), (operand2 * 1))
 
     case '-':
-      return (operand1 * 1) - (operand2 * 1)
+      return minus((operand1 * 1), (operand2 * 1))
 
     case 'x':
-      return (operand1 * 1) * (operand2 * 1)
+      return multiply((operand1 * 1), (operand2 * 1))
 
     case ':':
       if (operand2 * 1 === 0) {
         return 'ERROR: Divide by zero'
       }
-      return (operand1 * 1) / (operand2 * 1);
+      return divide((operand1 * 1), (operand2 * 1));
   }
 }
