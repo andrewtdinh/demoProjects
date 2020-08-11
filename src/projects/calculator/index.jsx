@@ -185,7 +185,7 @@ const Calculator = () => {
         }
       })
     } else {
-      const newOperandValue = (operand1 * 1) * (displayStr * 1)
+      const newOperandValue = executeOperation('x', (operand1 * 1), (displayStr * 1))
       dispatch({
         type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
         payload: {
