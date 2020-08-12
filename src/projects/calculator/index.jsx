@@ -174,6 +174,7 @@ const Calculator = () => {
 
   const onMultOperatorClick = (e) => {
     const { displayStr } = state;
+
     e.preventDefault();
     if (!operand1) {
       dispatch({
@@ -203,7 +204,34 @@ const Calculator = () => {
   }
 
   const onAdditionOperatorClick = e => {
+    const { displayStr } = state;
+
     e.preventDefault()
+    if (!operand1) {
+      dispatch({
+        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+        payload: {
+          operandNum: 1,
+          operandValue: displayStr,
+          nextDisplayValue: "0",
+        },
+      })
+    } else {
+      const newOperandValue = executeOperation(
+        "+",
+        operand1 * 1,
+        displayStr * 1
+      )
+      dispatch({
+        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+        payload: {
+          operandNum: 1,
+          operandValue: `${newOperandValue}`,
+          nextDisplayValue: `${newOperandValue}`,
+          shouldDisplayResetOnNext: true,
+        },
+      })
+    }
   }
 
   const onSubtractionOperatorClick = e => {
