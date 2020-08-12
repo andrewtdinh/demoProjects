@@ -142,10 +142,10 @@ export const CalculatorContextProvider = props => {
 export const executeOperation = (op, operand1, operand2) => {
   switch (op) {
     case '+':
-      return plus((operand1 * 1), (operand2 * 1))
+      return add((operand1 * 1), (operand2 * 1))
 
     case '-':
-      return minus((operand1 * 1), (operand2 * 1))
+      return subtract((operand1 * 1), (operand2 * 1))
 
     case 'x':
       return multiply((operand1 * 1), (operand2 * 1))
