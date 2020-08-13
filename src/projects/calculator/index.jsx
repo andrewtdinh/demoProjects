@@ -28,10 +28,9 @@ const Calculator = () => {
   }, []);
 
   const { 
-    resultsStartIndex: currentResultsStartIdx,
-    memoryStartIndex: currentMemoryStartIdx,
+    // resultsStartIndex: currentResultsStartIdx,
+    // memoryStartIndex: currentMemoryStartIdx,
     operand1,
-    operand2,
     shouldDisplayResetOnNext,
   } = state;
 
@@ -42,28 +41,28 @@ const Calculator = () => {
     });
   }
 
-  const clearOperand = (operandOrder) => {
-    dispatch({
-      type: 'CLEAR_OPERAND',
-      payload: operandOrder
-    });
-  }
+  // const clearOperand = (operandOrder) => {
+  //   dispatch({
+  //     type: 'CLEAR_OPERAND',
+  //     payload: operandOrder
+  //   });
+  // }
 
-  const setOperandValue = (operandOrder, nextValue) => {
-    dispatch({
-      type: 'SET_OPERAND',
-      payload: {
-        operandOrder,
-        value: nextValue
-      }
-    });
-  }
+  // const setOperandValue = (operandOrder, nextValue) => {
+  //   dispatch({
+  //     type: 'SET_OPERAND',
+  //     payload: {
+  //       operandOrder,
+  //       value: nextValue
+  //     }
+  //   });
+  // }
 
-  const resetDisplayOnNextKeyTap = () => {
-    dispatch({
-      type: 'RESET_DISPLAY_ON_NEXT_KEY_TAP'
-    })
-  }
+  // const resetDisplayOnNextKeyTap = () => {
+  //   dispatch({
+  //     type: 'RESET_DISPLAY_ON_NEXT_KEY_TAP'
+  //   })
+  // }
 
   const onNumbersClick = (e) => {
     const buttonValue = e.target.value;
