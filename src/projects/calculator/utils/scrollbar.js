@@ -1,5 +1,3 @@
-import { maxMemoryEntries } from "../constants";
-
 export const getValuesFrom = (arr=[], startingIndex=0, maxEntriesDisplayed=4) => {
   const length = arr.length;
   
