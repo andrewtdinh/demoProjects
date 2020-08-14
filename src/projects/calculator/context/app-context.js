@@ -6,7 +6,6 @@ import {
   displayedMemoryEntries,
   displayedResultsEntries,
 } from "../constants";
-import { convertToDecimal, convertToPercent } from '../utils/convert';
 
 const initialState = {
   displayStr: "0",
