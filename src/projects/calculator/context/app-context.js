@@ -105,7 +105,7 @@ export const reducer = (state, action) => {
         : { ...state, operand2: value};
       return nextState;
 
-    case "UPDATE_OPERAND_AND_DISPLAY_VALUE":
+    case "ON_BINARY_OPERATOR_PRESSED":
       const { operandNum, operandValue, nextDisplayValue, shouldDisplayResetOnNext } = payload;
       nextState = operandNum === 1
         ? { ...state, operand1: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext }

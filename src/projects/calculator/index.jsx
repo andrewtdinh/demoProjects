@@ -92,7 +92,7 @@ const Calculator = () => {
     e.preventDefault();
     resetDisplay();
     dispatch({
-      type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+      type: "ON_BINARY_OPERATOR_PRESSED",
       payload: {
         operandNum: 1,
         operandValue: '',
@@ -177,22 +177,22 @@ const Calculator = () => {
     e.preventDefault();
     if (!operand1) {
       dispatch({
-        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+        type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
           operandValue: displayStr,
-          nextDisplayValue: '0'
-        }
+          nextDisplayValue: "0",
+        },
       })
     } else {
-      const newOperandValue = executeOperation('x', (operand1 * 1), (displayStr * 1))
+      const newOperandValue = executeOperation(pendingOp ?? 'x', (operand1 * 1), (displayStr * 1))
       dispatch({
-        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+        type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
           operandValue: `${newOperandValue}`,
           nextDisplayValue: `${newOperandValue}`,
-          shouldDisplayResetOnNext: true
+          shouldDisplayResetOnNext: true,
         },
       })
     }
@@ -208,7 +208,7 @@ const Calculator = () => {
     e.preventDefault()
     if (!operand1) {
       dispatch({
-        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+        type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
           operandValue: displayStr,
@@ -222,7 +222,7 @@ const Calculator = () => {
         displayStr * 1
       )
       dispatch({
-        type: "UPDATE_OPERAND_AND_DISPLAY_VALUE",
+        type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
           operandValue: `${newOperandValue}`,
