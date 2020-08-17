@@ -173,6 +173,7 @@ const Calculator = () => {
 
   const onMultOperatorClick = (e) => {
     const { displayStr, pendingOp } = state;
+    console.log({pendingOp})
 
     e.preventDefault();
     if (!operand1) {
@@ -205,7 +206,7 @@ const Calculator = () => {
   }
 
   const onAdditionOperatorClick = e => {
-    const { displayStr } = state;
+    const { displayStr, pendingOp } = state;
 
     e.preventDefault()
     if (!operand1) {
