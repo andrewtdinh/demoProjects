@@ -216,11 +216,12 @@ const Calculator = () => {
           operandNum: 1,
           operandValue: displayStr,
           nextDisplayValue: "0",
+          pendingOp: '+'
         },
       })
     } else {
       const newOperandValue = executeOperation(
-        "+",
+        pendingOp ?? '+',
         operand1 * 1,
         displayStr * 1
       )
@@ -231,6 +232,7 @@ const Calculator = () => {
           operandValue: `${newOperandValue}`,
           nextDisplayValue: `${newOperandValue}`,
           shouldDisplayResetOnNext: true,
+          pendingOp: '+'
         },
       })
     }
