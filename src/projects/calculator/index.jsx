@@ -182,6 +182,7 @@ const Calculator = () => {
           operandNum: 1,
           operandValue: displayStr,
           nextDisplayValue: "0",
+          pendingOp: 'x'
         },
       })
     } else {
@@ -193,6 +194,7 @@ const Calculator = () => {
           operandValue: `${newOperandValue}`,
           nextDisplayValue: `${newOperandValue}`,
           shouldDisplayResetOnNext: true,
+          pendingOp: 'x'
         },
       })
     }
