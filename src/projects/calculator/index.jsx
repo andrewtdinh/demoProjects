@@ -173,7 +173,6 @@ const Calculator = () => {
 
   const onMultOperatorClick = (e) => {
     const { displayStr, pendingOp } = state;
-    console.log({pendingOp})
 
     e.preventDefault();
     if (!operand1) {
