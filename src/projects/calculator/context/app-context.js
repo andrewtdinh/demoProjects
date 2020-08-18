@@ -125,12 +125,11 @@ export const reducer = (state, action) => {
       return { ...state, pendingOp: payload }
 
     case "ON_EQUAL_BUTTON_PRESSED":
-      const { result } = payload;
       return { 
         ...state, 
-        operand1: result, 
+        operand1: payload.result, 
         operand2: '', 
-        displayStr: payload.nextDisplayValue, 
+        displayStr: payload.result, 
         shouldDisplayResetOnNext: payload.shouldDisplayResetOnNext,
         pendingOp: ''
       }
