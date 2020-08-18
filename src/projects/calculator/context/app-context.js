@@ -124,6 +124,17 @@ export const reducer = (state, action) => {
     case "UPDATE_PENDING_OPERATION":
       return { ...state, pendingOp: payload }
 
+    case "ON_EQUAL_BUTTON_PRESSED":
+      const { result } = payload;
+      return { 
+        ...state, 
+        operand1: result, 
+        operand2: '', 
+        displayStr: payload.nextDisplayValue, 
+        shouldDisplayResetOnNext: payload.shouldDisplayResetOnNext,
+        pendingOp: ''
+      }
+
     default:
       return state
   }
