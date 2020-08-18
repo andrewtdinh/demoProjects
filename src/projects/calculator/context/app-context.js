@@ -130,7 +130,7 @@ export const reducer = (state, action) => {
         operand1: payload.result, 
         operand2: '', 
         displayStr: payload.result, 
-        shouldDisplayResetOnNext: payload.shouldDisplayResetOnNext,
+        shouldDisplayResetOnNext: 'true',
         pendingOp: ''
       }
 
