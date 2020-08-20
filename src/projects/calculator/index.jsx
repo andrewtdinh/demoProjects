@@ -243,6 +243,8 @@ const Calculator = () => {
 
   const onEqualOperatorClick = e => {
     e.preventDefault()
+    const { displayStr, pendingOp } = state
+    
     if (!operand1) {
       dispatch({
         type: "ON_EQUAL_BUTTON_PRESSED",
