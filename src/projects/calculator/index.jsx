@@ -243,6 +243,30 @@ const Calculator = () => {
 
   const onEqualOperatorClick = e => {
     e.preventDefault()
+    if (!operand1) {
+      dispatch({
+        type: "ON_EQUAL_BUTTON_PRESSED",
+        payload: {
+          result: displayStr,
+        },
+      })
+    } else {
+      const newOperandValue = executeOperation(
+        pendingOp ?? "+",
+        operand1 * 1,
+        displayStr * 1
+      )
+      dispatch({
+        type: "ON_EQUAL_BUTTON_PRESSED",
+        payload: {
+          operandNum: 1,
+          operandValue: `${newOperandValue}`,
+          nextDisplayValue: `${newOperandValue}`,
+          shouldDisplayResetOnNext: true,
+          pendingOp: "+",
+        },
+      })
+    }
   }
 
   const onPeriodButtonClick = e => {
