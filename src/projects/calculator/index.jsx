@@ -186,7 +186,7 @@ const Calculator = () => {
         },
       })
     } else {
-      const newOperandValue = executeOperation(pendingOp ?? 'x', (operand1 * 1), (displayStr * 1))
+      const newOperandValue = executeOperation(pendingOp || 'x', (operand1 * 1), (displayStr * 1))
       dispatch({
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
@@ -220,7 +220,7 @@ const Calculator = () => {
       })
     } else {
       const newOperandValue = executeOperation(
-        pendingOp ?? '+',
+        pendingOp || '+',
         operand1 * 1,
         displayStr * 1
       )
@@ -244,7 +244,7 @@ const Calculator = () => {
   const onEqualOperatorClick = e => {
     e.preventDefault()
     const { displayStr, pendingOp } = state
-    
+
     if (!operand1) {
       dispatch({
         type: "ON_EQUAL_BUTTON_PRESSED",
