@@ -215,7 +215,8 @@ const Calculator = () => {
         },
       })
     } else {
-      const newOperandValue = executeOperation(
+      const isDivisorZero = displayStr * 1 === 0;
+      const newOperandValue = isDivisorZero ? 'Divide By Zero Error' : executeOperation(
         pendingOp || ":",
         operand1 * 1,
         displayStr * 1
