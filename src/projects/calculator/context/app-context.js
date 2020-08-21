@@ -161,11 +161,11 @@ export const executeOperation = (op, operand1, operand2) => {
 
     case ':':
       if (operand2 * 1 === 0) {
-        return 'ERROR: Divide by zero'
+        return 'DIVIDE_BY_ZERO_ERROR';
       }
       return divide((operand1 * 1), (operand2 * 1));
 
     default:
-      return 'ERROR: Operation not supported'
+      return 'UNSUPPORTED_OPERATION_ERROR';
   }
 }
