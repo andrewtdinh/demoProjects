@@ -201,7 +201,36 @@ const Calculator = () => {
   }
 
   const onDivisionOperatorClick = (e) => {
-    e.preventDefault();
+    const { displayStr, pendingOp } = state
+
+    e.preventDefault()
+    if (!operand1) {
+      dispatch({
+        type: "ON_BINARY_OPERATOR_PRESSED",
+        payload: {
+          operandNum: 1,
+          operandValue: displayStr,
+          nextDisplayValue: "0",
+          pendingOp: ":",
+        },
+      })
+    } else {
+      const newOperandValue = executeOperation(
+        pendingOp || ":",
+        operand1 * 1,
+        displayStr * 1
+      )
+      dispatch({
+        type: "ON_BINARY_OPERATOR_PRESSED",
+        payload: {
+          operandNum: 1,
+          operandValue: `${newOperandValue}`,
+          nextDisplayValue: `${newOperandValue}`,
+          shouldDisplayResetOnNext: true,
+          pendingOp: ":",
+        },
+      })
+    }
   }
 
   const onAdditionOperatorClick = e => {
