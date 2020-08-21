@@ -18,6 +18,7 @@ const initialState = {
   resultsStartIndex: 0,
   memoryStartIndex: 0,
   shouldDisplayResetOnNext: false,
+  isError: false,
 }
 
 // Create Calculator Context
