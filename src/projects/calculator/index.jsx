@@ -186,13 +186,13 @@ const Calculator = () => {
         },
       })
     } else {
-      const newOperandValue = executeOperation(pendingOp || 'x', (operand1 * 1), (displayStr * 1))
+      const result = executeOperation(pendingOp || 'x', (operand1 * 1), (displayStr * 1))
       dispatch({
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
-          operandValue: `${newOperandValue}`,
-          nextDisplayValue: `${newOperandValue}`,
+          operandValue: `${result}`,
+          nextDisplayValue: `${result}`,
           shouldDisplayResetOnNext: true,
           pendingOp: 'x'
         },
@@ -216,7 +216,7 @@ const Calculator = () => {
       })
     } else {
       const isDivisorZero = displayStr * 1 === 0;
-      const newOperandValue = isDivisorZero ? 'Divide By Zero Error' : executeOperation(
+      const result = isDivisorZero ? 'Divide By Zero Error' : executeOperation(
         pendingOp || ":",
         operand1 * 1,
         displayStr * 1
@@ -225,8 +225,8 @@ const Calculator = () => {
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
-          operandValue: `${newOperandValue}`,
-          nextDisplayValue: `${newOperandValue}`,
+          operandValue: `${result}`,
+          nextDisplayValue: `${result}`,
           shouldDisplayResetOnNext: true,
           pendingOp: ":",
         },
@@ -249,7 +249,7 @@ const Calculator = () => {
         },
       })
     } else {
-      const newOperandValue = executeOperation(
+      const result = executeOperation(
         pendingOp || '+',
         operand1 * 1,
         displayStr * 1
@@ -258,8 +258,8 @@ const Calculator = () => {
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
-          operandValue: `${newOperandValue}`,
-          nextDisplayValue: `${newOperandValue}`,
+          operandValue: `${result}`,
+          nextDisplayValue: `${result}`,
           shouldDisplayResetOnNext: true,
           pendingOp: '+'
         },
@@ -282,7 +282,7 @@ const Calculator = () => {
          },
        })
      } else {
-       const newOperandValue = executeOperation(
+       const result = executeOperation(
          pendingOp || "-",
          operand1 * 1,
          displayStr * 1
@@ -291,8 +291,8 @@ const Calculator = () => {
          type: "ON_BINARY_OPERATOR_PRESSED",
          payload: {
            operandNum: 1,
-           operandValue: `${newOperandValue}`,
-           nextDisplayValue: `${newOperandValue}`,
+           operandValue: `${result}`,
+           nextDisplayValue: `${result}`,
            shouldDisplayResetOnNext: true,
            pendingOp: "-",
          },
