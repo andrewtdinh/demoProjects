@@ -169,3 +169,8 @@ export const executeOperation = (op, operand1, operand2) => {
       return 'UNSUPPORTED_OPERATION_ERROR';
   }
 }
+
+export const ERRORS = Object.freeze({
+  DIVIDE_BY_ZERO_ERROR: 'DIVIDE_BY_ZERO_ERROR',
+  UNSUPPORTED_OPERATION_ERROR: 'UNSUPPORTED_OPERATION_ERROR'
+})
