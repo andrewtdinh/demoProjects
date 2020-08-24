@@ -187,9 +187,14 @@ const Calculator = () => {
       })
     } else {
       const result = executeOperation(pendingOp || 'x', (operand1 * 1), (displayStr * 1))
-      const isError = ERRORS[result]
+      const isError = Boolean(ERRORS[result])
       if (isError) {
-         
+        dispatch({
+          type: "ON_ERROR_THROWN",
+          payload: {
+            errorMsg: ERRORS[result]
+          }
+        })
       } else {
         dispatch({
           type: "ON_BINARY_OPERATOR_PRESSED",
