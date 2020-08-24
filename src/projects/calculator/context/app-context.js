@@ -131,8 +131,16 @@ export const reducer = (state, action) => {
         operand1: '', 
         operand2: '', 
         displayStr: payload.result, 
-        shouldDisplayResetOnNext: 'true',
+        shouldDisplayResetOnNext: true,
         pendingOp: ''
+      }
+    
+    case "ON_ERROR_THROWN":
+      return {
+        ...state,
+        displayStr: payload.errorMsg,
+        shouldDisplayResetOnNext: true,
+        isError: true
       }
 
     default:
