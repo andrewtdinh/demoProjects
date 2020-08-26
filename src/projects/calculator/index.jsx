@@ -225,12 +225,12 @@ const Calculator = () => {
         },
       })
     } else {
-      const isDivisorZero = displayStr * 1 === 0;
-      const result = isDivisorZero ? 'Divide By Zero Error' : executeOperation(
+      const result = executeOperation(
         pendingOp || ":",
         operand1 * 1,
         displayStr * 1
       )
+      const isError = Boolean(ERRORS[result])
       dispatch({
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
