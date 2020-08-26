@@ -120,7 +120,7 @@ export const reducer = (state, action) => {
       }
 
     case "UNRESET_DISPLAY_ON_NEXT_CLICK":
-      return { ...state, shouldDisplayResetOnNext: false }
+      return { ...state, shouldDisplayResetOnNext: false, isError: false }
 
     case "UPDATE_PENDING_OPERATION":
       return { ...state, pendingOp: payload }

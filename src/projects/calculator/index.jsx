@@ -69,7 +69,10 @@ const Calculator = () => {
     const { displayStr: previousDisplayStr } = state;
     
     e.preventDefault();
-    if (buttonValue === '0' && previousDisplayStr === '0') {return;}
+    if (buttonValue === '0' && previousDisplayStr === '0') {
+      dispatch({ type: "UNRESET_DISPLAY_ON_NEXT_CLICK" })
+      return;
+    }
     if (previousDisplayStr === '0' && '123456789'.includes(buttonValue)) {
       updateDisplay(buttonValue);
       dispatch({ type: "UNRESET_DISPLAY_ON_NEXT_CLICK" });
