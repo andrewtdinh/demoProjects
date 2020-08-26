@@ -231,16 +231,25 @@ const Calculator = () => {
         displayStr * 1
       )
       const isError = Boolean(ERRORS[result])
-      dispatch({
-        type: "ON_BINARY_OPERATOR_PRESSED",
-        payload: {
-          operandNum: 1,
-          operandValue: `${result}`,
-          nextDisplayValue: `${result}`,
-          shouldDisplayResetOnNext: true,
-          pendingOp: ":",
-        },
-      })
+      if (isError) {
+        dispatch({
+          type: "ON_ERROR_THROWN",
+          payload: {
+            errorMsg: ERRORS[result],
+          },
+        })
+      } else {
+        dispatch({
+          type: "ON_BINARY_OPERATOR_PRESSED",
+          payload: {
+            operandNum: 1,
+            operandValue: `${result}`,
+            nextDisplayValue: `${result}`,
+            shouldDisplayResetOnNext: true,
+            pendingOp: ":",
+          },
+        })
+      }
     }
   }
 
