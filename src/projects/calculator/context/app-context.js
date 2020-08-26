@@ -106,10 +106,10 @@ export const reducer = (state, action) => {
       return nextState;
 
     case "ON_BINARY_OPERATOR_PRESSED":
-      const { operandNum, operandValue, nextDisplayValue, shouldDisplayResetOnNext, pendingOp } = payload;
+      const { operandNum, operandValue, nextDisplayValue, shouldDisplayResetOnNext, pendingOp, isError=false } = payload;
       nextState = operandNum === 1
-        ? { ...state, operand1: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext, pendingOp }
-        : { ...state, operand2: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext, pendingOp }
+        ? { ...state, operand1: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext, pendingOp, isError }
+        : { ...state, operand2: operandValue, displayStr: nextDisplayValue, shouldDisplayResetOnNext, pendingOp, isError }
       return nextState;
 
     case "ADD_DECIMAL_POINT":
