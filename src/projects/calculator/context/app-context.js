@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import { add, subtract, multiply, divide, sqrt } from 'mathjs/number';
+import { add, subtract, multiply, divide } from 'mathjs/number';
 import {
   maxResultsEntries,
   maxMemoryEntries,
