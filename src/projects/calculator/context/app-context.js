@@ -132,6 +132,7 @@ export const reducer = (state, action) => {
         operand2: '', 
         displayStr: payload.result, 
         shouldDisplayResetOnNext: true,
+        prevResults: [...state.prevResults, payload.result],
         pendingOp: ''
       }
     
