@@ -150,6 +150,13 @@ export const reducer = (state, action) => {
         shouldDisplayResetOnNext: true,
       }
 
+    case "ON_SQUARE_ROOT_OPERATOR_TAP":
+      return {
+        ...state,
+        displayStr: payload.result,
+        shouldDisplayResetOnNext: true,
+      }
+
     default:
       return state
   }
