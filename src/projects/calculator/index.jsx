@@ -116,7 +116,7 @@ const Calculator = () => {
 
   const onSignBtnClick = (e) => {
     const { displayStr: previousDisplayStr } = state;
-    const isDisplayStrNegative = previousDisplayStr.includes('-');
+    const isDisplayStrNegative = previousDisplayStr ? `${previousDisplayStr}`.includes('-') : false;
 
     e.preventDefault();
     updateDisplay(isDisplayStrNegative ? previousDisplayStr.slice(1) : '-' + previousDisplayStr);
@@ -162,7 +162,7 @@ const Calculator = () => {
   }
 
   const onSquareRootButtonClick = (e) => {
-    const result = executeOperation('sqrt', (displayStr * 1))
+    const result = executeOperation('sqrt', (state.displayStr * 1))
 
     e.preventDefault();
     dispatch({
