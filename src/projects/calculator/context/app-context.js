@@ -144,6 +144,12 @@ export const reducer = (state, action) => {
         isError: true
       }
 
+    case "RESET_DISPLAY_ON_NEXT_KEY_TAP":
+      return {
+        ...state,
+        shouldDisplayResetOnNext: true,
+      }
+
     default:
       return state
   }
