@@ -168,6 +168,7 @@ const Calculator = () => {
   const onScrollBarEntryClick = (e) => {
     e.preventDefault();
     updateDisplay(`${e.currentTarget.innerText}`)
+    resetDisplayOnNextKeyTap()
   }
 
   const onPercentOfOperatorClick = (e) => {
