@@ -58,11 +58,11 @@ const Calculator = () => {
   //   });
   // }
 
-  // const resetDisplayOnNextKeyTap = () => {
-  //   dispatch({
-  //     type: 'RESET_DISPLAY_ON_NEXT_KEY_TAP'
-  //   })
-  // }
+  const resetDisplayOnNextKeyTap = () => {
+    dispatch({
+      type: 'RESET_DISPLAY_ON_NEXT_KEY_TAP'
+    })
+  }
 
   const onNumbersClick = (e) => {
     const buttonValue = e.target.value;
