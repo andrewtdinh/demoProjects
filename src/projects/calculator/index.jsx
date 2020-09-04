@@ -167,7 +167,7 @@ const Calculator = () => {
     e.preventDefault();
     dispatch({
       type: 'ON_SQUARE_ROOT_OPERATOR_TAP',
-      payload: 
+      payload: { result }
     })
   }
 

@@ -191,7 +191,7 @@ export const executeOperation = (op, operand1, operand2) => {
     case 'sqrt':
       const isOperandNegative = operand1 < 0;
       if (isOperandNegative) {
-        return 'NEGATIVE_NUMBER_SQRT_ERROR';
+        return "SQRT_OF_NEGATIVE_NUMBER_ERROR"
       } else {
         return sqrt(operand1 * 1)
       }
@@ -203,5 +203,6 @@ export const executeOperation = (op, operand1, operand2) => {
 
 export const ERRORS = Object.freeze({
   DIVIDE_BY_ZERO_ERROR: 'Error: Divide By Zero',
-  UNSUPPORTED_OPERATION_ERROR: 'Error: Unsupported Operation'
+  UNSUPPORTED_OPERATION_ERROR: 'Error: Unsupported Operation',
+  SQRT_OF_NEGATIVE_NUMBER_ERROR: 'Error: Square Root of Negative Number'
 })
