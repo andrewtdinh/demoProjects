@@ -1,11 +1,12 @@
 import React, { createContext } from "react";
-import { add, subtract, multiply, divide } from 'mathjs/number';
+import { add, subtract, multiply, divide, sqrt } from 'mathjs/number';
 import {
   maxResultsEntries,
   maxMemoryEntries,
   displayedMemoryEntries,
   displayedResultsEntries,
 } from "../constants";
+import { sqrt } from "mathjs";
 
 const initialState = {
   displayStr: "0",
@@ -186,6 +187,14 @@ export const executeOperation = (op, operand1, operand2) => {
         return 'DIVIDE_BY_ZERO_ERROR';
       }
       return divide((operand1 * 1), (operand2 * 1));
+
+    case 'sqrt':
+      const isOperandNegative = operand1 < 0;
+      if (isOperandNegative) {
+        return 'NEGATIVE_NUMBER_SQRT_ERROR';
+      } else {
+        return sqrt(operand1 * 1)
+      }
 
     default:
       return 'UNSUPPORTED_OPERATION_ERROR';
