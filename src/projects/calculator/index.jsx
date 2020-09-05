@@ -41,23 +41,6 @@ const Calculator = () => {
     });
   }
 
-  // const clearOperand = (operandOrder) => {
-  //   dispatch({
-  //     type: 'CLEAR_OPERAND',
-  //     payload: operandOrder
-  //   });
-  // }
-
-  // const setOperandValue = (operandOrder, nextValue) => {
-  //   dispatch({
-  //     type: 'SET_OPERAND',
-  //     payload: {
-  //       operandOrder,
-  //       value: nextValue
-  //     }
-  //   });
-  // }
-
   const resetDisplayOnNextKeyTap = () => {
     dispatch({
       type: 'RESET_DISPLAY_ON_NEXT_KEY_TAP'
