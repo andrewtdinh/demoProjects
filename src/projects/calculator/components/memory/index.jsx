@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { memoryBarBGColor, memoryTextColor } from '../../buttons';
 import Styles from "../../index.module.css";
-import { CalculatorContext } from "../../context/app-context";
 import { getValuesFrom } from "../../utils/scrollbar";
 import ScrollBar from "../scrollbar";
 import { displayedMemoryEntries } from "../../constants"
