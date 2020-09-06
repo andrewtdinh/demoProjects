@@ -105,9 +105,6 @@ const Calculator = () => {
     updateDisplay(isDisplayStrNegative ? previousDisplayStr.slice(1) : '-' + previousDisplayStr);
   }
 
-  // TODO: Before converting the display string to a number, consider strings that end in periods,
-  // like '235.', which should be convert to 235.0
-
   const renderDisplayFeatures = () => {
     return (
       <DisplayFeatures>
@@ -118,7 +115,6 @@ const Calculator = () => {
     )
   }
 
-  // TODO: have the displayResults array in state and change it when people shift results left or right
   const onResultsShiftLeftClick = (e) => {
     e.preventDefault();
     dispatch({ type: "SHIFT_RESULTS_LEFT" })
