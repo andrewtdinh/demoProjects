@@ -158,6 +158,17 @@ const Calculator = () => {
 
   const onPercentOfOperatorClick = (e) => {
     e.preventDefault();
+    if (!operand1) {
+      dispatch({
+        type: "SET_OPERAND",
+        payload: {
+          operandOrder: 1,
+          value: state.displayStr
+        }
+      })
+    } else {
+      
+    }
   }
 
   const onMultOperatorClick = (e) => {
