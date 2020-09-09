@@ -164,8 +164,8 @@ const Calculator = () => {
         payload: {
           operandOrder: 1,
           value: state.displayStr * 1 / 100, 
-          pendingOp: 'sqrt',
-
+          pendingOp: 'x',
+          nextDisplayValue: '0'
         }
       })
     } else {

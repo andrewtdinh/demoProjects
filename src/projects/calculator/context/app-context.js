@@ -102,8 +102,8 @@ export const reducer = (state, action) => {
     case "SET_OPERAND":
       const { operandOrder, value } = payload;
       nextState = operandOrder === 1
-        ? { ...state, operand1: value}
-        : { ...state, operand2: value};
+        ? { ...state, operand1: value, displayStr: payload.nextDisplayValue}
+        : { ...state, operand2: value, displayStr: payload.nextDisplayValue};
       return nextState;
 
     case "ON_BINARY_OPERATOR_PRESSED":
