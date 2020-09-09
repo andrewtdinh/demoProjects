@@ -169,7 +169,7 @@ const Calculator = () => {
         }
       })
     } else {
-      const result = executeOperation("x", operand1 * 1 / 100, state.displayStr * 1)
+      const result = executeOperation("x", operand1 * 1, state.displayStr * 1)
       dispatch({
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
