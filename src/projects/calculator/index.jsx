@@ -286,7 +286,6 @@ const Calculator = () => {
         operand1 * 1,
         displayStr * 1
       )
-      console.log({pendingOp})
       dispatch({
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
