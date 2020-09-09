@@ -174,7 +174,7 @@ const Calculator = () => {
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
           operandNum: 1,
-          operandValue: `${result}`,
+          operandValue: `${result / 100}`,
           nextDisplayValue: `${result}`,
           shouldDisplayResetOnNext: true,
           pendingOp: "x",
