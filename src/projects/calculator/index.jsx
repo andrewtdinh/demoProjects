@@ -157,7 +157,7 @@ const Calculator = () => {
   }
 
   const onPercentOfOperatorClick = (e) => {
-    const { operand1 } = state;
+    const { operand1, pendingOp } = state;
     e.preventDefault();
     if (!operand1) {
       dispatch({
@@ -170,7 +170,7 @@ const Calculator = () => {
         }
       })
     } else {
-      const result = executeOperation("x", operand1 * 1, state.displayStr * 1)
+      const result = executeOperation(pendingOp ?? "x", operand1 * 1, state.displayStr * 1)
       dispatch({
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
@@ -286,6 +286,7 @@ const Calculator = () => {
         operand1 * 1,
         displayStr * 1
       )
+      console.log({pendingOp})
       dispatch({
         type: "ON_BINARY_OPERATOR_PRESSED",
         payload: {
