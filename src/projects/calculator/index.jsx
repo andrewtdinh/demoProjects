@@ -157,6 +157,7 @@ const Calculator = () => {
   }
 
   const onPercentOfOperatorClick = (e) => {
+    const { operand1 } = state;
     e.preventDefault();
     if (!operand1) {
       dispatch({
@@ -184,7 +185,7 @@ const Calculator = () => {
   }
 
   const onMultOperatorClick = (e) => {
-    const { displayStr, pendingOp } = state;
+    const { displayStr, pendingOp, operand1 } = state;
 
     e.preventDefault();
     if (!operand1) {
@@ -223,7 +224,7 @@ const Calculator = () => {
   }
 
   const onDivisionOperatorClick = (e) => {
-    const { displayStr, pendingOp } = state
+    const { displayStr, pendingOp, operand1 } = state
 
     e.preventDefault()
     if (!operand1) {
@@ -266,7 +267,7 @@ const Calculator = () => {
   }
 
   const onAdditionOperatorClick = e => {
-    const { displayStr, pendingOp } = state;
+    const { displayStr, pendingOp, operand1 } = state;
 
     e.preventDefault()
     if (!operand1) {
@@ -299,7 +300,7 @@ const Calculator = () => {
   }
 
   const onSubtractionOperatorClick = e => {
-     const { displayStr, pendingOp } = state
+     const { displayStr, pendingOp, operand1 } = state
 
      e.preventDefault()
      if (!operand1) {
@@ -333,7 +334,7 @@ const Calculator = () => {
 
   const onEqualOperatorClick = e => {
     e.preventDefault()
-    const { displayStr, pendingOp } = state
+    const { displayStr, pendingOp, operand1 } = state
 
     if (!operand1) {
       dispatch({
