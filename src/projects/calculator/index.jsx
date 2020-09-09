@@ -163,11 +163,23 @@ const Calculator = () => {
         type: "SET_OPERAND",
         payload: {
           operandOrder: 1,
-          value: state.displayStr
+          value: state.displayStr * 1 / 100, 
+          pendingOp: 'sqrt',
+
         }
       })
     } else {
-      
+      const result = executeOperation("x", operand1 * 1 / 100, state.displayStr * 1)
+      dispatch({
+        type: "ON_BINARY_OPERATOR_PRESSED",
+        payload: {
+          operandNum: 1,
+          operandValue: `${result}`,
+          nextDisplayValue: `${result}`,
+          shouldDisplayResetOnNext: true,
+          pendingOp: "x",
+        },
+      })
     }
   }
 
