@@ -8,6 +8,8 @@ import {
 } from "../constants";
 import { sqrt } from "mathjs";
 
+const Big = require('big.js');
+
 const initialState = {
   displayStr: "0",
   operand1: null,
@@ -174,7 +176,7 @@ export const CalculatorContextProvider = props => {
 export const executeOperation = (op, operand1, operand2) => {
   switch (op) {
     case '+':
-      return add((operand1 * 1), (operand2 * 1))
+      return Big(operand1 * 1).plus(Big(operand2 * 1));
 
     case '-':
       return subtract((operand1 * 1), (operand2 * 1))
