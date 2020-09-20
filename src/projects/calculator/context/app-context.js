@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
-import { add, subtract, multiply, divide } from 'mathjs/number';
+import { multiply, divide } from 'mathjs/number';
 import {
   maxResultsEntries,
   maxMemoryEntries,
@@ -179,7 +179,7 @@ export const executeOperation = (op, operand1, operand2) => {
       return Big(operand1 * 1).plus(Big(operand2 * 1));
 
     case '-':
-      return subtract((operand1 * 1), (operand2 * 1))
+      return Big(operand1 * 1).minus(Big(operand2 * 1));
 
     case 'x':
       return multiply((operand1 * 1), (operand2 * 1))
