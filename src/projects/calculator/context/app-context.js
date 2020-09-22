@@ -183,7 +183,7 @@ export const executeOperation = (op, operand1, operand2) => {
       return Big(operand1 * 1).minus(Big(operand2 * 1)).toString();
 
     case 'x':
-      return multiply((operand1 * 1), (operand2 * 1))
+      return Big(operand1 * 1).times(Big(operand2 * 1)).toString();
 
     case ':':
       if (operand2 * 1 === 0) {
