@@ -189,7 +189,7 @@ export const executeOperation = (op, operand1, operand2) => {
       if (operand2 * 1 === 0) {
         return 'DIVIDE_BY_ZERO_ERROR';
       }
-      return divide((operand1 * 1), (operand2 * 1));
+      return (Big(operand1 * 1)).div(Big(operand2 * 1)).toString();
 
     case 'sqrt':
       const isOperandNegative = operand1 < 0;
