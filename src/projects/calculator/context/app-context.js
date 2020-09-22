@@ -7,6 +7,7 @@ import {
   displayedResultsEntries,
 } from "../constants";
 import { sqrt } from "mathjs";
+import { result } from "lodash";
 
 const Big = require('big.js');
 
@@ -176,10 +177,11 @@ export const CalculatorContextProvider = props => {
 export const executeOperation = (op, operand1, operand2) => {
   switch (op) {
     case '+':
-      return Big(operand1 * 1).plus(Big(operand2 * 1));
-
+      const result = Big(operand1 * 1).plus(Big(operand2 * 1));
+      console.log({result})
+      return result;
     case '-':
-      return Big(operand1 * 1).minus(Big(operand2 * 1));
+      return Big(operand1 * 1).minus(Big(operand2 * 1)).toString();
 
     case 'x':
       return multiply((operand1 * 1), (operand2 * 1))
