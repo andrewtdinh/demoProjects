@@ -196,7 +196,7 @@ export const executeOperation = (op, operand1, operand2) => {
       if (isOperandNegative) {
         return "SQRT_OF_NEGATIVE_NUMBER_ERROR"
       } else {
-        return sqrt(operand1 * 1)
+        return Big(operand1 * 1).sqrt();
       }
 
     default:
