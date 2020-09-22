@@ -118,7 +118,7 @@ export const buttons = [
   },
   {
     name: "Division Operator",
-    label: "÷",
+    label: "/",
     color: "#FFF",
     bgColor: orangeOperatorColor,
     type: "orange-operator-button",
