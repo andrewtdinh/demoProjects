@@ -177,9 +177,8 @@ export const CalculatorContextProvider = props => {
 export const executeOperation = (op, operand1, operand2) => {
   switch (op) {
     case '+':
-      const result = Big(operand1 * 1).plus(Big(operand2 * 1));
-      console.log({result})
-      return result;
+      return Big(operand1 * 1).plus(Big(operand2 * 1)).toString();
+
     case '-':
       return Big(operand1 * 1).minus(Big(operand2 * 1)).toString();
 
