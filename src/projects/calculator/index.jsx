@@ -32,6 +32,10 @@ const Calculator = () => {
     copy(state.displayStr)
   }
 
+  const copyResultsToClipboard = () => {
+    copy(state.prevResults)
+  }
+
   const { 
     operand1,
     shouldDisplayResetOnNext,
@@ -112,7 +116,7 @@ const Calculator = () => {
     return (
       <DisplayFeatures>
         <button onClick={copyDisplayToClipboard} >export display</button>
-        <button>export results</button>
+        <button onClick={copyResultsToClipboard}>export results</button>
         <button>export memories</button>
       </DisplayFeatures>
     )
