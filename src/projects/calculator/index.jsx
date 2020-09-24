@@ -6,7 +6,7 @@ import DisplayFeatures from './components/display-features';
 import MemoryBar from './components/memory';
 import ResultsBar from './components/results';
 import { buttons, displayColor, displayBGColor } from './buttons';
-import { copy } from 'copy-to-clipboard';
+import copy from 'copy-to-clipboard';
 
 import { CalculatorContext, CalculatorContextProvider, reducer, executeOperation, ERRORS } from './context/app-context';
 
@@ -28,8 +28,8 @@ const Calculator = () => {
     })
   }, []);
 
-  const copyToClipboard = (content) => {
-    copy(content);
+  const copyDisplayToClipboard = () => {
+    copy(state.displayStr)
   }
 
   const { 
@@ -111,7 +111,7 @@ const Calculator = () => {
   const renderDisplayFeatures = () => {
     return (
       <DisplayFeatures>
-        <button>export display</button>
+        <button onClick={copyDisplayToClipboard} >export display</button>
         <button>export results</button>
         <button>export memories</button>
       </DisplayFeatures>
