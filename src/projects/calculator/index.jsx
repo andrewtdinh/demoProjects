@@ -116,9 +116,9 @@ const Calculator = () => {
   const renderDisplayFeatures = () => {
     return (
       <DisplayFeatures>
-        <button onClick={copyDisplayToClipboard} >export display</button>
-        <button onClick={copyResultsToClipboard}>export results</button>
-        <button>export memories</button>
+        <button onClick={copyDisplayToClipboard} >copy display</button>
+        <button onClick={copyResultsToClipboard}>copy results</button>
+        <button>copy memories</button>
       </DisplayFeatures>
     )
   }
