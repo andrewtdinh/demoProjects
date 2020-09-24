@@ -33,7 +33,8 @@ const Calculator = () => {
   }
 
   const copyResultsToClipboard = () => {
-    copy(state.prevResults)
+    const resultString = state.prevResults.join(', ')
+    copy(resultString);
   }
 
   const { 
