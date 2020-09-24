@@ -33,8 +33,6 @@ const Calculator = () => {
   }
 
   const { 
-    // resultsStartIndex: currentResultsStartIdx,
-    // memoryStartIndex: currentMemoryStartIdx,
     operand1,
     shouldDisplayResetOnNext,
   } = state;
