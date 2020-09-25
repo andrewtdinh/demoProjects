@@ -124,6 +124,8 @@ const Calculator = () => {
         <button onClick={copyDisplayToClipboard}>copy display</button>
         <button onClick={copyResultsToClipboard}>copy results</button>
         <button onClick={copyMemoriesToClipboard}>copy memories</button>
+        <button>clr mem</button>
+        <button>clr res</button>
       </DisplayFeatures>
     )
   }
