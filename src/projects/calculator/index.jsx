@@ -123,7 +123,7 @@ const Calculator = () => {
       <DisplayFeatures>
         <button onClick={copyDisplayToClipboard}>copy display</button>
         <button onClick={copyResultsToClipboard}>copy results</button>
-        <button>copy memories</button>
+        <button onClick={copyMemoriesToClipboard}>copy memories</button>
       </DisplayFeatures>
     )
   }
