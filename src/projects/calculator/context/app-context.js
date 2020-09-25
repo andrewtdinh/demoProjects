@@ -86,6 +86,9 @@ export const reducer = (state, action) => {
         : 0
       return { ...state, memoryStartIndex: newMemoryStartIdx, memories: newMemoryArray }
 
+    case "CLEAR_MEMORY":
+      return { ...state, memories: [], memoryStartIndex: 0}
+
     case "RESULTS_IN":
       const isMaxResultsReached = qtyPreviousResults >= maxResultsEntries;
       const newResultsArray = isMaxResultsReached
