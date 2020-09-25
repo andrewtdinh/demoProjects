@@ -1,13 +1,10 @@
 import React, { createContext } from "react";
-import { multiply, divide } from 'mathjs/number';
 import {
   maxResultsEntries,
   maxMemoryEntries,
   displayedMemoryEntries,
   displayedResultsEntries,
 } from "../constants";
-import { sqrt } from "mathjs";
-import { result } from "lodash";
 
 const Big = require('big.js');
 
