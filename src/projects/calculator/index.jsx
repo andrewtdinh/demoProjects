@@ -37,6 +37,11 @@ const Calculator = () => {
     copy(resultString);
   }
 
+  const copyMemoriesToClipboard = () => {
+    const memoryString = state.memories.join(', ')
+    copy(memoryString);
+  }
+
   const { 
     operand1,
     shouldDisplayResetOnNext,
