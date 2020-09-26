@@ -51,7 +51,6 @@ const Calculator = () => {
   }
 
   const { 
-    operand1,
     shouldDisplayResetOnNext,
   } = state;
 
