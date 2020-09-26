@@ -46,6 +46,10 @@ const Calculator = () => {
     dispatch({ type: 'CLEAR_RESULTS' });
   }
 
+  const onClearMemoriesClick = () => {
+    dispatch({ type: 'CLEAR_MEMORIES' });
+  }
+
   const { 
     operand1,
     shouldDisplayResetOnNext,
