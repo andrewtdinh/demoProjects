@@ -170,6 +170,10 @@ const Calculator = () => {
       type: 'ON_SQUARE_ROOT_OPERATOR_TAP',
       payload: { result }
     })
+    dispatch({
+      type: 'RESULTS_IN',
+      payload: result
+    })
   }
 
   const onScrollBarEntryClick = (e) => {
