@@ -25,7 +25,7 @@
   "devDependencies": {
     "gatsby-plugin-sass": "^2.1.27",
     "lodash": "^4.17.20",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "prettier": "^1.19.1"
   },
   "repository": {
