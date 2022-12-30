@@ -16,7 +16,7 @@
   "dependencies": {
     "big.js": "^5.2.2",
     "copy-to-clipboard": "^3.3.1",
-    "gatsby": "^2.19.7",
+    "gatsby": "^2.32.13",
     "gatsby-cli": "^2.12.100",
     "mathjs": "^7.1.0",
     "react": "^16.12.0",
